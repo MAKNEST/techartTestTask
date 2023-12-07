@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/controller_404.php';
+require_once __DIR__ . '/Controller404.php';
 
 class ControllerNews extends Controller
 {
@@ -7,21 +7,23 @@ class ControllerNews extends Controller
     {
         $this->model = new ModelNews();
         $this->view = new View();
+        $this->Controller404 = new Controller404();
     }
 
     public function action_index($page = null)
     {
-        // кол-во новостей на 1 странице
+        // кол-во новостей на странице
         $newOnPage = 4;
 
         // общее кол-во страниц для табл. новостей
-        $countPages = ceil($this->model->getCountPages() / $newOnPage);
+        $countPages = ceil($this->model->getCountNews() / $newOnPage);
 
         // определяем номер страницы
         if($page == null || $page == 0) {
             $page = 1;
         }
 
+        // если номер запрашиваемой страницы больше общего кол-ва страниц, то отдаем последнюю страницу
         if($page >= $countPages)
         {
             $page = $countPages;
@@ -37,9 +39,7 @@ class ControllerNews extends Controller
         $data = $this->model->getAll($newOnPage, $offset);
 
         if(is_null($data)) {
-            $controller = new Controller_404();
-            $controller->action_index('Новость не найдена');
-            die();
+            $this->Controller404->action_index("404 Страница не найдена");
         }
 
         // последняя по дате новость в БД
@@ -55,11 +55,14 @@ class ControllerNews extends Controller
 
     public function action_one($id)
     {
-        $data = $this->model->getOne($id);
-        if(is_null($data)) {
-            $controller = new Controller_404();
-            $controller->action_index('Новость не найдена');
+        if (!is_numeric($id)) {
+            $this->Controller404->action_index("404 Страница не найдена");
             die();
+        }
+        $data = $this->model->getOne($id);
+
+        if(is_null($data)) {
+            $this->Controller404->action_index("404 Страница не найдена");
         } 
         $this->view->generate('one_news_view.php', 'template_view.php', $data);
     }

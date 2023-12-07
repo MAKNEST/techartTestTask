@@ -4,14 +4,17 @@ class Route
 {
     public static function route()
     {
-        // контроллер и метод по умолчанию
+        // контроллер по умолчанию
         $controller_name = "News";
+        // имя действия по умолчанию
         $action_name = "index";
 		// параметр для методов контроллера
 		$param = null;
 
+		// массив входных параметров
         $routes = explode('/', $_SERVER['REQUEST_URI']);
 
+        
         // получаем имя контроллера из URL
         if ( !empty($routes[1]) )
 		{	
@@ -60,7 +63,6 @@ class Route
 		else
 		{
 			Route::ErrorPage404();
-			die();
 		}
 		
 		// создаем контроллер
@@ -74,16 +76,15 @@ class Route
 		else
 		{
 			Route::ErrorPage404();
-			die();
 		}
 	
 	}
 
 	public static function ErrorPage404()
 	{
-		require_once 'src/controllers/controller_404.php';
-        $controller = new Controller_404();
-		$controller->action_index('Страница не найдена :(');
+		require_once 'src/controllers/Controller404.php';
+        $controller = new Controller404();
+		$controller->action_index("404 Страница не найдена");
     }
     
 }

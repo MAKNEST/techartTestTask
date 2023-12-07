@@ -1,14 +1,11 @@
 <?php
+
 // последняя новость в БД
 $latestNewsId = $data['latest_news'][0]['id'];
 $latestNewsImage = $data['latest_news'][0]['image'];
 $latestNewsTitle = $data['latest_news'][0]['title'];
 $latestNewsIdAnnounce = $data['latest_news'][0]['announce'];
 unset($data['latest_news']);
-
-// echo "<pre>";
-// print_r($latestNewsId);
-// echo "</pre>";
 
 // номер текущей страницы
 $page = $data['page'];
@@ -17,7 +14,6 @@ unset($data['page']);
 // общее кол-во страниц для компонента Pager
 $countPages = $data['count_pages'];
 unset($data['count_pages']);
-
 
 ?>
 
