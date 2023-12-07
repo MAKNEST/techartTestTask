@@ -1,3 +1,13 @@
+<?php
+
+$title = $data['title'];
+$date = $data['date'];
+$announce = $data['announce'];
+$content = $data['content'];
+$image = $data['image'];
+
+?>
+
 <div class="container">
     <div class="line"></div>
     <div class="work_news">
@@ -6,11 +16,11 @@
                 Главная /
             </a> 
             <div class="breadcrumb_title">
-                <?= $data['title'];?>
+                <?= $title;?>
             </div>
         </div>
         <h1 class="content_title">
-            <?= $data['title'];?>
+            <?= $title;?>
         </h1>
 
         <div class="work_news-content">
@@ -18,11 +28,11 @@
                 <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/src/views/components/component_date.php";?>
 
                 <div class="work_news-content-title">
-                    <?= $data['announce']; ?>
+                    <?= $announce; ?>
                 </div>
 
                 <div class="work_news-content-news-text">
-                    <?= $data['content']?>
+                    <?= $content; ?>
                 </div>
 
                 <?php
@@ -38,7 +48,7 @@
                 
             </div>
             <div class="work_news-content-image-container">
-                <img src="/style/images/<?= $data['image']?>" class="work_news-content-image">
+                <img src="/style/images/<?= $image; ?>" class="work_news-content-image">
             </div>
 
         </div>

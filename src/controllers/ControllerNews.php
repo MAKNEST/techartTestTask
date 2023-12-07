@@ -1,11 +1,11 @@
 <?php
 require_once __DIR__ . '/controller_404.php';
 
-class Controller_news extends Controller
+class ControllerNews extends Controller
 {
     public function __construct()
     {
-        $this->model = new Model_news();
+        $this->model = new ModelNews();
         $this->view = new View();
     }
 
@@ -15,7 +15,7 @@ class Controller_news extends Controller
         $newOnPage = 4;
 
         // общее кол-во страниц для табл. новостей
-        $countPages = $this->model->getCountPages($newOnPage);
+        $countPages = ceil($this->model->getCountPages() / $newOnPage);
 
         // определяем номер страницы
         if($page == null || $page == 0) {
@@ -34,7 +34,7 @@ class Controller_news extends Controller
         }
 
         // получаем список новостей для текущей страницы
-        $data = $this->model->getAllNews($newOnPage, $offset);
+        $data = $this->model->getAll($newOnPage, $offset);
 
         if(is_null($data)) {
             $controller = new Controller_404();
@@ -43,7 +43,7 @@ class Controller_news extends Controller
         }
 
         // последняя по дате новость в БД
-        $data['latest_news'] = $this->model->getLatestNews();
+        $data['latest_news'] = $this->model->getLatest();
 
         // номер страницы
         $data['page'] = $page;
@@ -55,7 +55,7 @@ class Controller_news extends Controller
 
     public function action_one($id)
     {
-        $data = $this->model->getOneNews($id);
+        $data = $this->model->getOne($id);
         if(is_null($data)) {
             $controller = new Controller_404();
             $controller->action_index('Новость не найдена');

@@ -136,12 +136,12 @@ body {
 }
 
 .work_news-content-image {
-    max-width: 30rem;
+    max-height: 60%;
     margin-top: 5rem;
     margin-left: 2rem;
 }
 
-.work_news-content-title {
+.work_news-content-title p {
     color: #841844;
 
     font-family: Open Sans;
@@ -347,6 +347,12 @@ p {
     }
 }
 
+@media (min-width: 551px) and (max-width: 750px) {
+    .pager {
+        justify-content: end;
+    }
+}
+
 @media (min-width: 751px) and (max-width: 1151px) {
     .pager {
         justify-content: end;
@@ -376,7 +382,7 @@ p {
 @media (max-width: 360px) {
     .pager_button {
         padding: 5px 10px;
-        margin: 3px;
+        margin: 5px;
     }
 }
 

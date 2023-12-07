@@ -5,7 +5,7 @@ class Route
     public static function route()
     {
         // контроллер и метод по умолчанию
-        $controller_name = "news";
+        $controller_name = "News";
         $action_name = "index";
 		// параметр для методов контроллера
 		$param = null;
@@ -15,7 +15,7 @@ class Route
         // получаем имя контроллера из URL
         if ( !empty($routes[1]) )
 		{	
-			$controller_name = $routes[1];
+			$controller_name = ucwords($routes[1]);
 		}
 
 		// определяем имя действия
@@ -37,11 +37,11 @@ class Route
 		}
 
         // добавляем префиксы
-		$model_name = 'Model_'.$controller_name;
-		$controller_name = 'Controller_'.$controller_name;
+		$model_name = 'Model'.$controller_name;
+		$controller_name = 'Controller'.$controller_name;
 		$action_name = 'action_'.$action_name;
 		
-        $model_file = strtolower($model_name).'.php';
+        $model_file = $model_name . '.php';
 		$model_path = "src/models/".$model_file;
         
 		if(file_exists($model_path))
@@ -50,7 +50,7 @@ class Route
 		}
 
 		// подцепляем файл с классом контроллера
-		$controller_file = strtolower($controller_name).'.php';
+		$controller_file = $controller_name . '.php';
 		$controller_path = "src/controllers/".$controller_file;
 
 		if(file_exists($controller_path))
