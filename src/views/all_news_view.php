@@ -15,6 +15,8 @@ unset($data['page']);
 $countPages = $data['count_pages'];
 unset($data['count_pages']);
 
+// новости
+$newsList = $data;
 ?>
 
 <a href="/news/one/<?= $latestNewsId; ?>" class="all_news-banner-link">
@@ -32,7 +34,7 @@ unset($data['count_pages']);
 
     <div class="all_news-list">
         <?php
-        foreach ($data as $key => $value) {
+        foreach ($newsList as $key => $value) {
             require 'src/views/components/component_news_card.php';
         }
         ?>

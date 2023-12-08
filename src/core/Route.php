@@ -5,9 +5,9 @@ class Route
     public static function route()
     {
         // контроллер по умолчанию
-        $controller_name = "News";
+        $controllerName = "News";
         // имя действия по умолчанию
-        $action_name = "index";
+        $actionName = "index";
 		// параметр для методов контроллера
 		$param = null;
 
@@ -18,13 +18,13 @@ class Route
         // получаем имя контроллера из URL
         if ( !empty($routes[1]) )
 		{	
-			$controller_name = ucwords($routes[1]);
+			$controllerName = ucwords($routes[1]);
 		}
 
 		// определяем имя действия
 		if ( !empty($routes[2]) && !is_numeric( $routes[2] ) )
 		{
-			$action_name = $routes[2];
+			$actionName = $routes[2];
 		}
 		
 		// если второй параметр uri числовой, то 
@@ -40,20 +40,20 @@ class Route
 		}
 
         // добавляем префиксы
-		$model_name = 'Model'.$controller_name;
-		$controller_name = 'Controller'.$controller_name;
-		$action_name = 'action_'.$action_name;
+		$modelName = 'Model'.$controllerName;
+		$controllerName = 'Controller'.$controllerName;
+		$actionName = 'action_'.$actionName;
 		
-        $model_file = $model_name . '.php';
-		$model_path = "src/models/".$model_file;
+        $modelFile = $modelName . '.php';
+		$modelPath = "src/models/".$modelFile;
         
-		if(file_exists($model_path))
+		if(file_exists($modelPath))
 		{
-			require_once "src/models/".$model_file;
+			require_once "src/models/".$modelFile;
 		}
 
 		// подцепляем файл с классом контроллера
-		$controller_file = $controller_name . '.php';
+		$controller_file = $controllerName . '.php';
 		$controller_path = "src/controllers/".$controller_file;
 
 		if(file_exists($controller_path))
@@ -66,12 +66,11 @@ class Route
 		}
 		
 		// создаем контроллер
-		$controller = new $controller_name;
-		$action = $action_name;
+		$controller = new $controllerName;
 		
-		if(method_exists($controller, $action))
+		if(method_exists($controller, $actionName))
 		{
-			$controller->$action($param);
+			$controller->$actionName($param);
 		}
 		else
 		{
@@ -85,6 +84,7 @@ class Route
 		require_once 'src/controllers/Controller404.php';
         $controller = new Controller404();
 		$controller->action_index("404 Страница не найдена");
+		die();
     }
     
 }
