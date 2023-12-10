@@ -1,9 +1,14 @@
 <?php
-require_once __DIR__ . '/../core/database.php';
 
-class Model_news extends Model
+namespace Models;
+
+use Core\Model;
+use Core\Database;
+
+class ModelNews extends Model
 {
     private $db = null;
+    
     public function __construct()
     {
         $this->db = Database::getInstance()->getConnect();

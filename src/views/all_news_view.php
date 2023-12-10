@@ -17,7 +17,9 @@ unset($data['count_pages']);
     <div class="banner-container">
         
         <h1 class="all_news-banner-title"><?= $latestNews[0]['title']?></h1>
-        <div class="all_news-banner-announce"><?= $latestNews[0]['announce']?></div>
+        <div class="all_news-banner-announce">
+            <?= $latestNews[0]['announce']?>
+        </div>
     </div>
 </div>
 </a>

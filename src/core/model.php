@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 class Model
 {
 	// метод выборки данных
@@ -7,6 +9,6 @@ class Model
 	{	
 		$stmt = $db->prepare($query);
 		$stmt->execute();
-		return $stmt->fetchAll(PDO::FETCH_ASSOC);
+		return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	}
 }

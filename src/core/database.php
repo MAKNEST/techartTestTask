@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 class Database
 {
     private static $instance = null;
@@ -13,8 +15,8 @@ class Database
     private function __construct()
     {
         try {
-            $this->connect = new PDO("mysql:host={$this->host};dbname={$this->dbName};", $this->username, $this->password);
-        } catch(PDOException $e) {
+            $this->connect = new \PDO("mysql:host={$this->host};dbname={$this->dbName};", $this->username, $this->password);
+        } catch(\PDOException $e) {
             echo "Database error: " . $e->getMessage();
         }
     }

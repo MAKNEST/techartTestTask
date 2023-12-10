@@ -1,11 +1,16 @@
 <?php
-require_once __DIR__ . '/controller_404.php';
 
-class Controller_news extends Controller
+namespace Controllers;
+
+use Core\Controller;
+use Core\View;
+use Models\ModelNews;
+
+class ControllerNews extends Controller
 {
     public function __construct()
     {
-        $this->model = new Model_news();
+        $this->model = new ModelNews();
         $this->view = new View();
     }
 
@@ -37,7 +42,7 @@ class Controller_news extends Controller
         $data = $this->model->getAllNews($newOnPage, $offset);
 
         if(is_null($data)) {
-            $controller = new Controller_404();
+            $controller = new Controller404();
             $controller->action_index('Новость не найдена');
             die();
         }
@@ -57,7 +62,7 @@ class Controller_news extends Controller
     {
         $data = $this->model->getOneNews($id);
         if(is_null($data)) {
-            $controller = new Controller_404();
+            $controller = new Controller404();
             $controller->action_index('Новость не найдена');
             die();
         } 
