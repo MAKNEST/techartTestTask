@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 class Model
 {
 	// 
@@ -10,7 +12,7 @@ class Model
 	 * @param array $params массив параметров для выборки
 	 * @return mixed данные из БД
 	 */ 
-	public function query($db, $query, $params)
+	protected function query($db, $query, $params)
 	{	
 		try {
 			$stmt = $db->prepare($query);
@@ -20,7 +22,7 @@ class Model
 			}
 
 			$stmt->execute();
-			return $stmt->fetchAll(PDO::FETCH_ASSOC);
+			return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 		}
 		catch (PDOException $e) {
 			die($e->getMessage());

@@ -1,5 +1,7 @@
 <?php
 
+namespace Database;
+
 class Database
 {
     private static $instance = null;
@@ -30,7 +32,7 @@ class Database
             $this->PASSWORD = PASSWORD;
         } 
         catch(Exception $e) {
-            die("Database error: " . $e->getMessage());
+            die($e->getMessage());
         }
     }
 
@@ -46,7 +48,7 @@ class Database
     {
         if(is_null($this->connect)) {
             try{
-                $this->connect = new PDO("mysql:host={$this->HOST};dbname={$this->DB_NAME};port={$this->PORT};charset=utf8mb4", $this->USER_NAME, $this->PASSWORD);
+                $this->connect = new \PDO("mysql:host={$this->HOST};dbname={$this->DB_NAME};port={$this->PORT};charset=utf8mb4", $this->USER_NAME, $this->PASSWORD);
             } catch (PDOException $e) {
                 die("Database connect error: " . $e->getMessage());
             }

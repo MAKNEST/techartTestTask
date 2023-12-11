@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 class Controller {
 	
 	public $model;
@@ -11,5 +13,5 @@ class Controller {
 	}
 	
 	// действие (action), вызываемое по умолчанию
-	public function action_index($param) {}
+	public function actionIndex($param) {}
 }

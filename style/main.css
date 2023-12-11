@@ -290,6 +290,12 @@ body {
 .news-card {
     flex: 1 1 32rem;
     margin: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
 }
 
 .news-card_link {

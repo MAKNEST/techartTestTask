@@ -1,16 +1,19 @@
 <?php
-require_once __DIR__ . '/Controller404.php';
+namespace Controllers;
 
-class ControllerNews extends Controller
+use Core;
+use Models;
+
+class ControllerNews extends Core\Controller
 {
     public function __construct()
     {
-        $this->model = new ModelNews();
-        $this->view = new View();
+        $this->model = new Models\ModelNews();
+        $this->view = new Core\View();
         $this->Controller404 = new Controller404();
     }
 
-    public function action_index($page = null)
+    public function actionAll($page = null)
     {
         // кол-во новостей на странице
         $newOnPage = 4;
@@ -39,7 +42,7 @@ class ControllerNews extends Controller
         $data = $this->model->getAll($newOnPage, $offset);
 
         if(is_null($data)) {
-            $this->Controller404->action_index("404 Страница не найдена");
+            $this->Controller404->actionIndex();
         }
 
         // последняя по дате новость в БД
@@ -53,16 +56,12 @@ class ControllerNews extends Controller
         $this->view->generate('all_news_view.php', 'template_view.php', $data);
     }
 
-    public function action_one($id)
+    public function actionOne($id)
     {
-        if (!is_numeric($id)) {
-            $this->Controller404->action_index("404 Страница не найдена");
-            die();
-        }
         $data = $this->model->getOne($id);
 
         if(is_null($data)) {
-            $this->Controller404->action_index("404 Страница не найдена");
+            $this->Controller404->actionIndex();
         } 
         $this->view->generate('one_news_view.php', 'template_view.php', $data);
     }

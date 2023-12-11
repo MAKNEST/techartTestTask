@@ -1,10 +1,10 @@
 <?php
 
-// последняя новость в БД
+// последняя новость в таблице
 $latestNewsId = $data['latest_news'][0]['id'];
 $latestNewsImage = $data['latest_news'][0]['image'];
 $latestNewsTitle = $data['latest_news'][0]['title'];
-$latestNewsIdAnnounce = $data['latest_news'][0]['announce'];
+$latestNewsAnnounce = $data['latest_news'][0]['announce'];
 unset($data['latest_news']);
 
 // номер текущей страницы
@@ -23,7 +23,7 @@ $newsList = $data;
 <div class="all_news-banner" style="background-image: url(/style/images/<?= $latestNewsImage; ?>);">
     <div class="banner-container">
         <h1 class="all_news-banner-title"><?= $latestNewsTitle; ?></h1>
-        <div class="all_news-banner-announce"><?= $latestNewsIdAnnounce; ?></div>
+        <div class="all_news-banner-announce"><?= $latestNewsAnnounce; ?></div>
     </div>
 </div>
 </a>
@@ -34,7 +34,7 @@ $newsList = $data;
 
     <div class="all_news-list">
         <?php
-        foreach ($newsList as $key => $value) {
+        foreach ($newsList as $value) {
             require 'src/views/components/component_news_card.php';
         }
         ?>

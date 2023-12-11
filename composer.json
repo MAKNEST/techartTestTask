@@ -1,0 +1,11 @@
+{
+	"autoload": {
+		"psr-0": {
+            "Core\\Router\\": "src/",
+            "Core\\": "src/",
+            "Models\\" : "src/",
+            "Controllers\\" : "src/",
+            "Database\\" : "src/"
+        }
+	}
+}

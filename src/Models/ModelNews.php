@@ -1,5 +1,11 @@
 <?php
-require_once __DIR__ . '/../database/Database.php';
+
+namespace Models;
+
+use Core\Model;
+use Database;
+
+//require_once __DIR__ . '/../database/Database.php';
 
 class ModelNews extends Model
 {
@@ -7,9 +13,9 @@ class ModelNews extends Model
 
     public function __construct()
     {
-        $this->db = Database::getInstance()->getConnect();
+        $this->db = database\Database::getInstance()->getConnect();
     }
-
+    
     public function getAll($limit, $offset)
     {
         $query = "SELECT `id`, `date`, `title`, `announce`, `image` FROM `news` ORDER BY `date` DESC LIMIT :limit OFFSET :offset";
@@ -18,21 +24,14 @@ class ModelNews extends Model
             [
                 "param" => ":limit",
                 "value" => (int) $limit,
-                "param_type" => PDO::PARAM_INT,
+                "param_type" => \PDO::PARAM_INT,
             ],
             [
                 "param" => ":offset",
                 "value" => (int) $offset,
-                "param_type" => PDO::PARAM_INT,
+                "param_type" => \PDO::PARAM_INT,
             ],
         ];
-
-        // $query = "SELECT `id`, `date`, `title`, `announce`, `image` FROM `news` ORDER BY `date` DESC LIMIT ? OFFSET ?";
-
-        // $params = [
-        //     $limit,
-        //     $offset,
-        // ];
 
         return $this->query($this->db, $query, $params) ?? null;
     }
@@ -45,7 +44,7 @@ class ModelNews extends Model
             [
                 "param" => ":id",
                 "value" => (int) $id,
-                "param_type" => PDO::PARAM_INT,
+                "param_type" => \PDO::PARAM_INT,
             ],
         ];
 
@@ -54,17 +53,7 @@ class ModelNews extends Model
 
     public function getLatest()
     {
-        $query = "SELECT `id`, `title`, `announce`, `image` FROM `news` ORDER BY `date` DESC LIMIT :limit";
-
-        $params = [
-            [
-                "param" => ":limit",
-                "value" => (int) 1,
-                "param_type" => PDO::PARAM_INT,
-            ],
-        ];
-
-        return $this->query($this->db, $query, $params) ?? null;
+        return $this->getAll(1, 0) ?? null;
     }
 
     public function getCountNews()
