@@ -1,6 +1,22 @@
 <?php 
 
 return [
-    '/news\/one\/[0-9]{1,}/',
-    '/news\/all\/[0-9]{1,}/',
-];
+    "{(news)/(?P<action>all|one)/(?P<param>\d+)}" => [
+        'controller' => 'News',
+    ],
+
+    "{/(news/(?P<param>\d+)|test)}" => [
+        'controller' => 'News',
+        'action' => 'All'
+    ],
+
+    "{/(test/(?P<param>\d+)|test)}" => [
+        'controller' => 'News',
+        'action' => 'All',
+    ],
+
+    "{^/$}" => [
+        'controller' => 'News',
+        'action' => 'All'
+    ],
+];  
