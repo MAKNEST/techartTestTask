@@ -1,0 +1,19 @@
+div.bx-auth-reg input.bx-auth-input {vertical-align:middle;}
+div.bx-auth-reg span.bx-auth-secure {background-color:#FFFAE3; border:1px solid #DEDBC8; padding:2px; display:inline-block; vertical-align:middle;}
+div.bx-auth-reg div.bx-auth-secure-icon {background-image:url(images/sec.png); background-repeat:no-repeat; background-position:center; width:19px; height:18px;}
+div.bx-auth-reg div.bx-auth-secure-unlock {background-image:url(images/sec-unlocked.png);}
+
+body > div > div > div > form > table > tbody > tr > td > input {
+    font-size: 1.5rem;
+
+    border: 1px solid #9B407A;
+    border-radius: 2rem;
+
+    padding: 0.8rem 1.3rem;
+    margin-bottom: 0.5rem;
+    min-width: 10rem;
+}
+
+.starrequired {
+    color: red;
+}

@@ -1,0 +1,7 @@
+.forgot_link {
+    text-decoration: none;
+}
+
+.direction_row {
+    flex-direction: row !important;
+}

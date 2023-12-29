@@ -1,7 +1,11 @@
 <?php
-
-use Core\Router\Route;
-
-require_once __DIR__ . "/vendor/autoload.php";
-
-Route::route();
+require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+$APPLICATION->SetPageProperty("TITLE", "Главная");
+$APPLICATION->SetTitle("Главная");
+?><div class="container">
+	<h2>Главная страница</h2>
+ <br>
+</div>
+<?php
+require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
+?>

@@ -1,0 +1,82 @@
+div.mf-name, div.mf-email, div.mf-phone, div.mf-chapter, div.mf-captcha, div.mf-message {
+    width:80%;
+    padding-bottom:0.4em;
+    padding-left: 28%;
+}
+div.mf-name input, div.mf-email input, div.mf-phone input, div.mf-chapter select {
+    width:60%;
+}
+div.mf-message textarea {
+    width: 60%;
+}
+span.mf-req {
+    color:red;
+}
+div.mf-ok-text {
+    color:green;
+    font-weight:bold;
+    padding-bottom: 1em;
+}
+
+.mf-text {
+    font-size: 1.4rem;
+}
+
+.form_feedback {
+    font-family: 'Open Sans';
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_feedback-title-block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+    text-transform: uppercase;
+}
+
+.form_feedback-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    line-height: 132%;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 2rem;
+    
+    padding: 14px 16px;
+}
+
+.form_feedback-input {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+
+    border: 2px solid #9B407A;
+    border-radius: 25px;
+
+    margin-bottom: 1.5rem;
+}
+
+.form_feedback-select {
+    width: 64% !important;
+}
+
+.form_feedback-submit {
+    font-size: 1.4rem !important;
+    padding: 1rem !important;
+
+    width: 25rem !important;
+}
+
+.error_message {
+    color: red;
+}

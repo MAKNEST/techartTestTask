@@ -1,0 +1,9 @@
+.chapters_list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button_chapters-list {
+    margin-top: 2rem;
+}

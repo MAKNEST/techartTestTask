@@ -65,4 +65,5 @@ class ControllerNews extends Core\Controller
         } 
         $this->view->generate('one_news_view.php', 'template_view.php', $data);
     }
+    
 }
