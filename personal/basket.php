@@ -59,7 +59,7 @@ $USER->Authorize(1);
 		),
 		"LABEL_PROP_MOBILE" => "",
 		"LABEL_PROP_POSITION" => "top-left",
-		"PATH_TO_ORDER" => "/personal/order/make/",
+		"PATH_TO_ORDER" => "/personal/order.php",
 		"PRICE_DISPLAY_MODE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
 		"PRODUCT_BLOCKS_ORDER" => "props,sku,columns",
