@@ -1,0 +1,23 @@
+.search-form form {
+    display: flex;
+    flex-direction: row;
+}
+
+.search_input,
+.seatch_button {
+    border: 2px solid #9B407A;
+    border-radius: 25px;
+    padding: 0.7rem;
+
+    font-family: 'Open sans';
+    font-size: 1rem;
+    outline: none;
+    background-color: #fff;
+    margin: 0.5rem;
+}
+
+.seatch_button:hover {
+    background-color: #9B407A;
+    color: #fff;
+    transition: 0.3s;
+}
