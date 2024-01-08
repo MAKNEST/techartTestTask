@@ -73,8 +73,7 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
 	<div class="bx-basket-block"><?
 		if (!$arResult["DISABLE_USE_BASKET"])
 		{
-			?><i class="fa fa-shopping-cart"></i>
-			<a href="<?= $arParams['PATH_TO_BASKET'] ?>"><?= GetMessage('TSB1_CART') ?></a><?
+			?><i class="fa fa-shopping-cart"></i> <?
 		}
 
 		if (!$compositeStub)
@@ -94,12 +93,7 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
 				}
 			}
 		}
-
-		if ($arParams['SHOW_PERSONAL_LINK'] == 'Y'):?>
-			<div style="padding-top: 4px;">
-			<span class="icon_info"></span>
-			<a href="<?=$arParams['PATH_TO_PERSONAL']?>"><?=GetMessage('TSB1_PERSONAL')?></a>
-			</div>
-		<?endif?>
+		?>
+		<br><a href="<?= $arParams['PATH_TO_BASKET'] ?>"><?= GetMessage('TSB1_CART') ?></a>
 	</div>
 </div>
