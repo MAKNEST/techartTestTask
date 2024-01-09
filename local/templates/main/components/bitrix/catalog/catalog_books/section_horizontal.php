@@ -81,7 +81,7 @@ else
 				}
 				?>
 			</div>
-			<div class="col-xs-12">
+			<div class="container">
 				<?
 				$sectionListParams = array(
 					"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],

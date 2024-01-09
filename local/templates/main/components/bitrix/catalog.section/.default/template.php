@@ -197,30 +197,24 @@ if (!isset($arParams['HIDE_SECTION_DESCRIPTION']) || $arParams['HIDE_SECTION_DES
 								<?
 								foreach ($rowItems as $item)
 								{
-									?>
-
-										<?
-										$APPLICATION->IncludeComponent(
-											'bitrix:catalog.item',
-											'catalog_item',
-											array(
-												'RESULT' => array(
-													'ITEM' => $item,
-													'AREA_ID' => $areaIds[$item['ID']],
-													'TYPE' => $rowData['TYPE'],
-													'BIG_LABEL' => 'N',
-													'BIG_DISCOUNT_PERCENT' => 'N',
-													'BIG_BUTTONS' => 'N',
-													'SCALABLE' => 'N'
-												),
-												'PARAMS' => $generalParams + $itemParameters[$item['ID']],
+									$APPLICATION->IncludeComponent(
+										'bitrix:catalog.item',
+										'catalog_item',
+										array(
+											'RESULT' => array(
+												'ITEM' => $item,
+												'AREA_ID' => $areaIds[$item['ID']],
+												'TYPE' => $rowData['TYPE'],
+												'BIG_LABEL' => 'N',
+												'BIG_DISCOUNT_PERCENT' => 'N',
+												'BIG_BUTTONS' => 'N',
+												'SCALABLE' => 'N'
 											),
-											$component,
-											array('HIDE_ICONS' => 'Y')
-										);
-										?>
-
-									<?
+											'PARAMS' => $generalParams + $itemParameters[$item['ID']],
+										),
+										$component,
+										array('HIDE_ICONS' => 'Y')
+									);
 								}
 								?>
 							</div>

@@ -114,10 +114,6 @@ if (!empty($arParams['PRODUCT_BLOCKS_ORDER']))
 					?>
 					<span class="product-item-price-current" id="<?=$itemIds['PRICE']?>">
 						<?
-						// echo '<pre>';
-						// print_r($price);
-						// echo '</pre>';
-
 						if (!empty($price))
 						{
 							if ($arParams['PRODUCT_DISPLAY_MODE'] === 'N' && $haveOffers)
@@ -219,7 +215,7 @@ if (!empty($arParams['PRODUCT_BLOCKS_ORDER']))
 							<div class="product-item-amount">
 								<div class="product-item-amount-field-container">
 									<span class="product-item-amount-field-btn-minus no-select" id="<?=$itemIds['QUANTITY_DOWN']?>">-</span>
-									<input class="product-item-amount-field" id="<?=$itemIds['QUANTITY']?>" type="number"
+									<input class="product-item-amount-field field_count" id="<?=$itemIds['QUANTITY']?>" type="number"
 										name="<?=$arParams['PRODUCT_QUANTITY_VARIABLE']?>"
 										value="<?=$measureRatio?>">
 									<span class="product-item-amount-field-btn-plus no-select" id="<?=$itemIds['QUANTITY_UP']?>">+</span>

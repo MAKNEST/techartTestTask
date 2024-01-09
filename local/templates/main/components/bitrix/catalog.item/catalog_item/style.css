@@ -18,7 +18,8 @@ input[type=number] {
     flex-direction: column;
     align-items: center;
     align-content: center;
-
+    justify-content: space-between;
+    
     font-family: 'Open sans';
 
     margin-top: 1rem;
@@ -92,11 +93,14 @@ input[type=number] {
 }
 
 .product-item-amount-field {
-    width: 19%;
+    width: 10%;
     outline: none !important;
     border: none;
     align-content: center;
-    padding-left: 8%;
+}
+
+.field_count {
+    margin-left: 6%;
 }
 
 .product-item-properties dd a {
