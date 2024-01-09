@@ -1,8 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("keywords", "Новости");
+$APPLICATION->SetPageProperty("description", "Новости");
 
-$APPLICATION->SetPageProperty("TITLE", "Новости");
-$APPLICATION->SetTitle("news");
+$APPLICATION->SetTitle("Новости");
 
 $GLOBALS['arrFilter'] = [];
 
@@ -11,9 +12,9 @@ if(!$USER->IsAuthorized()) {
 }
 
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"news_banner", 
-	array(
+	"bitrix:news.list",
+	"news_banner",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -26,6 +27,7 @@ if(!$USER->IsAuthorized()) {
 		"CACHE_TIME" => "",
 		"CACHE_TYPE" => "N",
 		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => "news_banner",
 		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "N",
 		"DISPLAY_DATE" => "Y",
@@ -33,14 +35,7 @@ if(!$USER->IsAuthorized()) {
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "ID",
-			1 => "CODE",
-			2 => "NAME",
-			3 => "PREVIEW_TEXT",
-			4 => "DETAIL_PICTURE",
-			5 => "",
-		),
+		"FIELD_CODE" => array(0=>"ID",1=>"CODE",2=>"NAME",3=>"PREVIEW_TEXT",4=>"DETAIL_PICTURE",5=>"",),
 		"FILTER_NAME" => "arrFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "1",
@@ -59,12 +54,7 @@ if(!$USER->IsAuthorized()) {
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "ANNOUNCE",
-			1 => "IMAGE",
-			2 => "SECRET_NEWS",
-			3 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"ANNOUNCE",1=>"IMAGE",2=>"SECRET_NEWS",3=>"",),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "N",
@@ -76,23 +66,19 @@ if(!$USER->IsAuthorized()) {
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "news_banner"
-	),
-	false
+		"STRICT_SECTION_CHECK" => "N"
+	)
 );?><br>
-<?php
+ <?php
 
 $categoryId = $_REQUEST['CHAPTER_ID'];
 if(!is_null($categoryId)) {
 	$arrFilter += ["PROPERTY_CHAPTER" => (int) $categoryId];
 }
-?>
-
-<?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"news_list", 
-	array(
+?> <?$APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"news_list",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -113,15 +99,7 @@ if(!is_null($categoryId)) {
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "ID",
-			1 => "CODE",
-			2 => "NAME",
-			3 => "PREVIEW_TEXT",
-			4 => "IBLOCK_ID",
-			5 => "",
-		),
-		"USE_FILTER" => "Y",
+		"FIELD_CODE" => array(0=>"ID",1=>"CODE",2=>"NAME",3=>"PREVIEW_TEXT",4=>"IBLOCK_ID",5=>"",),
 		"FILTER_NAME" => "arrFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "1",
@@ -140,12 +118,7 @@ if(!is_null($categoryId)) {
 		"PARENT_SECTION" => $_REQUEST["SECTION_ID"],
 		"PARENT_SECTION_CODE" => $_REQUEST["SECTION_CODE"],
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "ANNOUNCE",
-			1 => "SECRET_NEWS",
-			2 => "CHAPTER",
-			3 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"ANNOUNCE",1=>"SECRET_NEWS",2=>"CHAPTER",3=>"",),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "N",
@@ -157,7 +130,7 @@ if(!is_null($categoryId)) {
 		"SORT_BY2" => "PROPERTY_SECRET_NEWS",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "DESC",
-		"STRICT_SECTION_CHECK" => "N"
-	),
-	false
+		"STRICT_SECTION_CHECK" => "N",
+		"USE_FILTER" => "Y"
+	)
 );?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

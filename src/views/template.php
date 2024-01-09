@@ -30,7 +30,7 @@ if($page <= 1) {
 } else {
     $button_1_page = $page - 1;
 }
-// var_dump($arResult['LIST_PAGE_URL']);
+
 if($button_1_page > 0) {
     getButton([
         'link' => $arResult['sUrlPath'] . $button_1_page,

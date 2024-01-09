@@ -14,11 +14,8 @@ class Route
 		$res = 0;
 		foreach ($routes as $reg => $route) {
 			$res += preg_match($reg, $_SERVER['REQUEST_URI'], $matches);
-			// echo '<pre>';
-			// print_r($matches);
 			if($res > 0) {
 				$uri = explode('/', $matches[0]);
-				// echo "action: " . $routes[$reg]['action'];
 				
 				$controllerName = "Controllers\\Controller" . $routes[$reg]['controller'];
 

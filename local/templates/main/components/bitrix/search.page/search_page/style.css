@@ -1,0 +1,21 @@
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.search-result-title {
+	font-size: 2.6rem;
+	font-family: 'Open sans';
+}
+
+.search_item {
+	font-family: 'Open sans';
+}
+
+.search_link:hover {
+	.search_name h2 {
+		color: #9B407A;
+		transition: 0.3s;
+	}
+	
+}

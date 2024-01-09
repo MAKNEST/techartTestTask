@@ -13,7 +13,12 @@
     font-size: 1rem;
     outline: none;
     background-color: #fff;
+    font-weight: 400;
     margin: 0.5rem;
+}
+
+.seatch_button {
+    color: #9B407A;
 }
 
 .seatch_button:hover {

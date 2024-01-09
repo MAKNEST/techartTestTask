@@ -166,13 +166,8 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 		$labelPositionClass .= isset($positionClassMap[$pos]) ? ' '.$positionClassMap[$pos] : '';
 	}
 }
-
-// echo '<pre>';
-// print_r($arResult);
-// echo '</pre>';
 ?>
 
-<!-- new detail -->
 <div class="item_container">
 	<div class="product-item-detail-slider-images-container item_picture" data-entity="images-container">
 		<img src="<?= $arResult['DETAIL_PICTURE']['SRC']; ?>" alt="<?= $arResult['DETAIL_PICTURE']['ALT']; ?>" data-entity="image">

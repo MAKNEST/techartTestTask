@@ -101,6 +101,7 @@ input[type=number] {
 
 .field_count {
     margin-left: 6%;
+    font-size: 1rem;
 }
 
 .product-item-properties dd a {
@@ -110,11 +111,11 @@ input[type=number] {
 
 .product-item-amount-field-btn-minus,
 .product-item-amount-field-btn-plus {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color:#9B407A;
     border: 1px solid #9B407A;
     border-radius: 25px;
     padding: 0 0.6rem;
-    font-size: 1rem;
 }
 
 .product-item-amount-field-btn-minus:hover,

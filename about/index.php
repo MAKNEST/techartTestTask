@@ -1,7 +1,10 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+$APPLICATION->SetPageProperty("ROBOTS", "О нас");
+$APPLICATION->SetPageProperty("keywords", "О нас");
+$APPLICATION->SetPageProperty("description", "О нас");
 $APPLICATION->SetPageProperty("TITLE", "О нас");
-$APPLICATION->SetTitle("Главная");
+$APPLICATION->SetTitle("О нас");
 ?>
 
     <div class="container">

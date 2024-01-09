@@ -5,7 +5,6 @@ $APPLICATION->SetTitle("Книги");
 
 $GLOBALS['arrFilter'] = [];
 
-// var_dump($_SERVER['REQUEST_URI']);
 ?><div class="container">
 	 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 

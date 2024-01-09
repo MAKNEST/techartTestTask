@@ -25,13 +25,6 @@ use \Bitrix\Main\Localization\Loc;
  */
 ?>
 
-<?
-// echo '<pre>';
-// // print_r($item);
-// echo '</pre>';
-?>
-
-
 <? if ($itemHasDetailUrl): ?>
 <a class="product-item-image-wrapper" href="<?=$item['DETAIL_PAGE_URL']?>" title="<?=$imgTitle?>"
 		data-entity="image-wrapper">
@@ -52,11 +45,9 @@ use \Bitrix\Main\Localization\Loc;
 	<img src="<?=$item['PREVIEW_PICTURE']['SRC']?>">
 </div>
 <?
-// var_dump($item['SECOND_PICT']);
 if ($item['SECOND_PICT'])
 {
 	$bgImage = !empty($item['PREVIEW_PICTURE_SECOND']) ? $item['PREVIEW_PICTURE_SECOND']['SRC'] : $item['PREVIEW_PICTURE']['SRC'];
-	// var_dump($bgImage);
 	?>
 	<span class="product-item-image-alternative" id="<?=$itemIds['SECOND_PICT']?>"
 		style="background-image: url('<?=$bgImage?>'); <?=($showSlider ? 'display: none;' : '')?>">

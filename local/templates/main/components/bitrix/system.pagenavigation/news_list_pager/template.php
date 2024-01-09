@@ -42,7 +42,6 @@ if($button_1_page > 0) {
 }
 
 // кнопка 2
-// var_dump($countPages);
 $button_2_page = $button_1_page + 1;
 if($button_2_page <= $countPages) {
     getButton([
@@ -62,8 +61,6 @@ if(!($button_3_page > $countPages)) {
     ]);
 }
 
-// var_dump($page);
-// var_dump($countPages);
 // кнопка вперед
 if($page < $countPages ) {
     getButton([

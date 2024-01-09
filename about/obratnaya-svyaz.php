@@ -1,7 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("ROBOTS", "Обратная связь");
+$APPLICATION->SetPageProperty("keywords", "Обратная связь");
+$APPLICATION->SetPageProperty("description", "Обратная связь");
 $APPLICATION->SetPageProperty("TITLE", "Обратная связь");
-$APPLICATION->SetTitle("Обратная связь");
+$APPLICATION->SetTitle("Форма обратной связи");
 ?>
 
 <?$APPLICATION->IncludeComponent(

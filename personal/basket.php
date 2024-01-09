@@ -1,6 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("test");
+$APPLICATION->SetPageProperty("ROBOTS", "Корзина");
+$APPLICATION->SetPageProperty("TITLE", "Корзина");
+$APPLICATION->SetPageProperty("keywords", "Корзина");
+$APPLICATION->SetPageProperty("description", "Корзина");
+$APPLICATION->SetTitle("Корзина");
 
 global $USER;
 $USER->Authorize(1); 
@@ -35,9 +39,9 @@ $USER->Authorize(1);
 			4 => "TYPE",
 			5 => "SUM",
 		),
-		"COMPATIBLE_MODE" => "Y",
+		"COMPATIBLE_MODE" => "N",
 		"CORRECT_RATIO" => "N",
-		"DEFERRED_REFRESH" => "N",
+		"DEFERRED_REFRESH" => "Y",
 		"DISCOUNT_PERCENT_POSITION" => "bottom-right",
 		"DISPLAY_MODE" => "extended",
 		"EMPTY_BASKET_HINT_PATH" => "/books/",
@@ -76,7 +80,7 @@ $USER->Authorize(1);
 		"USE_ENHANCED_ECOMMERCE" => "N",
 		"USE_GIFTS" => "N",
 		"USE_PREPAYMENT" => "N",
-		"USE_PRICE_ANIMATION" => "Y",
+		"USE_PRICE_ANIMATION" => "N",
 		"COMPONENT_TEMPLATE" => ".default"
 	),
 	false

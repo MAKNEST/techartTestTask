@@ -47,26 +47,3 @@ $newsList = $data;
         ?>
     </div>
 </div>
-
-<?php
-// echo '<pre>';
-// // print_r($data);
-
-// $fileCSV = fopen('news.csv', 'w');
-
-// foreach ($data as $value) {
-//     $arr = [
-//         $value['id'],
-//         $value['date'],
-//         $value['title'],
-//         $value['announce'],
-//         $value['content'],
-//         $value['image'],
-//     ];
-
-//     fputcsv($fileCSV, $arr);
-//     // print_r($arr);
-//     echo '<hr>';
-// }
-// var_dump($fileCSV);
-// fclose($fileCSV);

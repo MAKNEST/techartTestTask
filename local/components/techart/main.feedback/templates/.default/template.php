@@ -28,15 +28,6 @@ if($arResult["OK_MESSAGE"] <> '')
 	?><div class="mf-ok-text"><?=$arResult["OK_MESSAGE"]?></div><?
 }
 
-// if(!empty($arResult["ERROR_MESSAGE"]))
-// {
-// 	foreach($arResult["ERROR_MESSAGE"] as $v) {
-// 		ShowError($v);
-// 	}
-// }
-
-// echo '<pre>';
-// print_r($arResult['ERROR_MESSAGE']);
 ?>
 
 <?=bitrix_sessid_post()?>
