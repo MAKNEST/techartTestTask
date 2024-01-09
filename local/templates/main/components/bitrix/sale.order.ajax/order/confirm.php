@@ -16,27 +16,25 @@ if ($arParams["SET_TITLE"] == "Y")
 
 <? if (!empty($arResult["ORDER"])): ?>
 
-	<div class="row mb-5">
-		<div class="col">
-			<?=Loc::getMessage("SOA_ORDER_SUC", array(
-				"#ORDER_DATE#" => $arResult["ORDER"]["DATE_INSERT"]->toUserTime()->format('d.m.Y H:i'),
-				"#ORDER_ID#" => htmlspecialcharsbx($arResult["ORDER"]["ACCOUNT_NUMBER"])
-			))?>
-			<? if (!empty($arResult['ORDER']["PAYMENT_ID"])): ?>
-				<?=Loc::getMessage("SOA_PAYMENT_SUC", array(
-					"#PAYMENT_ID#" => htmlspecialcharsbx($arResult['PAYMENT'][$arResult['ORDER']["PAYMENT_ID"]]['ACCOUNT_NUMBER'])
+	<table class="sale_order_full_table">
+		<tr>
+			<td>
+				<?=Loc::getMessage("SOA_ORDER_SUC", array(
+					"#ORDER_DATE#" => $arResult["ORDER"]["DATE_INSERT"]->toUserTime()->format('d.m.Y H:i'),
+					"#ORDER_ID#" => htmlspecialcharsbx($arResult["ORDER"]["ACCOUNT_NUMBER"])
 				))?>
-			<? endif ?>
-		</div>
-	</div>
-
-	<? if ($arParams['NO_PERSONAL'] !== 'Y'): ?>
-		<div class="row mb-5">
-			<div class="col">
-				<?=Loc::getMessage('SOA_ORDER_SUC1', ['#LINK#' => $arParams['PATH_TO_PERSONAL']])?>
-			</div>
-		</div>
-	<? endif; ?>
+				<? if (!empty($arResult['ORDER']["PAYMENT_ID"])): ?>
+					<?=Loc::getMessage("SOA_PAYMENT_SUC", array(
+						"#PAYMENT_ID#" => htmlspecialcharsbx($arResult['PAYMENT'][$arResult['ORDER']["PAYMENT_ID"]]['ACCOUNT_NUMBER'])
+					))?>
+				<? endif ?>
+				<? if ($arParams['NO_PERSONAL'] !== 'Y'): ?>
+					<br /><br />
+					<?=Loc::getMessage('SOA_ORDER_SUC1', ['#LINK#' => $arParams['PATH_TO_PERSONAL']])?>
+				<? endif; ?>
+			</td>
+		</tr>
+	</table>
 
 	<?
 	if ($arResult["ORDER"]["IS_ALLOW_PAY"] === 'Y')
@@ -56,52 +54,52 @@ if ($arParams["SET_TITLE"] == "Y")
 						if (empty($arPaySystem["ERROR"]))
 						{
 							?>
+							<br /><br />
 
-							<div class="row mb-2">
-								<div class="col">
-									<h3 class="pay_name"><?=Loc::getMessage("SOA_PAY") ?></h3>
-								</div>
-							</div>
-							<div class="row mb-2 align-items-center">
-								<div class="col-auto"><strong><?=$arPaySystem["NAME"] ?></strong></div>
-								<div class="col"><?=CFile::ShowImage($arPaySystem["LOGOTIP"], 100, 100, "border=0\" style=\"width:100px\"", "", false) ?></div>
-							</div>
-							<div class="row mb-2">
-								<div class="col">
-									<? if ($arPaySystem["ACTION_FILE"] <> '' && $arPaySystem["NEW_WINDOW"] == "Y" && $arPaySystem["IS_CASH"] != "Y"): ?>
-									<?
-										$orderAccountNumber = urlencode(urlencode($arResult["ORDER"]["ACCOUNT_NUMBER"]));
-										$paymentAccountNumber = $payment["ACCOUNT_NUMBER"];
-									?>
-									<script>
-										window.open('<?=$arParams["PATH_TO_PAYMENT"]?>?ORDER_ID=<?=$orderAccountNumber?>&PAYMENT_ID=<?=$paymentAccountNumber?>');
-									</script>
-									<?=Loc::getMessage("SOA_PAY_LINK", array("#LINK#" => $arParams["PATH_TO_PAYMENT"]."?ORDER_ID=".$orderAccountNumber."&PAYMENT_ID=".$paymentAccountNumber))?>
-									<? if (CSalePdf::isPdfAvailable() && $arPaySystem['IS_AFFORD_PDF']): ?>
-									<br/>
-										<?=Loc::getMessage("SOA_PAY_PDF", array("#LINK#" => $arParams["PATH_TO_PAYMENT"]."?ORDER_ID=".$orderAccountNumber."&pdf=1&DOWNLOAD=Y"))?>
-									<? endif ?>
-									<? else: ?>
-										<?=$arPaySystem["BUFFERED_OUTPUT"]?>
-									<? endif ?>
-								</div>
-							</div>
-
-
+							<table class="sale_order_full_table">
+								<tr>
+									<td class="ps_logo">
+										<div class="pay_name"><?=Loc::getMessage("SOA_PAY") ?></div>
+										<?=CFile::ShowImage($arPaySystem["LOGOTIP"], 100, 100, "border=0\" style=\"width:100px\"", "", false) ?>
+										<div class="paysystem_name"><?=$arPaySystem["NAME"] ?></div>
+										<br/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<? if ($arPaySystem["ACTION_FILE"] <> '' && $arPaySystem["NEW_WINDOW"] == "Y" && $arPaySystem["IS_CASH"] != "Y"): ?>
+											<?
+											$orderAccountNumber = urlencode(urlencode($arResult["ORDER"]["ACCOUNT_NUMBER"]));
+											$paymentAccountNumber = $payment["ACCOUNT_NUMBER"];
+											?>
+											<script>
+												window.open('<?=$arParams["PATH_TO_PAYMENT"]?>?ORDER_ID=<?=$orderAccountNumber?>&PAYMENT_ID=<?=$paymentAccountNumber?>');
+											</script>
+										<?=Loc::getMessage("SOA_PAY_LINK", array("#LINK#" => $arParams["PATH_TO_PAYMENT"]."?ORDER_ID=".$orderAccountNumber."&PAYMENT_ID=".$paymentAccountNumber))?>
+										<? if (CSalePdf::isPdfAvailable() && $arPaySystem['IS_AFFORD_PDF']): ?>
+										<br/>
+											<?=Loc::getMessage("SOA_PAY_PDF", array("#LINK#" => $arParams["PATH_TO_PAYMENT"]."?ORDER_ID=".$orderAccountNumber."&pdf=1&DOWNLOAD=Y"))?>
+										<? endif ?>
+										<? else: ?>
+											<?=$arPaySystem["BUFFERED_OUTPUT"]?>
+										<? endif ?>
+									</td>
+								</tr>
+							</table>
 
 							<?
 						}
 						else
 						{
 							?>
-							<div class="alert alert-danger" role="alert"><?=Loc::getMessage("SOA_ORDER_PS_ERROR")?></div>
+							<span style="color:red;"><?=Loc::getMessage("SOA_ORDER_PS_ERROR")?></span>
 							<?
 						}
 					}
 					else
 					{
 						?>
-						<div class="alert alert-danger" role="alert"><?=Loc::getMessage("SOA_ORDER_PS_ERROR")?></div>
+						<span style="color:red;"><?=Loc::getMessage("SOA_ORDER_PS_ERROR")?></span>
 						<?
 					}
 				}
@@ -111,20 +109,23 @@ if ($arParams["SET_TITLE"] == "Y")
 	else
 	{
 		?>
-		<div class="alert alert-danger" role="alert"><?=$arParams['MESS_PAY_SYSTEM_PAYABLE_ERROR']?></div>
+		<br /><strong><?=$arParams['MESS_PAY_SYSTEM_PAYABLE_ERROR']?></strong>
 		<?
 	}
 	?>
 
 <? else: ?>
 
+	<b><?=Loc::getMessage("SOA_ERROR_ORDER")?></b>
+	<br /><br />
 
-	<div class="row mb-2">
-		<div class="col">
-			<div class="alert alert-danger" role="alert"><strong><?=Loc::getMessage("SOA_ERROR_ORDER")?></strong><br />
-				<?=Loc::getMessage("SOA_ERROR_ORDER_LOST", ["#ORDER_ID#" => htmlspecialcharsbx($arResult["ACCOUNT_NUMBER"])])?><br />
-				<?=Loc::getMessage("SOA_ERROR_ORDER_LOST1")?></div>
-		</div>
-	</div>
+	<table class="sale_order_full_table">
+		<tr>
+			<td>
+				<?=Loc::getMessage("SOA_ERROR_ORDER_LOST", ["#ORDER_ID#" => htmlspecialcharsbx($arResult["ACCOUNT_NUMBER"])])?>
+				<?=Loc::getMessage("SOA_ERROR_ORDER_LOST1")?>
+			</td>
+		</tr>
+	</table>
 
 <? endif ?>

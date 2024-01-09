@@ -1,5 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("TITLE", "Оформить заказ");
 $APPLICATION->SetTitle("Оформить заказ");
 ?><?$APPLICATION->IncludeComponent("bitrix:sale.order.ajax", "order", Array(
 	"ACTION_VARIABLE" => "soa-action",	// Название переменной, в которой передается действие
@@ -57,7 +58,7 @@ $APPLICATION->SetTitle("Оформить заказ");
 		"SKIP_USELESS_BLOCK" => "Y",	// Пропускать шаги, в которых один элемент для выбора
 		"SPOT_LOCATION_BY_GEOIP" => "Y",	// Определять местоположение покупателя по IP-адресу
 		"TEMPLATE_LOCATION" => "popup",	// Визуальный вид контрола выбора местоположений
-		"TEMPLATE_THEME" => "blue",	// Цветовая тема
+		"TEMPLATE_THEME" => "site",	// Цветовая тема
 		"USER_CONSENT" => "N",	// Запрашивать согласие
 		"USER_CONSENT_ID" => "0",	// Соглашение
 		"USER_CONSENT_IS_CHECKED" => "Y",	// Галка по умолчанию проставлена
@@ -70,7 +71,7 @@ $APPLICATION->SetTitle("Оформить заказ");
 		"USE_PRELOAD" => "Y",	// Автозаполнение оплаты и доставки по предыдущему заказу
 		"USE_PREPAYMENT" => "N",	// Использовать предавторизацию для оформления заказа (PayPal Express Checkout)
 		"USE_YM_GOALS" => "N",	// Использовать цели счетчика Яндекс.Метрики
-		"COMPONENT_TEMPLATE" => "bootstrap_v4"
+		"COMPONENT_TEMPLATE" => ".default"
 	),
 	false
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

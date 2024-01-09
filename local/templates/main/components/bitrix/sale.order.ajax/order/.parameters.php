@@ -15,13 +15,22 @@ if ($eshop = \Bitrix\Main\ModuleManager::isModuleInstalled('bitrix.eshop'))
 {
 	$arThemes['site'] = GetMessage('THEME_SITE');
 }
-
-$arThemes = array(
+$arThemesList = array(
 	'blue' => GetMessage('THEME_BLUE'),
 	'green' => GetMessage('THEME_GREEN'),
 	'red' => GetMessage('THEME_RED'),
 	'yellow' => GetMessage('THEME_YELLOW')
 );
+$dir = $_SERVER["DOCUMENT_ROOT"]."/bitrix/css/main/themes/";
+if (is_dir($dir))
+{
+	foreach ($arThemesList as $themeID => $themeName)
+	{
+		if (!is_file($dir.$themeID.'/style.css'))
+			continue;
+		$arThemes[$themeID] = $themeName;
+	}
+}
 
 $arTemplateParameters = array(
 	"TEMPLATE_THEME" => array(
@@ -108,12 +117,14 @@ $arTemplateParameters = array(
 	"DELIVERY_FADE_EXTRA_SERVICES" => array(
 		"NAME" => GetMessage("DELIVERY_FADE_EXTRA_SERVICES"),
 		"TYPE" => "CHECKBOX",
+		"MULTIPLE" => "N",
 		"DEFAULT" => "N",
 		"PARENT" => "VISUAL",
 	),
 	"SHOW_NEAREST_PICKUP" => array(
 		"NAME" => GetMessage("SHOW_NEAREST_PICKUP"),
 		"TYPE" => "CHECKBOX",
+		"MULTIPLE" => "N",
 		"DEFAULT" => "N",
 		"PARENT" => "VISUAL",
 	),
@@ -141,6 +152,7 @@ $arTemplateParameters = array(
 	"SHOW_PICKUP_MAP" => array(
 		"NAME" => GetMessage("SHOW_PICKUP_MAP"),
 		"TYPE" => "CHECKBOX",
+		"MULTIPLE" => "N",
 		"DEFAULT" => "Y",
 		"PARENT" => "VISUAL",
 	),
@@ -196,7 +208,7 @@ $arTemplateParameters = array(
 		"TYPE" => "CHECKBOX",
 		"DEFAULT" => "N",
 		"REFRESH" => "Y",
-		"PARENT" => "BASE",
+		"PARENT" => "BASE"
 	),
 	"ALLOW_NEW_PROFILE" => array(
 		"NAME" => GetMessage("ALLOW_NEW_PROFILE"),
@@ -207,7 +219,7 @@ $arTemplateParameters = array(
 				? 'N'
 				: 'Y'
 		,
-		"PARENT" => "BASE",
+		"PARENT" => "BASE"
 	),
 	"SHOW_COUPONS" => array(
 		"NAME" => GetMessage("SHOW_COUPONS"),

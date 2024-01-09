@@ -103,7 +103,10 @@ if (!empty($arParams['PRODUCT_BLOCKS_ORDER']))
 						<?
 					}
 					?>
-					<span class="product-item-price-current" id="<?=$itemIds['PRICE']?>">
+					<span class="product-item-price-current" id="<?=$itemIds['PRICE']?>"
+					<?php if ($price['BASE_PRICE'] > $price['PRICE']): ?>
+						style="color: red;"
+					<?php endif; ?>>
 						<?
 						if (!empty($price))
 						{
@@ -122,12 +125,11 @@ if (!empty($arParams['PRODUCT_BLOCKS_ORDER']))
 							{
 								if ($price['BASE_PRICE'] > $price['PRICE'])
 								{
-									echo '<span class="old_price">' . $price['PRINT_BASE_PRICE'] . '</span> ';
 									echo '<span class="new_price">' . $price['PRINT_DISCOUNT'] . '</span>';
 								}
 								else 
 								{
-									echo '<span>' . $price['PRINT_BASE_PRICE'] . '</span> ';
+									echo $price['PRINT_BASE_PRICE'];
 								}
 							}
 						}

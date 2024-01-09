@@ -62,7 +62,8 @@ input[type=number] {
     margin-top: 1rem;
 }
 
-.old_price {
+.old_price,
+.product-item-price-old {
     text-decoration: line-through;
 }
 

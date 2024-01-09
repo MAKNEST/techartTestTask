@@ -12,6 +12,12 @@
 /** @var CBitrixComponent $component */
 ?>
 
+<?
+// echo '<pre>';
+// print_r($arResult);
+// echo '</pre>';
+?>
+
 <div class="container">
 	<form action="" method="get">
 		<input class="search_input" type="text" name="q" value="<?=$arResult["REQUEST"]["QUERY"]?>" size="40" />
@@ -19,27 +25,37 @@
 	</form>
 
 	<h2 class="search-result-title">Результаты поиска</h2>
+	
+	<?php if (!empty($arResult['SEARCH'])): ?>
+		<?php foreach ($arResult['SEARCH'] as $item): ?>
+			<div class="search_item">
+				<a class="search_link" href="<?= $item['URL_WO_PARAMS']; ?>">
+					<div class="search_name">
+						<h2>
+							<?= $item['TITLE'] ?>
+						</h2>
+					</div>
 
-	<?php foreach ($arResult['SEARCH'] as $item): ?>
-		<div class="search_item">
-			<a class="search_link" href="<?= $item['URL_WO_PARAMS']; ?>">
-				<div class="search_name">
-					<h2>
-						<?= $item['TITLE'] ?>
-					</h2>
-				</div>
+					<div class="serch_text">
+						<?= $item['BODY_FORMATED']; ?>
+					</div>
 
-				<div class="serch_text">
-					<?= $item['BODY_FORMATED']; ?>
-				</div>
-
-				<div class="date">
-					<?= $item['DATE_CHANGE']; ?>
-				</div>
-			</a>
-		</div>
-	<?php endforeach; ?>
-
+					<div class="date">
+						<?= $item['DATE_CHANGE']; ?>
+					</div>
+				</a>
+			</div>
+			<hr>
+		<?php endforeach; ?>
+	<?php else: ?>
+		<p class="search_notfound">
+			<?php if (is_null($arResult['REQUEST']['ORIGINAL_QUERY'])): ?>
+				Поисковый запрос не может быть пустым
+			<?php else: ?>
+				По запросу "<?= $arResult['REQUEST']['ORIGINAL_QUERY']; ?>" ничего не найдено
+			<?php endif; ?>
+		</p>
+	<?php endif; ?>
 </div>
 
 <script>
