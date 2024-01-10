@@ -192,33 +192,27 @@ if (!isset($arParams['HIDE_SECTION_DESCRIPTION']) || $arParams['HIDE_SECTION_DES
 				switch ($rowData['VARIANT'])
 				{
 					case 6:
-						?>
-							<div class="row">
-								<?
-								foreach ($rowItems as $item)
-								{
-									$APPLICATION->IncludeComponent(
-										'bitrix:catalog.item',
-										'catalog_item',
-										array(
-											'RESULT' => array(
-												'ITEM' => $item,
-												'AREA_ID' => $areaIds[$item['ID']],
-												'TYPE' => $rowData['TYPE'],
-												'BIG_LABEL' => 'N',
-												'BIG_DISCOUNT_PERCENT' => 'N',
-												'BIG_BUTTONS' => 'N',
-												'SCALABLE' => 'N'
-											),
-											'PARAMS' => $generalParams + $itemParameters[$item['ID']],
-										),
-										$component,
-										array('HIDE_ICONS' => 'Y')
-									);
-								}
-								?>
-							</div>
-						<?
+						foreach ($rowItems as $item)
+						{
+							$APPLICATION->IncludeComponent(
+								'bitrix:catalog.item',
+								'catalog_item',
+								array(
+									'RESULT' => array(
+										'ITEM' => $item,
+										'AREA_ID' => $areaIds[$item['ID']],
+										'TYPE' => $rowData['TYPE'],
+										'BIG_LABEL' => 'N',
+										'BIG_DISCOUNT_PERCENT' => 'N',
+										'BIG_BUTTONS' => 'N',
+										'SCALABLE' => 'N'
+									),
+									'PARAMS' => $generalParams + $itemParameters[$item['ID']],
+								),
+								$component,
+								array('HIDE_ICONS' => 'Y')
+							);
+						}
 						break;
 					}
 				?>
@@ -249,17 +243,6 @@ if (!isset($arParams['HIDE_SECTION_DESCRIPTION']) || $arParams['HIDE_SECTION_DES
 	?>
 </div>
 <?
-if ($showLazyLoad)
-{
-	?>
-	<div class="row bx-<?=$arParams['TEMPLATE_THEME']?>">
-		<div class="btn btn-default btn-lg center-block" style="margin: 15px;"
-			data-use="show-more-<?=$navParams['NavNum']?>">
-			<?=$arParams['MESS_BTN_LAZY_LOAD']?>
-		</div>
-	</div>
-	<?
-}
 
 if ($showBottomPager)
 {

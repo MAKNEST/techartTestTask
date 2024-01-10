@@ -67,7 +67,7 @@ $USER->Authorize(1);
 		"PRICE_DISPLAY_MODE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
 		"PRODUCT_BLOCKS_ORDER" => "props,sku,columns",
-		"QUANTITY_FLOAT" => "Y",
+		"QUANTITY_FLOAT" => "N",
 		"SET_TITLE" => "Y",
 		"SHOW_DISCOUNT_PERCENT" => "N",
 		"SHOW_FILTER" => "N",

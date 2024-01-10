@@ -37,10 +37,6 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
 			<div class="row">
 				<?foreach($arResult["ITEMS"] as $key=>$arItem)//prices
 				{
-					// echo '<pre>';
-					// print_r($arItem);
-					// echo '</pre>';
-
 					$key = $arItem["ENCODED_ID"];
 					if(isset($arItem["PRICE"])):
 						if ($arItem["VALUES"]["MAX"]["VALUE"] - $arItem["VALUES"]["MIN"]["VALUE"] <= 0)

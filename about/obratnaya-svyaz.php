@@ -4,7 +4,7 @@ $APPLICATION->SetPageProperty("ROBOTS", "Обратная связь");
 $APPLICATION->SetPageProperty("keywords", "Обратная связь");
 $APPLICATION->SetPageProperty("description", "Обратная связь");
 $APPLICATION->SetPageProperty("TITLE", "Обратная связь");
-$APPLICATION->SetTitle("Форма обратной связи");
+$APPLICATION->SetTitle("Обратная связь");
 ?>
 
 <?$APPLICATION->IncludeComponent(

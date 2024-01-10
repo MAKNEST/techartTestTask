@@ -93,6 +93,7 @@ if (!empty($arParams['PRODUCT_BLOCKS_ORDER']))
 			case 'price': ?>
 				<div class="product-item-info-container product-item-price-container" data-entity="price-block">
 					<?
+					
 					if ($arParams['SHOW_OLD_PRICE'] === 'Y')
 					{
 						?>
@@ -104,33 +105,20 @@ if (!empty($arParams['PRODUCT_BLOCKS_ORDER']))
 					}
 					?>
 					<span class="product-item-price-current" id="<?=$itemIds['PRICE']?>"
-					<?php if ($price['BASE_PRICE'] > $price['PRICE']): ?>
-						style="color: red;"
-					<?php endif; ?>>
+						<?php if ($price['BASE_PRICE'] > $price['PRICE']): ?>
+							style="color: red;"
+						<?php endif; ?>>
+						
 						<?
 						if (!empty($price))
 						{
-							if ($arParams['PRODUCT_DISPLAY_MODE'] === 'N' && $haveOffers)
+							if ($price['BASE_PRICE'] > $price['PRICE'])
 							{
-								echo Loc::getMessage(
-									'CT_BCI_TPL_MESS_PRICE_SIMPLE_MODE',
-									array(
-										'#PRICE#' => $price['PRINT_RATIO_PRICE'],
-										'#VALUE#' => $measureRatio,
-										'#UNIT#' => $minOffer['ITEM_MEASURE']['TITLE']
-									)
-								);
+								echo $price['PRINT_DISCOUNT'];
 							}
-							else
+							else 
 							{
-								if ($price['BASE_PRICE'] > $price['PRICE'])
-								{
-									echo '<span class="new_price">' . $price['PRINT_DISCOUNT'] . '</span>';
-								}
-								else 
-								{
-									echo $price['PRINT_BASE_PRICE'];
-								}
+								echo $price['PRINT_BASE_PRICE'];
 							}
 						}
 						?>

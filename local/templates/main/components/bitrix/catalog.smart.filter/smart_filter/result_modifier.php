@@ -42,17 +42,24 @@ $arParams["POPUP_POSITION"] = (isset($arParams["POPUP_POSITION"]) && in_array($a
 // print_r($arResult);
 // echo '</pre>';
 
-
 $iterator = CIBlockElement::GetList(
-	array(),
-	array('IBLOCK_ID' => 4, '=PROPERTY_DISCOUNT_VALUE' => 'Да'),
+	array('CATALOG_PRICE_1' => 'ASC'),
+	array('IBLOCK_ID' => 4),
 	false,
 	false,
-	array('ID', 'CATALOG_GROUP_2', 'PROPERTY_DISCOUNT')
+	array('ID', 'PROPERTY_DISCOUNT', 'CATALOG_GROUP_2', 'CATALOG_PRICE_1')
 );
 
+$arPrices = [];
 while ($res = $iterator->Fetch()) {
-	echo '<pre>';
-	print_r($res);
-	echo '</pre>';
+	if ($res['PROPERTY_DISCOUNT_VALUE'] === 'Да') {
+		$arPrices[] = (int) ($res['CATALOG_PRICE_1'] * 0.8);
+	} else {
+		$arPrices[] = $res['CATALOG_PRICE_1'];
+	}
 }
+
+asort($arPrices);
+
+$arResult['ITEMS']['retail']['VALUES']['MIN']['VALUE'] = $arPrices[0];
+$arResult['ITEMS']['retail']['VALUES']['MAX']['VALUE'] = end($arPrices);
