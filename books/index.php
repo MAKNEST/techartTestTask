@@ -6,14 +6,14 @@ $APPLICATION->SetTitle("Книги");
 $GLOBALS['arrFilter'] = [];
 
 ?><div class="container">
-	 <?$APPLICATION->IncludeComponent(
+	<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
 	"catalog_books", 
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_PICT_PROP" => "-",
-		"ADD_PROPERTIES_TO_BASKET" => "Y",
+		"ADD_PROPERTIES_TO_BASKET" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
@@ -115,7 +115,7 @@ $GLOBALS['arrFilter'] = [];
 		"LIST_META_DESCRIPTION" => "-",
 		"LIST_META_KEYWORDS" => "-",
 		"LIST_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
-		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'6','BIG_DATA':false}]",
+		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'6','BIG_DATA':false},{'VARIANT':'6','BIG_DATA':false},{'VARIANT':'6','BIG_DATA':false},{'VARIANT':'6','BIG_DATA':false},{'VARIANT':'6','BIG_DATA':false}]",
 		"LIST_PROPERTY_CODE_MOBILE" => array(
 			0 => "AUTHOR",
 		),
@@ -143,8 +143,8 @@ $GLOBALS['arrFilter'] = [];
 		"PAGER_SHOW_ALWAYS" => "Y",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Товары",
-		"PAGE_ELEMENT_COUNT" => "6",
-		"PARTIAL_PRODUCT_PROPERTIES" => "Y",
+		"PAGE_ELEMENT_COUNT" => "30",
+		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRICE_CODE" => array(
 			0 => "retail",
 		),
@@ -221,7 +221,7 @@ $GLOBALS['arrFilter'] = [];
 		"USE_SALE_BESTSELLERS" => "Y",
 		"USE_STORE" => "N",
 		"SEF_URL_TEMPLATES" => array(
-			"sections" => "",
+			"sections" => "/books/",
 			"section" => "#SECTION_CODE#/",
 			"element" => "#SECTION_CODE#/#ELEMENT_CODE#/",
 			"compare" => "compare.php?action=#ACTION_CODE#",

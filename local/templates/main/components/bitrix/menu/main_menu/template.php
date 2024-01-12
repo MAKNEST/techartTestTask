@@ -62,26 +62,35 @@ if (!empty($arResult)): ?>
 
                     <div class="bassket">
                     <?php
-                        $APPLICATION->IncludeComponent("bitrix:sale.basket.basket.line", "menu_basket", Array(
-                            "COMPONENT_TEMPLATE" => ".default",
-                                "PATH_TO_BASKET" => "/personal/basket.php",	// Страница корзины
-                                "PATH_TO_ORDER" => "/personal/order/make/",	// Страница оформления заказа
-                                "SHOW_NUM_PRODUCTS" => "Y",	// Показывать количество товаров
-                                "SHOW_TOTAL_PRICE" => "Y",	// Показывать общую сумму по товарам
-                                "SHOW_EMPTY_VALUES" => "Y",	// Выводить нулевые значения в пустой корзине
-                                "SHOW_PERSONAL_LINK" => "Y",	// Отображать персональный раздел
-                                "PATH_TO_PERSONAL" => "/personal/",	// Страница персонального раздела
-                                "SHOW_AUTHOR" => "N",	// Добавить возможность авторизации
-                                "PATH_TO_AUTHORIZE" => "",	// Страница авторизации
-                                "SHOW_REGISTRATION" => "Y",	// Добавить возможность регистрации
-                                "PATH_TO_REGISTER" => "/auth/register.php",	// Страница регистрации
-                                "PATH_TO_PROFILE" => "/personal/",	// Страница профиля
-                                "SHOW_PRODUCTS" => "N",	// Показывать список товаров
-                                "POSITION_FIXED" => "N",	// Отображать корзину поверх шаблона
-                                "HIDE_ON_BASKET_PAGES" => "N",	// Не показывать на страницах корзины и оформления заказа
-                            ),
-                            false
-                        ); ?>
+                        $APPLICATION->IncludeComponent(
+	"bitrix:sale.basket.basket.line", 
+	"basket_line", 
+	array(
+		"COMPONENT_TEMPLATE" => "basket_line",
+		"PATH_TO_BASKET" => "/personal/basket.php",
+		"PATH_TO_ORDER" => "/personal/basket.php",
+		"SHOW_NUM_PRODUCTS" => "Y",
+		"SHOW_TOTAL_PRICE" => "Y",
+		"SHOW_EMPTY_VALUES" => "Y",
+		"SHOW_PERSONAL_LINK" => "N",
+		"PATH_TO_PERSONAL" => "/personal/",
+		"SHOW_AUTHOR" => "N",
+		"PATH_TO_AUTHORIZE" => "",
+		"SHOW_REGISTRATION" => "N",
+		"PATH_TO_REGISTER" => "/auth/register.php",
+		"PATH_TO_PROFILE" => "/personal/",
+		"SHOW_PRODUCTS" => "Y",
+		"POSITION_FIXED" => "N",
+		"HIDE_ON_BASKET_PAGES" => "N",
+		"SHOW_DELAY" => "N",
+		"SHOW_NOTAVAIL" => "Y",
+		"SHOW_IMAGE" => "Y",
+		"SHOW_PRICE" => "Y",
+		"SHOW_SUMMARY" => "Y",
+		"MAX_IMAGE_SIZE" => "70"
+	),
+	false
+); ?>
                     </div>
                 </div>
             </div>

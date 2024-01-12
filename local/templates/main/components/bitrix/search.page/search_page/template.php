@@ -12,12 +12,6 @@
 /** @var CBitrixComponent $component */
 ?>
 
-<?
-// echo '<pre>';
-// print_r($arResult);
-// echo '</pre>';
-?>
-
 <div class="container">
 	<form action="" method="get">
 		<input class="search_input" type="text" name="q" value="<?=$arResult["REQUEST"]["QUERY"]?>" size="40" />

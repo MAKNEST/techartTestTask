@@ -116,6 +116,9 @@ if (!isset($arParams['HIDE_SECTION_DESCRIPTION']) || $arParams['HIDE_SECTION_DES
 	</div>
 	<?
 }
+
+$arParams['USE_PRODUCT_QUANTITY'] = 'Y';
+
 ?>
 
 <div class="catalog-section bx-<?=$arParams['TEMPLATE_THEME']?>" data-entity="<?=$containerName?>">

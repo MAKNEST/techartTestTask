@@ -140,19 +140,6 @@ li {
     flex-wrap: wrap;
     align-content: center;
 }
-
-/*   
-.navbar a {
-    line-height: 132%;
-    font-family: 'Open Sans';
-    font-weight: 400;
-    text-decoration: none;
-    transition: 0.3s;
-
-    float: left;
-    text-align: center;
-    padding: 14px 16px;
-} */
   
 .dropdown {
     float: left;

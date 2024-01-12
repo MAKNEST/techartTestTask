@@ -11,7 +11,7 @@ $USER->Authorize(1);
 
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:sale.basket.basket", 
-	".default", 
+	"basket", 
 	array(
 		"ACTION_VARIABLE" => "basketAction",
 		"ADDITIONAL_PICT_PROP_4" => "-",
@@ -40,7 +40,7 @@ $USER->Authorize(1);
 			5 => "SUM",
 		),
 		"COMPATIBLE_MODE" => "N",
-		"CORRECT_RATIO" => "N",
+		"CORRECT_RATIO" => "Y",
 		"DEFERRED_REFRESH" => "Y",
 		"DISCOUNT_PERCENT_POSITION" => "bottom-right",
 		"DISPLAY_MODE" => "extended",
@@ -72,7 +72,7 @@ $USER->Authorize(1);
 		"SHOW_DISCOUNT_PERCENT" => "N",
 		"SHOW_FILTER" => "N",
 		"SHOW_RESTORE" => "N",
-		"TEMPLATE_THEME" => "blue",
+		"TEMPLATE_THEME" => "",
 		"TOTAL_BLOCK_DISPLAY" => array(
 			0 => "bottom",
 		),
@@ -81,7 +81,7 @@ $USER->Authorize(1);
 		"USE_GIFTS" => "N",
 		"USE_PREPAYMENT" => "N",
 		"USE_PRICE_ANIMATION" => "N",
-		"COMPONENT_TEMPLATE" => ".default"
+		"COMPONENT_TEMPLATE" => "basket"
 	),
 	false
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
