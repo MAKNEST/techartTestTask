@@ -1,0 +1,3 @@
+<?
+$PERM["register.php"]["*"]="R";
+?>

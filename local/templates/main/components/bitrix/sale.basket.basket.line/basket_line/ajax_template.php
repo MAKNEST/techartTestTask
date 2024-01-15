@@ -53,7 +53,7 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
 				</div>
 
 				<div class="basket_button_continer">
-					<a href="<?=$arParams["PATH_TO_ORDER"]?>" class="basket_link"><?=GetMessage("TSB1_2ORDER")?></a>
+					<a href="<?=$arParams["PATH_TO_BASKET"]?>" class="basket_link"><?=GetMessage("TSB1_CART")?></a>
 				</div>
 			</div>
 		</div>	

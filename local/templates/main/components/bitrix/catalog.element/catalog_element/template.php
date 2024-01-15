@@ -168,7 +168,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 }
 ?>
 
-<div class="item_container">
+<div class="item_container" >
 	<div class="product-item-detail-slider-images-container item_picture" data-entity="images-container">
 		<img src="<?= $arResult['DETAIL_PICTURE']['SRC']; ?>" alt="<?= $arResult['DETAIL_PICTURE']['ALT']; ?>" data-entity="image">
 	</div>
@@ -180,15 +180,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 
 		<div class="genre_container">
 			<?= '<span class="genre_name">' . $arResult['PROPERTIES']['GENRE']['NAME'] . '</span>'; ?>
-			<?php
-			// echo '<pre>';
-			// print_r($arResult['PROPERTIES']['GENRE']['VALUE']);
-			// echo '</pre>';
-
-			foreach ($arResult['PROPERTIES']['GENRE']['VALUE_ENUM'] as $genre) {
-				echo '<span class="genre">' . $genre . '</span>';
-			}
-			?>
+			<?= implode(' / ', $arResult['PROPERTIES']['GENRE']['VALUE_ENUM']); ?>
 		</div>
 
 		<div class="binding_container">
@@ -237,7 +229,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 			</div>
 		</div>
 
-		<div class="product-item-detail-info-container">
+		<div class="product-item-detail-info-container" data-entity="main-button-container" id="<?=$itemIds['BASKET_ACTIONS_ID']?>">
 			<a class="btn <?=$showButtonClassName?> product-item-detail-buy-button" id="<?=$itemIds['ADD_BASKET_LINK']?>"
 				href="javascript:void(0);">
 				<span><?=$arParams['MESS_BTN_ADD_TO_BASKET']?></span>
@@ -262,122 +254,11 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 col-sm-12">
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="product-item-detail-info-section">
-							
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="product-item-detail-pay-block">
-							<?php
-							
-							foreach ($arParams['PRODUCT_PAY_BLOCK_ORDER'] as $blockName)
-							{
-								switch ($blockName)
-								{
-									case 'price':
-										?>
-										<div class="product-item-detail-info-container">
-											<div class="product-item-detail-price-current" id="<?=$itemIds['PRICE_ID']?>">
-												
-											</div>
-										</div>
-										<?php
-										break;
 
-									case 'quantityLimit':
-										if ($arParams['SHOW_MAX_QUANTITY'] !== 'N')
-										{
-											if ($haveOffers)
-											{
-												?>
-												<div class="product-item-detail-info-container" id="<?=$itemIds['QUANTITY_LIMIT']?>" style="display: none;">
-													<div class="product-item-detail-info-container-title">
-														<?=$arParams['MESS_SHOW_MAX_QUANTITY']?>:
-														<span class="product-item-quantity" data-entity="quantity-limit-value"></span>
-													</div>
-												</div>
-												<?php
-											}
-											else
-											{
-												if (
-													$measureRatio
-													&& (float)$actualItem['PRODUCT']['QUANTITY'] > 0
-													&& $actualItem['CHECK_QUANTITY']
-												)
-												{
-													?>
-													<div class="product-item-detail-info-container" id="<?=$itemIds['QUANTITY_LIMIT']?>">
-														<div class="product-item-detail-info-container-title">
-															<?=$arParams['MESS_SHOW_MAX_QUANTITY']?>:
-															<span class="product-item-quantity" data-entity="quantity-limit-value">
-																<?php
-																if ($arParams['SHOW_MAX_QUANTITY'] === 'M')
-																{
-																	if ((float)$actualItem['PRODUCT']['QUANTITY'] / $measureRatio >= $arParams['RELATIVE_QUANTITY_FACTOR'])
-																	{
-																		echo $arParams['MESS_RELATIVE_QUANTITY_MANY'];
-																	}
-																	else
-																	{
-																		echo $arParams['MESS_RELATIVE_QUANTITY_FEW'];
-																	}
-																}
-																else
-																{
-																	echo $actualItem['PRODUCT']['QUANTITY'].' '.$actualItem['ITEM_MEASURE']['TITLE'];
-																}
-																?>
-															</span>
-														</div>
-													</div>
-													<?php
-												}
-											}
-										}
-
-										break;
-
-									case 'quantity':
-										if ($arParams['USE_PRODUCT_QUANTITY'])
-										{
-											?>
-											<div class="product-item-detail-info-container" style="<?=(!$actualItem['CAN_BUY'] ? 'display: none;' : '')?>"
-												data-entity="quantity-block">
-												<div class="product-item-detail-info-container-title"><?=Loc::getMessage('CATALOG_QUANTITY')?></div>
-												<div class="product-item-amount">
-													<div class="product-item-amount-field-container">
-														
-													</div>
-												</div>
-											</div>
-											<?php
-										}
-
-										break;
-
-									case 'buttons':
-										?>
-										<div data-entity="main-button-container">
-											<div id="<?=$itemIds['BASKET_ACTIONS_ID']?>" style="display: <?=($actualItem['CAN_BUY'] ? '' : 'none')?>;">
-											</div>
-											
-											<div class="product-item-detail-info-container">
-												<a class="btn btn-link product-item-detail-buy-button" id="<?=$itemIds['NOT_AVAILABLE_MESS']?>"
-													href="javascript:void(0)"
-													rel="nofollow" style="display: <?=(!$actualItem['CAN_BUY'] ? '' : 'none')?>;">
-													<?=$arParams['MESS_NOT_AVAILABLE']?>
-												</a>
-											</div>
-										</div>
-										<?php
-										break;
-								}
-							}
-?>
+	
+					
+			
+						
 
 	
 
