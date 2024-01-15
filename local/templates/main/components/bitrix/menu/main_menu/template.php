@@ -68,7 +68,7 @@ if (!empty($arResult)): ?>
 	array(
 		"COMPONENT_TEMPLATE" => "basket_line",
 		"PATH_TO_BASKET" => "/personal/basket.php",
-		"PATH_TO_ORDER" => "/personal/basket.php",
+		"PATH_TO_ORDER" => "",
 		"SHOW_NUM_PRODUCTS" => "Y",
 		"SHOW_TOTAL_PRICE" => "Y",
 		"SHOW_EMPTY_VALUES" => "Y",
@@ -81,7 +81,7 @@ if (!empty($arResult)): ?>
 		"PATH_TO_PROFILE" => "/personal/",
 		"SHOW_PRODUCTS" => "Y",
 		"POSITION_FIXED" => "N",
-		"HIDE_ON_BASKET_PAGES" => "N",
+		"HIDE_ON_BASKET_PAGES" => "Y",
 		"SHOW_DELAY" => "N",
 		"SHOW_NOTAVAIL" => "Y",
 		"SHOW_IMAGE" => "Y",

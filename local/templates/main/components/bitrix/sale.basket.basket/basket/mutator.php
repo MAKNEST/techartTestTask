@@ -13,8 +13,6 @@ use Bitrix\Sale\PriceMaths;
 
 $this->arParams['BRAND_PROPERTY'] ??= '';
 
-
-
 $mobileColumns = $this->arParams['COLUMNS_LIST_MOBILE'] ?? $this->arParams['COLUMNS_LIST'];
 $mobileColumns = array_fill_keys($mobileColumns, true);
 
@@ -393,20 +391,30 @@ foreach ($this->basketItems as $row)
 		$rowData['LABEL_VALUES'] = $labels;
 	}
 
-	foreach ($rowData['COLUMN_LIST'] as $key => $prop) {
-		if ($prop['CODE'] == 'PROPERTY_DISCOUNT_VALUE' && $prop['VALUE'] == 'Да') {
-			$rowData['PRICE'] = (int) ($rowData['PRICE'] * 0.8);
-			$rowData['PRICE_FORMATED'] = $rowData['PRICE'] . ' ₽';
-			$rowData['FULL_PRICE'] = $rowData['PRICE'];
-			$rowData['FULL_PRICE_FORMATED'] = $rowData['FULL_PRICE'] . ' ₽';
-			$rowData['SUM_PRICE'] = $rowData['FULL_PRICE'] * $rowData['QUANTITY'];
-			$rowData['SUM_PRICE_FORMATED'] = $rowData['SUM_PRICE'] . ' ₽';
-			$rowData['SUM_FULL_PRICE'] = $rowData['SUM_PRICE'];
-			$rowData['SUM_FULL_PRICE_FORMATED'] = $rowData['SUM_FULL_PRICE'] . ' ₽';
-		}
-	}
+	$result['TOTAL_PRICE_PRINT'] .= $rowData['TOTAL_PRICE'] . ' ₽';
 
 	$result['BASKET_ITEM_RENDER_DATA'][] = $rowData;
+}
+
+$totalPrice = 0;
+
+foreach ($result['BASKET_ITEM_RENDER_DATA'] as $key => $item) {
+	foreach ($item['COLUMN_LIST'] as $property) {
+		if ($property['NAME'] == 'Скидка' && $property['VALUE'] == 'Да') {
+			$result['BASKET_ITEM_RENDER_DATA'][$key]['BASE_PRICE'] = $item['PRICE'];
+			$result['BASKET_ITEM_RENDER_DATA'][$key]['PRICE'] = $item['PRICE'] * 0.8;
+			$result['BASKET_ITEM_RENDER_DATA'][$key]['PRICE_FORMATED'] = $result['BASKET_ITEM_RENDER_DATA'][$key]['PRICE'] . ' ₽';
+			$result['BASKET_ITEM_RENDER_DATA'][$key]['FULL_PRICE'] = $result['BASKET_ITEM_RENDER_DATA'][$key]['PRICE'];
+			$result['BASKET_ITEM_RENDER_DATA'][$key]['FULL_PRICE_FORMATED'] = $result['BASKET_ITEM_RENDER_DATA'][$key]['PRICE'] . ' ₽';
+			$result['BASKET_ITEM_RENDER_DATA'][$key]['SUM_PRICE'] = $result['BASKET_ITEM_RENDER_DATA'][$key]['PRICE'] * $item['QUANTITY'];
+			$result['BASKET_ITEM_RENDER_DATA'][$key]['SUM_PRICE_FORMATED'] = $result['BASKET_ITEM_RENDER_DATA'][$key]['SUM_PRICE'] . ' ₽';
+			$result['BASKET_ITEM_RENDER_DATA'][$key]['SUM_FULL_PRICE'] = $result['BASKET_ITEM_RENDER_DATA'][$key]['SUM_PRICE'];
+			$result['BASKET_ITEM_RENDER_DATA'][$key]['SUM_PRICE_FORMATED'] = $result['BASKET_ITEM_RENDER_DATA'][$key]['SUM_PRICE'] . ' ₽';
+			$result['BASKET_ITEM_RENDER_DATA'][$key]['SUM_FULL_PRICE_FORMATED'] = $result['BASKET_ITEM_RENDER_DATA'][$key]['SUM_PRICE'] . ' ₽';
+
+		}
+	}	
+	$totalPrice += $result['BASKET_ITEM_RENDER_DATA'][$key]['SUM_PRICE'];
 }
 
 $totalData = array(
@@ -416,6 +424,10 @@ $totalData = array(
 	'PRICE_WITHOUT_DISCOUNT_FORMATED' => $result['PRICE_WITHOUT_DISCOUNT'],
 	'CURRENCY' => $result['CURRENCY']
 );
+
+if ($totalPrice > 0) {
+	$totalData['TOTAL_PRICE'] = $totalPrice . ' ₽';
+}
 
 if ($result['DISCOUNT_PRICE_ALL'] > 0)
 {

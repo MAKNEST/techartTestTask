@@ -39,7 +39,7 @@ use Bitrix\Main\Page\Asset;
 		),
 		"MENU_CACHE_TIME" => "3600",
 		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_USE_GROUPS" => "N",
 		"ROOT_MENU_TYPE" => "main_top_menu",
 		"USE_EXT" => "Y",
 		"COMPONENT_TEMPLATE" => "main_menu"

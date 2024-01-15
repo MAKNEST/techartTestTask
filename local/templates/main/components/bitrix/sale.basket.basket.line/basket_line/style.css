@@ -1,8 +1,6 @@
-/* .bx-basket-item-list-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-} */
+a {
+	text-decoration: none;
+}
 
 .bassket {
 	margin-left: 1rem;
@@ -12,15 +10,18 @@
 	display: none;
 	background-color: #fff;
 	float: right;
+
+	border-radius: 25px;
 }
 
 .bx-basket:hover .basket_item_list {
+	width: max-content;
 	display: flex;
 	position: absolute;
 	z-index: 1;
 	right: 0;
 	margin-top: 2px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	box-shadow: 6px 8px 16px 6px rgba(0,0,0,0.2);
 }
 
 .basket_item_container {
@@ -40,7 +41,15 @@
 	margin-top: 1rem;
 }
 
+.basket_item_container a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
 .basket_item_container:hover {
+	background-color: #f5f2f2;
+
 	.basket_item_name,
 	.basket_item_price,
 	.basket_item_total_price {
@@ -72,11 +81,23 @@
 	text-wrap: nowrap;
 }
 
+.basket_remove_item_button {
+	color: red;
+	font-size: 1.2rem;
+	margin: 1rem;
+}
+
+.basket_remove_item_button:hover {
+	font-size: 1.5rem;
+	transition: 0.3s;
+}
+
 .basket_result_container {
 	display: flex;
 	flex-direction: row;
     justify-content: space-between;
     align-items: center;
+	margin-top: 1rem;
 }
 
 .basket_result_price {
@@ -98,6 +119,7 @@
 	border-radius: 25px;
 	padding: 1rem;
 	margin-bottom: 1rem;
+	text-decoration: none;
 }
 
 .basket_link:hover {

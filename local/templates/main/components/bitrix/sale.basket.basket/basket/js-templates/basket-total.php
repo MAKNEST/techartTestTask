@@ -54,7 +54,7 @@ use Bitrix\Main\Localization\Loc;
 						{{/DISCOUNT_PRICE_FORMATED}}
 
 						<div class="basket-coupon-block-total-price-current" data-entity="basket-total-price">
-							{{{PRICE_FORMATED}}}
+							{{{TOTAL_PRICE}}}
 						</div>
 
 						{{#DISCOUNT_PRICE_FORMATED}}

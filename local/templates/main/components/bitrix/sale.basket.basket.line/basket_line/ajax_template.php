@@ -10,26 +10,26 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
 {
 ?>
 	<div data-role="basket-item-list" class="basket_item_list">
-
-		<!-- <?if ($arParams["POSITION_FIXED"] == "Y"):?>
-			<div id="<?=$cartId?>status" class="bx-basket-item-list-action" onclick="<?=$cartId?>.toggleOpenCloseCart()"><?=GetMessage("TSB1_COLLAPSE")?></div>
-		<?endif?> -->
-
 		<div id="<?=$cartId?>products" class="bx-basket-item-list-container">
 			<?foreach ($arResult["CATEGORIES"] as $category => $items): ?>
 				<?php foreach ($items as $item): ?>
-					<a href="<?= $item['DETAIL_PAGE_URL']; ?>">
 						<div class="basket_item_container">
-							<div class="basket_item_image">
-								<img src="<?= $item['PICTURE_SRC']; ?>" alt="<?= $item['NAME']; ?>">
-							</div>
+							<a href="<?= $item['DETAIL_PAGE_URL']; ?>">
+								<div class="basket_item_image">
+									<img src="<?= $item['PICTURE_SRC']; ?>" alt="<?= $item['NAME']; ?>">
+								</div>
 
-							<div class="basket_item_name">
-								<?= $item['NAME']; ?>
-							</div>
-
+								<div class="basket_item_name">
+									<?= $item['NAME']; ?>
+								</div>
+							</a>
 							<div class="basket_item_price">
-								<?= 'Цена: ' . $item['FULL_PRICE']; ?>
+								<?php if ($item['BASE_PRICE'] > $item['PRICE']): ?>
+									<span class="old_price"><?= $item['BASE_PRICE']; ?></span>
+									<span class="new_price"><?= $item['PRICE_FMT']; ?></span>
+								<?php else: ?>
+									<span><?= $item['PRICE'] ?></span>
+								<?php endif; ?>
 							</div>
 
 							<div class="basket_item_total_price">
@@ -41,8 +41,9 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
 									<?= $item['SUM']; ?>
 								</span>
 							</div>
+
+							<div class="basket_remove_item_button" onclick="<?=$cartId?>.removeItemFromCart(<?=$item['ID']?>)" title="<?=GetMessage("TSB1_DELETE")?>">X</div>
 						</div>
-					</a>
 				<?php endforeach; ?>
 			<?php endforeach; ?>
 			

@@ -11,7 +11,7 @@ $APPLICATION->SetTitle("Список категорий");
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_TYPE" => "content",
-		"IBLOCK_ID" => "2",
+		"IBLOCK_ID" => "9",
 		"ORDER_FIELD" => "NAME",
 		"ORDER_TYPE" => "DESC"
 	),

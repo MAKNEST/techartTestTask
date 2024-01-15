@@ -181,6 +181,10 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 		<div class="genre_container">
 			<?= '<span class="genre_name">' . $arResult['PROPERTIES']['GENRE']['NAME'] . '</span>'; ?>
 			<?php
+			// echo '<pre>';
+			// print_r($arResult['PROPERTIES']['GENRE']['VALUE']);
+			// echo '</pre>';
+
 			foreach ($arResult['PROPERTIES']['GENRE']['VALUE_ENUM'] as $genre) {
 				echo '<span class="genre">' . $genre . '</span>';
 			}

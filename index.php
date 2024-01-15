@@ -4,8 +4,7 @@ $APPLICATION->SetPageProperty("TITLE", "Главная");
 $APPLICATION->SetTitle("Главная");
 ?><div class="container">
 	<h2>Главная страница</h2>
- <br>
 </div>
-<?php
+<br><?php
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
 ?>

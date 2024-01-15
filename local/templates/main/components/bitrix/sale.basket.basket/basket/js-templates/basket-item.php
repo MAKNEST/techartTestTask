@@ -82,7 +82,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 							{{#SHOW_LABEL}}
 								<div class="basket-item-label-text basket-item-label-big <?=$labelPositionClass?>">
 									{{#LABEL_VALUES}}
-										<div{{#HIDE_MOBILE}} class="hidden-xs"{{/HIDE_MOBILE}}>
+										<div {{#HIDE_MOBILE}} class="hidden-xs"{{/HIDE_MOBILE}}>
 											<span title="{{NAME}}">{{NAME}}</span>
 										</div>
 									{{/LABEL_VALUES}}
@@ -110,14 +110,6 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 					}
 					?>
 					<div class="basket-item-block-info">
-						<?
-						if (isset($mobileColumns['DELETE']))
-						{
-							?>
-							<span class="basket-item-actions-remove visible-xs" data-entity="basket-item-delete"></span>
-							<?
-						}
-						?>
 						<h2 class="basket-item-info-name">
 							{{#DETAIL_PAGE_URL}}
 								<a href="{{DETAIL_PAGE_URL}}" class="basket-item-info-name-link">
@@ -345,6 +337,8 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 						{{/SHOW_DISCOUNT_PRICE}}
 
 						<div class="basket-item-price-current">
+							<span class="basket-item-price-current-text old_price">{{{BASE_PRICE}}}</span>
+
 							<span class="basket-item-price-current-text" id="basket-item-price-{{ID}}">
 								{{{PRICE_FORMATED}}}
 							</span>
