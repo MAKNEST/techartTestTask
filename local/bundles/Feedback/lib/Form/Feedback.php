@@ -15,13 +15,7 @@ class Feedback extends \TAO\Form
 			'title' => 'Обратная связь'
 		);
 	}
-
-	public function properties()
-	{
-		$props = parent::properties();
-		return $props;
-	}
-
+	
 	public function required()
 	{
 		return [
