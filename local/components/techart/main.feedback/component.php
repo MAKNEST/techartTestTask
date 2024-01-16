@@ -11,16 +11,19 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
  * @global CUser $USER
 */
 
-$arOrder = ['PROPERTY_DATE' => 'ASC'];   
-$arFilter = ["IBLOCK_ID" => 2, "ACTIVE" => "Y"];
-$arSelectFields = ['ID', 'NAME'];
-
 $arResult["CHAPTER_LIST"] = [];
 
-$res = CIBlockElement::GetList($arOrder, $arFilter, false, [], $arSelectFields);
+$args = [
+    'order' => [
+		'PROPERTY_DATE' => 'ASC'
+    ],
+    'fields' => ['NAME']
+];
 
-while ($arFields = $res->Fetch()) {
-	array_push($arResult["CHAPTER_LIST"], $arFields['NAME']);	
+$res = \TAO::infoblock('categories')->getRows($args);
+
+foreach ($res as $categoryName) {
+	$arResult['CHAPTER_LIST'][] = $categoryName['NAME'];
 }
 
 $arResult["PARAMS_HASH"] = md5(serialize($arParams).$this->GetTemplateName());

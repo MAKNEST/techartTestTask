@@ -157,6 +157,7 @@ li {
 }
   
 .dropdown-content {
+    font-family: 'Open sans';
     margin-top: 4rem;
     margin-left: 3rem;
     display: none;

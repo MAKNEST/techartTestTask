@@ -71,7 +71,8 @@ if($arResult["OK_MESSAGE"] <> '')
 
 		<select name="chapter" id="" class="form_feedback-input form_feedback-select">
 			<option value="">-<?=GetMessage("MFT_CHAPTER")?>-</option>
-			<?php foreach ($arResult["CHAPTER_LIST"] as $chapterName): ?>
+			<?php 
+			foreach ($arResult["CHAPTER_LIST"] as $chapterName): ?>
 				<option value="<?= $chapterName; ?>"><?= $chapterName; ?></option>
 			<?php endforeach; ?>
 		</select>
@@ -100,4 +101,4 @@ if($arResult["OK_MESSAGE"] <> '')
 	<input type="submit" name="submit" value="<?=GetMessage("MFT_SUBMIT")?>" class="main_button form_feedback-submit">
 </form>
 </div>
-</div>	
+</div>

@@ -15,6 +15,13 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
+		"[TAO] Обратная связь", 
+		"/about/tao_feedback.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
 		"Список категорий", 
 		"/about/chapters.php", 
 		Array(), 

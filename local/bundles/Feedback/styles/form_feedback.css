@@ -1,0 +1,68 @@
+.tao-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.form_feedback_title {
+    text-transform: uppercase;
+    line-height: 132%;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 14px 16px;
+}
+
+.tao-form-field {
+    width: 60%;
+}
+
+.tao-form-field-name .field .field-name,
+.field-phone,
+.field select,
+.field-email,
+.field .text
+{
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+
+    border: 2px solid #9B407A;
+    border-radius: 25px;
+
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.field select {
+    width: 105%;
+}
+
+.field .submit-button {
+    color: #9B407A;
+    font-family: 'Open sans';
+    font-weight: 600;
+    font-size: 1.3rem;
+    float: right;
+    border: 2px solid #9B407A;
+    border-radius: 25px;
+    padding: 1.1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    background-color: #fff;
+    text-transform: uppercase;
+}
+
+.field .submit-button:hover {
+    color: #fff;
+    background-color: #9B407A;
+    transition: 0.3s;
+}
+
+.error_message {
+    color: red;
+}

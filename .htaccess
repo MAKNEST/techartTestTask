@@ -2,14 +2,10 @@ Options -Indexes
 ErrorDocument 404 /404.php
 
 <IfModule mod_rewrite.c>
-  Options +FollowSymLinks
   RewriteEngine On
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
-  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
-  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+  RewriteCond %{REQUEST_FILENAME} !/local/vendor/techart/bitrix.tao/urlrewrite.php$
+  RewriteCond %{REQUEST_URI} !/bitrix/backup/*
+  RewriteRule	!\.(js|ico|gif|jpg|jpeg|JPG|png|svg|css|chm|doc|xls|zip|rar|pdf|txt|avi|ttf|woff|eot|woff2|xml)$ /local/vendor/techart/bitrix.tao/urlrewrite.php
 </IfModule>
 
 <IfModule mod_dir.c>

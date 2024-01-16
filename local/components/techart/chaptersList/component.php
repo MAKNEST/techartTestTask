@@ -1,31 +1,19 @@
 <?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
-/**
- * Bitrix vars
- *
- * @var array $arParams
- * @var array $arResult
- * @var CBitrixComponent $this
-*/
-
-
-$arOrder = [
-    $arParams['ORDER_FIELD'] => $arParams['ORDER_TYPE'],
-    "SORT" => $arParams['ORDER_TYPE']
+$args = [
+    'filter' => [
+        "ACTIVE" => "Y"
+    ],
+    'order' => [
+        $arParams['ORDER_FIELD'] => $arParams['ORDER_TYPE'],
+        "SORT" => $arParams['ORDER_TYPE']
+    ],
+    'fields' => ['ID', 'NAME']
 ];
-$arFilter = ["IBLOCK_ID" => $arParams['IBLOCK_ID'], "ACTIVE" => "Y"];
 
-if (CModule::IncludeModule("iblock")) {
+$res = \TAO::infoblock($arParams['IBLOCK_ID'])->getRows($args);
 
-    $res = CIBlockElement::GetList($arOrder, $arFilter, false, [], []);
-
-    $chapters = [];
-    while ($arFields = $res->Fetch()) {
-        $chapters[] = $arFields;
-    }
-
-    $arResult['ITEMS'] = array_merge($chapters, $arResult);
-}
+$arResult['ITEMS'] = $res;
 
 $this->IncludeComponentTemplate();
