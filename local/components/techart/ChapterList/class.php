@@ -18,27 +18,25 @@ class ChaptersList extends CBitrixComponent
     public function onPrepareComponentParams($arParams)
     {
         $this->arParams = $arParams;
-        
         return $this->arParams;
     }
 
     public function getChaptersList()
     {
-        $arOrder = [
-            $this->arParams['ORDER_FIELD'] => $this->arParams['ORDER_TYPE'],
-            "SORT" => $this->arParams['ORDER_TYPE']
+        $args = [
+            'filter' => [
+                "ACTIVE" => "Y"
+            ],
+            'order' => [
+                $this->arParams['ORDER_FIELD'] => $this->arParams['ORDER_TYPE'],
+                "SORT" => $this->arParams['ORDER_TYPE']
+            ],
+            'fields' => ['ID', 'NAME']
         ];
 
-        $arFilter = ["IBLOCK_ID" => $this->arParams['IBLOCK_ID'], "ACTIVE" => "Y"];
+        $res = \TAO::infoblock($this->arParams['IBLOCK_ID'])->getRows($args);
         
-        $res = CIBlockElement::GetList($arOrder, $arFilter, false, [], []);
-        
-        $chapters = [];
-        while ($arFields = $res->Fetch()) {
-            $chapters[] = $arFields;
-        }
-        
-        return $chapters;
+        return $res;
     }
 
     public function executeComponent()

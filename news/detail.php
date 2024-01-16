@@ -2,6 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("TITLE", "title");
 
+$_REQUEST['CODE'] = str_replace('/', '', $_REQUEST['CODE']);
 
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news.detail", 
@@ -28,7 +29,7 @@ $APPLICATION->SetPageProperty("TITLE", "title");
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"ELEMENT_CODE" => $_REQUEST["CODE"],
-		"ELEMENT_ID" => $_REQUEST["ID"],
+		"ELEMENT_ID" => "",
 		"FIELD_CODE" => array(
 			0 => "ID",
 			1 => "CODE",

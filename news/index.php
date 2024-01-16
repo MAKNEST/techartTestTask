@@ -7,6 +7,8 @@ $APPLICATION->SetTitle("Новости");
 
 $GLOBALS['arrFilter'] = [];
 
+$_REQUEST['PAGEN_1'] = str_replace('/', '', $_REQUEST['PAGEN_1']);
+
 if(!$USER->IsAuthorized()) {
 	$arrFilter += ['!PROPERTY_SECRET_NEWS_VALUE' => 'Да'];
 }
@@ -56,7 +58,7 @@ if(!$USER->IsAuthorized()) {
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TEMPLATE" => "news_list_pager",
 		"PAGER_TITLE" => "Новости",
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
@@ -83,6 +85,8 @@ if(!$USER->IsAuthorized()) {
 	false
 );?><br>
 <?php
+
+
 
 $categoryId = $_REQUEST['CHAPTER_ID'];
 if(!is_null($categoryId)) {
@@ -128,7 +132,7 @@ if(!is_null($categoryId)) {
 		"INCLUDE_SUBSECTIONS" => "N",
 		"MESSAGE_404" => "",
 		"NEWS_COUNT" => "4",
-		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_BASE_LINK_ENABLE" => "Y",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
@@ -156,7 +160,15 @@ if(!is_null($categoryId)) {
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "DESC",
 		"STRICT_SECTION_CHECK" => "N",
-		"USE_FILTER" => "Y"
+		"USE_FILTER" => "Y",
+		"PAGER_BASE_LINK" => "",
+		"PAGER_PARAMS_NAME" => "arrPager",
+		"TEMPLATE_THEME" => "blue",
+		"MEDIA_PROPERTY" => "",
+		"SLIDER_PROPERTY" => "",
+		"SEARCH_PAGE" => "/search/",
+		"USE_RATING" => "N",
+		"USE_SHARE" => "N"
 	),
 	false
 );?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
