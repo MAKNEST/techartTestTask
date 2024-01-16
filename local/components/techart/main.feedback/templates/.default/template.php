@@ -100,4 +100,4 @@ if($arResult["OK_MESSAGE"] <> '')
 	<input type="submit" name="submit" value="<?=GetMessage("MFT_SUBMIT")?>" class="main_button form_feedback-submit">
 </form>
 </div>
-</div>	
+</div>

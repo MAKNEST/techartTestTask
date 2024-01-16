@@ -1,0 +1,25 @@
+<div class="container">
+<div class="tao-form tao-form-<?= $name ?> tao-form-<?= $this->fid ?>">
+		<h2 class="form_feedback_title">
+			<?= $this->option('title'); ?>
+		</h2>
+	<form id="tao-form-<?= $name ?>" method="post" action="<?= $action ?>"
+		  class="tao-form tao-form-<?= $name ?> tao-form-<?= $this->fid ?>"<?= ($this->multipart ? ' enctype="multipart/form-data"' : '') ?>>
+		<?php foreach($serviceFields as $field => $data) {
+			print $data['input'];
+		} ?>
+		<?php foreach ($fields as $field => $data) if ($this->fieldType($field) == 'hidden') {
+			print $data['input'];
+		} ?>
+		<?php include($templateLayout); ?>
+	</form>
+	<?php if ($this->ajax()) { ?>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				taoAjaxForm('<?= $name ?>', <?= json_encode($this->options) ?>, '<?= $this->fid ?>');
+			});
+		</script>
+	<?php } ?>
+</div>
+</div>
+
