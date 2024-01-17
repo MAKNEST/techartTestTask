@@ -1,0 +1,121 @@
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/header/header.scss ***!
+  \****************************************************************************************************************************************************************************************************/
+.b-header {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  text-align: left;
+  justify-content: space-between;
+}
+.b-header__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+.b-header__image {
+  position: inherit;
+}
+.b-header__icon {
+  width: 4rem;
+}
+.b-header__title {
+  color: #2c145e;
+  font-family: "Open Sans", arial, sans-serif;
+  line-height: 132%;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  white-space: inherit;
+  margin-left: 1rem;
+}
+.b-header__links {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 2s ease;
+  position: relative;
+}
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/menu/menu.scss ***!
+  \************************************************************************************************************************************************************************************************/
+.b-menu {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 2s ease;
+  position: relative;
+  margin-right: 1rem;
+}
+.b-menu__navbar {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.b-menu__dropdown {
+  float: left;
+  overflow: hidden;
+}
+.b-menu__dropdown:hover .b-menu__dropdown-content {
+  display: block;
+}
+.b-menu__link {
+  color: black;
+  line-height: 132%;
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-left: 2rem;
+}
+.b-menu__link--selected {
+  color: #9b407a;
+}
+.b-menu__link:hover {
+  color: #9b407a;
+}
+.b-menu__dropdown-content {
+  flex-direction: column;
+  font-family: "Open Sans", arial, sans-serif;
+  margin-left: 3rem;
+  display: none;
+  position: absolute;
+  background-color: #fefefe;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.b-menu__submenu {
+  color: #0a0a0a;
+  float: none;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.b-menu__submenu:hover {
+  color: #9b407a;
+  transition: 0.3s;
+}
+.b-menu__submenu--selected {
+  color: #9b407a;
+}
+.b-menu__icon {
+  width: 1rem;
+}
+.b-menu__user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.b-menu__login {
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+/*# sourceMappingURL=index.css.map*/

@@ -454,15 +454,15 @@ li {
 
     margin-top: 2rem;
 }
-
+/* 
 p {
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: 160%;
     margin-bottom: 2rem;
-}
+} */
 
 .button_icon {
     margin-right: 0.5rem;

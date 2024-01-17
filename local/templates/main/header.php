@@ -18,6 +18,9 @@ use Bitrix\Main\Page\Asset;
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/style/form.css");
     Asset::getInstance()->addString(' <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Open+Sans&display=swap" rel="stylesheet">');
     $APPLICATION->ShowHead();
+
+	\TAO::frontendCss('index');
+	\TAO::frontendJs('index');
     ?>
     <title><?php $APPLICATION->ShowTitle();?></title>
 </head>
@@ -27,7 +30,9 @@ use Bitrix\Main\Page\Asset;
 	<?php $APPLICATION->ShowPanel();?>
 </div>
 	
-<?$APPLICATION->IncludeComponent(
+<?
+
+$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
 	"main_menu", 
 	array(

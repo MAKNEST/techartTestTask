@@ -1,6 +1,7 @@
 {
 	"require": {
 		"php": ">=5.3",
+		"illuminate/view": "^8.0",
 		"techart/bitrix.tao": "dev-master"
 	},
 	"minimum-stability": "dev",

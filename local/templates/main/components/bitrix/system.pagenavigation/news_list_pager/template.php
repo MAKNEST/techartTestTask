@@ -10,7 +10,7 @@ $this->setFrameMode(true);
 
 require_once $_SERVER["DOCUMENT_ROOT"] . "/local/templates/main/assets/components/component_button.php";
 
-preg_match("{(?P<url>(news)/(?P<category>[a-z]+))/(?P<page>[0-9]+)}", $arResult['sUrlPath'], $matches);
+preg_match("{(?P<url>(news)/(?P<category>[a-z0-9]+))/(?P<page>[0-9]+)/?}", $arResult['sUrlPath'], $matches);
 
 $page = $matches['page'] ?? $arResult['NavPageNomer'] ?? 1;
 $countPages = $arResult['NavPageCount'];

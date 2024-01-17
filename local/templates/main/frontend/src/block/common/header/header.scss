@@ -1,0 +1,46 @@
+@import "~style";
+
+$block-name: "b-header";
+
+.#{$block-name} {
+	display: flex;
+	align-items: center;
+	margin-top: 1rem;
+	text-align: left;
+	justify-content: space-between;
+
+	&__logo {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-decoration: none;
+		margin-right: 2rem;
+		margin-left: 1rem;
+	}
+
+	&__image {
+		position: inherit;
+	}
+
+	&__icon {
+		width: 4rem;
+	}
+
+	&__title {
+		color: $color-purple-dark;
+		font-family: $body-font-family;
+		line-height: 132%;
+		letter-spacing: 3.5px;
+		text-transform: uppercase;
+		white-space: inherit;
+		margin-left: 1rem;
+	}
+
+	&__links {
+		width: 60%;
+		display: flex;
+		justify-content: flex-end;
+		transition: all 2s ease;
+		position: relative;
+	}
+}

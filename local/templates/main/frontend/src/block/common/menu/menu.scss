@@ -1,0 +1,95 @@
+@import "~style";
+
+$block-name: "b-menu";
+
+.#{$block-name} {
+	width: 60%;
+	display: flex;
+	justify-content: flex-end;
+	transition: all 2s ease;
+	position: relative;
+	margin-right: 1rem;
+
+	&__navbar {
+		overflow: hidden;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+	}
+
+	&__dropdown {
+		float: left;
+		overflow: hidden;
+
+		&:hover {
+			.#{$block-name}__dropdown-content {
+				display: block;
+			}
+		}
+	}
+
+	&__link {
+		color: black;
+		line-height: 132%;
+		font-family: $body-font-family;
+		font-size: 1.2rem;
+		font-weight: 400;
+		text-decoration: none;
+		transition: 0.3s;
+		margin-left: 2rem;
+
+		&--selected {
+			color: $color-purple;
+		}
+
+		&:hover {
+			color: $color-purple;
+		}
+	}
+
+	&__dropdown-content {
+		flex-direction: column;
+		font-family: $body-font-family;
+		margin-left: 3rem;
+		display: none;
+		position: absolute;
+		background-color: $color-white;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 20%);
+		z-index: 1;
+	}
+
+	&__submenu {
+		color: $color-black;
+		float: none;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+
+		&:hover {
+			color: $color-purple;
+			transition: 0.3s;
+		}
+
+		&--selected {
+			color: $color-purple;
+		}
+	}
+
+	&__icon {
+		width: 1rem;
+	}
+
+	&__user {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	&__login {
+		font-size: 1.2rem;
+		margin: 0 1rem;
+	}
+}
