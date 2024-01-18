@@ -3,12 +3,10 @@
 $block-name: "b-menu";
 
 .#{$block-name} {
-	width: 60%;
 	display: flex;
 	justify-content: flex-end;
 	transition: all 2s ease;
 	position: relative;
-	margin-right: 1rem;
 
 	&__navbar {
 		overflow: hidden;

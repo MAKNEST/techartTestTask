@@ -1,0 +1,22 @@
+@import "~style";
+
+$block-name: "b-footer";
+
+.#{$block-name} {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: 5rem;
+	text-align: left;
+
+	&__line {
+		width: 100%;
+		border-top: 0.5px solid $color-gray-dark;
+	}
+
+	&__title {
+		font-family: $body-font-family;
+		font-weight: 400;
+		margin: 3rem 0;
+	}
+}

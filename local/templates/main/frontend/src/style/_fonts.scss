@@ -1,5 +1,5 @@
 @mixin site-fonts() {
 	@include font-face($name: "Open Sans", $path: "OpenSans-Regular", $weight: normal, $style: normal, $woff2: false);
 	@include font-face($name: "Open Sans", $path: "OpenSans-Italic", $weight: normal, $style: italic, $woff2: false);
-	@include font-face($name: "Open Sans", $path: "OpenSans-SemiBold", $weight: 600, $style: normal, $woff2: false);
+	@include font-face($name: "Open Sans", $path: "OpenSans-Bold", $weight: 600, $style: normal, $woff2: false);
 }
