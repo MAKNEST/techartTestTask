@@ -527,7 +527,7 @@ img {
   color: black;
 }
 .b-detail__breadcrumb-title {
-  color: #6C6E7B;
+  color: #6c6e7b;
   margin-left: 0.5rem;
 }
 .b-detail__title {
@@ -746,10 +746,10 @@ img {
 .b-news-banner__container {
   width: 80%;
 }
-/*!****************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/assets/button/button.scss ***!
-  \****************************************************************************************************************************************************************************************************/
-.b-button {
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/assets/button-link/button-link.scss ***!
+  \**************************************************************************************************************************************************************************************************************/
+.b-button-link {
   font-family: "Open Sans", arial, sans-serif;
   font-size: 0.9rem;
   font-style: normal;
@@ -772,6 +772,35 @@ img {
   align-items: center;
   transition: 0.3s;
 }
+.b-button-link:hover {
+  color: #fff;
+  background-color: #9b407a;
+}
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/assets/button/button.scss ***!
+  \****************************************************************************************************************************************************************************************************/
+.b-button {
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 2px solid #9b407a;
+  color: #9b407a;
+  background-color: #fff;
+  width: 25rem;
+  padding: 1rem 1.4rem;
+  display: flex;
+  align-content: stretch;
+  flex-flow: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
 .b-button:hover {
   color: #fff;
   background-color: #9b407a;
@@ -782,13 +811,21 @@ img {
 .b-error {
   color: red;
 }
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/assets/ok-message/ok-message.scss ***!
+  \************************************************************************************************************************************************************************************************************/
+.b-ok-message {
+  color: green;
+  font-weight: bold;
+  padding-bottom: 1em;
+}
 /*!**********************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/form/form/form.scss ***!
   \**********************************************************************************************************************************************************************************************/
 .b-form__title-container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: wrap;
   align-content: center;
   justify-content: center;
   align-items: baseline;
@@ -799,14 +836,73 @@ img {
   flex-direction: row;
   justify-content: center;
   line-height: 132%;
-  font-family: "Open Sans";
+  font-family: "Open Sans", arial, sans-serif;
   font-weight: 400;
   font-size: 2rem;
   padding: 14px 16px;
 }
-/*!**************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/inputs/input/input.scss ***!
-  \**************************************************************************************************************************************************************************************************/
-
+.b-form__feedback {
+  font-family: "Open Sans", arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+.b-form__input-container {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.b-form__input-container p {
+  margin: 0;
+}
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/inputs/input-text/input-text.scss ***!
+  \************************************************************************************************************************************************************************************************************/
+.b-input-text {
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  background-color: #fff;
+  border: 2px solid #9b407a;
+  border-radius: 25px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+.b-input-text:focus-visible {
+  border: 2px solid #9b407a;
+}
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/inputs/select/select.scss ***!
+  \****************************************************************************************************************************************************************************************************/
+.b-select {
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  background-color: #fff;
+  border: 2px solid #9b407a;
+  border-radius: 25px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+.b-select:focus-visible {
+  border: 2px solid #9b407a;
+}
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/inputs/textarea/textarea.scss ***!
+  \********************************************************************************************************************************************************************************************************/
+.b-textarea {
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  background-color: #fff;
+  border: 2px solid #9b407a;
+  border-radius: 25px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+.b-textarea:focus-visible {
+  border: 2px solid #9b407a;
+}
 
 /*# sourceMappingURL=index.css.map*/

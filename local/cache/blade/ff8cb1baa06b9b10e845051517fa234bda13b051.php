@@ -14,7 +14,7 @@
 
 
         <?php echo $renderer->renderBlock(
-            'assets/button',
+            'assets/button-link',
             [
                 'text' => 'Подробнее',
                 'icon' => '<svg width="26" height="16" viewBox="0 0 26 16" xmlns="http://www.w3.org/2000/svg" class="button_icon" fill="currentColor">

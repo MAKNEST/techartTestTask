@@ -1,10 +1,10 @@
 @import "~style";
 
-$block-name: "b-button";
+$block-name: "b-button-link";
 
 .#{$block-name} {
 	font-family: $body-font-family;
-	font-size: 1.4rem;
+	font-size: 0.9rem;
 	font-style: normal;
 	font-weight: 600;
 	line-height: normal;
@@ -14,7 +14,7 @@ $block-name: "b-button";
 	border: 2px solid $color-purple;
 	color: $color-purple;
 	background-color: $color-white;
-	width: 25rem;
+	width: fit-content;
 	padding: 1rem 1.4rem;
 	display: flex;
 	align-content: stretch;

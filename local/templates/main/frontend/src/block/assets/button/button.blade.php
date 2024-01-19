@@ -1,15 +1,5 @@
-<a href="{{ $link }}" class="{{ $block }}">
-    @php
-        $pos = 'right';
-
-        $pos = !is_null($icon_postion) ? $icon_postion : '';
-    @endphp
-
-    @if ($pos == 'right' || $pos == '')
-        {{ $text }}
-        {!! $icon !!}        
-    @else
-        {!! $icon !!}
-        {{ $text }} 
-    @endif
-</a>
+<input
+    class="{{ $block->mod($mod) }}"
+    type="{{ $type }}"
+    name="{{ $name }}"
+    value="{{ $value }}">

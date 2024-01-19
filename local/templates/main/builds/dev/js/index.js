@@ -66,6 +66,19 @@ requireAll(__webpack_require__("./src/block/news sync recursive ^\\.\\/[^/]+\\/[
 
 /***/ }),
 
+/***/ "./src/block/assets/button-link/button-link.scss":
+/*!*******************************************************!*\
+  !*** ./src/block/assets/button-link/button-link.scss ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/block/assets/button/button.scss":
 /*!*********************************************!*\
   !*** ./src/block/assets/button/button.scss ***!
@@ -83,6 +96,19 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************************!*\
   !*** ./src/block/assets/error/error.scss ***!
   \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/block/assets/ok-message/ok-message.scss":
+/*!*****************************************************!*\
+  !*** ./src/block/assets/ok-message/ok-message.scss ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -144,10 +170,36 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/block/inputs/input/input.scss":
-/*!*******************************************!*\
-  !*** ./src/block/inputs/input/input.scss ***!
-  \*******************************************/
+/***/ "./src/block/inputs/input-text/input-text.scss":
+/*!*****************************************************!*\
+  !*** ./src/block/inputs/input-text/input-text.scss ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/block/inputs/select/select.scss":
+/*!*********************************************!*\
+  !*** ./src/block/inputs/select/select.scss ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/block/inputs/textarea/textarea.scss":
+/*!*************************************************!*\
+  !*** ./src/block/inputs/textarea/textarea.scss ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -229,8 +281,10 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./button-link/button-link.scss": "./src/block/assets/button-link/button-link.scss",
 	"./button/button.scss": "./src/block/assets/button/button.scss",
-	"./error/error.scss": "./src/block/assets/error/error.scss"
+	"./error/error.scss": "./src/block/assets/error/error.scss",
+	"./ok-message/ok-message.scss": "./src/block/assets/ok-message/ok-message.scss"
 };
 
 
@@ -328,7 +382,9 @@ webpackContext.id = "./src/block/form sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
-	"./input/input.scss": "./src/block/inputs/input/input.scss"
+	"./input-text/input-text.scss": "./src/block/inputs/input-text/input-text.scss",
+	"./select/select.scss": "./src/block/inputs/select/select.scss",
+	"./textarea/textarea.scss": "./src/block/inputs/textarea/textarea.scss"
 };
 
 

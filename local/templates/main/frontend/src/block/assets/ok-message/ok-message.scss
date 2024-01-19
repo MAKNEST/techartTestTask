@@ -1,0 +1,9 @@
+@import "~style";
+
+$block-name: "b-ok-message";
+
+.#{$block-name} {
+    color: green;
+    font-weight: bold;
+    padding-bottom: 1em;
+}

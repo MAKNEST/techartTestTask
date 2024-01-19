@@ -50,7 +50,7 @@
         <div class="{{ $block->elem('button-container') }}">
             {!! 
                 $renderer->renderBlock(
-                    'assets/button',
+                    'assets/button-link',
                     [
                         'text' => 'Назад к новостям',
                         'icon' => '<svg viewbox="0 0 26 16" xmlns="http://www.w3.org/2000/svg" class="button_icon" fill="currentColor">

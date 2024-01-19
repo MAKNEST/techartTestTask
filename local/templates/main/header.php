@@ -18,7 +18,7 @@ use Bitrix\Main\Page\Asset;
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/style/form.css");
     Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Open+Sans&display=swap" rel="stylesheet">');
     $APPLICATION->ShowHead();
-
+	
 	\TAO::frontendCss('index');
 	\TAO::frontendJs('index');
     ?>

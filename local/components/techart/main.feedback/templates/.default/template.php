@@ -12,7 +12,7 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 ?>
 <div class="container">
 
-<div class="mfeedback">
+<!-- <div class="mfeedback">
 	<div class="form_feedback-title-block">
 		<h2 class="form_feedback-title">Обратная связь</h2>
 
@@ -101,17 +101,21 @@ if($arResult["OK_MESSAGE"] <> '')
 	<input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
 	<input type="submit" name="submit" value="<?=GetMessage("MFT_SUBMIT")?>" class="main_button form_feedback-submit">
 </form>
-</div>
+</div> -->
 
 
 <?=
 \TAO::frontend()->renderBlock(
 	'form/form',
 	[
+		'action' => POST_FORM_ACTION_URI,
+		'error_message' => $arResult['ERROR_TITLE'],
 		'title' => 'Обратная связь',
-		'error_message' => $arResult["ERROR_MESSAGE"],
 		'bitrix_sessid_post' => bitrix_sessid_post(),
-		
+		'inputs' => $arResult['INPUTS'],
+		'params_hash' => $arResult['PARAMS_HASH'],
+		'submit_button' => $arResult['SUBMIT_BUTTON'],
+		'ok_message' => $arResult['OK_MESSAGE_BLOCK']
 	]
 );
 ?>

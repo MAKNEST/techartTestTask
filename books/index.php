@@ -3,6 +3,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("TITLE", "Книги");
 $APPLICATION->SetTitle("Книги");
 
+\TAO::frontendCss('books');
+\TAO::frontendJs('books');
+
 $GLOBALS['arrFilter'] = [];
 
 ?><div class="container">

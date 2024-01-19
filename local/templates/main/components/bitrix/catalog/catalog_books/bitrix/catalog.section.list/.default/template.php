@@ -45,6 +45,7 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_CONFIRM'));
 
 ?><div class="<? echo $arCurView['CONT']; ?>"><?
+
 if ('Y' == $arParams['SHOW_PARENT_NAME'] && 0 < $arResult['SECTION']['ID'])
 {
 	$this->AddEditAction($arResult['SECTION']['ID'], $arResult['SECTION']['EDIT_LINK'], $strSectionEdit);
@@ -57,6 +58,7 @@ if ('Y' == $arParams['SHOW_PARENT_NAME'] && 0 < $arResult['SECTION']['ID'])
 if (0 < $arResult["SECTIONS_COUNT"])
 {
 ?>
+<hr>
 <ul class="<? echo $arCurView['LIST']; ?>">
 <?php
 	switch ($arParams['VIEW_MODE'])

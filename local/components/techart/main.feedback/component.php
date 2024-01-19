@@ -136,6 +136,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
 		$arResult["AUTHOR_NAME"] = htmlspecialcharsbx($_POST["user_name"]);
 		$arResult["AUTHOR_EMAIL"] = htmlspecialcharsbx($_POST["user_email"]);
 		$arResult["AUTHOR_PHONE"] = htmlspecialcharsbx($_POST["user_phone"]);
+		$arResult["CHAPTER"] = htmlspecialcharsbx($_POST["chapter"]);
 	}
 	else
 		$arResult["ERROR_MESSAGE"][] = GetMessage("MF_SESS_EXP");
