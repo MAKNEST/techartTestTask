@@ -1,0 +1,7 @@
+@import "~style";
+
+$block-name: "b-error";
+
+.#{$block-name} {
+	color: red;
+}

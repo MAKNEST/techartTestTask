@@ -1,3 +1,379 @@
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/normalize.css/normalize.css ***!
+  \************************************************************************************************************************/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style/layout/base.scss ***!
+  \*******************************************************************************************************************************************************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  background-color: #fff;
+  color: #0a0a0a;
+  font-family: "Open Sans", arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/footer/footer.scss ***!
   \****************************************************************************************************************************************************************************************************/
@@ -101,7 +477,7 @@
   margin-left: 3rem;
   display: none;
   position: absolute;
-  background-color: #fefefe;
+  background-color: #fff;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -134,5 +510,303 @@
   font-size: 1.2rem;
   margin: 0 1rem;
 }
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/news/detail/detail.scss ***!
+  \**************************************************************************************************************************************************************************************************/
+.b-detail {
+  text-align: left;
+  position: relative;
+}
+.b-detail__breadcrumb {
+  font-family: "Open Sans", arial, sans-serif;
+  display: flex;
+  margin-top: 4rem;
+}
+.b-detail__breadcrumb-link {
+  text-decoration: none;
+  color: black;
+}
+.b-detail__breadcrumb-title {
+  color: #6C6E7B;
+  margin-left: 0.5rem;
+}
+.b-detail__title {
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: left;
+}
+.b-detail__content-container {
+  display: flex;
+  justify-content: flex-start;
+}
+@media (max-width: 1151px) {
+  .b-detail__content-container {
+    width: 100%;
+    flex-flow: column;
+  }
+}
+@media (min-width: 1152px) {
+  .b-detail__content-container {
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+}
+.b-detail__text-container {
+  width: 50%;
+}
+@media (max-width: 1151px) {
+  .b-detail__text-container {
+    width: 100%;
+  }
+}
+.b-detail__date {
+  border-radius: 20px;
+  background-color: #ecf2f5;
+  padding: 6px 18px;
+  text-align: center;
+  font-family: "Open Sans", arial, sans-serif;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 5rem;
+  box-sizing: content-box;
+}
+.b-detail__announce p {
+  color: #9b407a;
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 3rem;
+}
+.b-detail__image-mobile {
+  display: flex;
+  justify-content: space-evenly;
+}
+.b-detail__image-mobile[hidden] {
+  display: none;
+}
+@media (max-width: 1151px) {
+  .b-detail__image-mobile[hidden] {
+    display: block;
+    width: 50%;
+  }
+}
+@media (min-width: 551px) and (max-width: 1150px) {
+  .b-detail__image-mobile {
+    width: 100%;
+  }
+}
+.b-detail__text {
+  color: black;
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 5rem;
+}
+@media (max-width: 550px) {
+  .b-detail__text {
+    margin-bottom: 0;
+  }
+  .b-detail__text p {
+    font-size: 4vw;
+    margin-left: 1rem;
+  }
+}
+.b-detail__chapter-link {
+  font-size: 1.2rem;
+  color: black;
+  transition: 0.3s;
+}
+.b-detail__chapter-link:hover {
+  color: #9b407a;
+}
+.b-detail__image-desctop {
+  margin-top: 5rem;
+  margin-left: 2rem;
+}
+@media (min-width: 1152px) {
+  .b-detail__image-desctop {
+    max-width: 30rem;
+  }
+}
+@media (max-width: 1151px) {
+  .b-detail__image-desctop {
+    display: none;
+  }
+}
+@media (min-width: 551px) and (max-width: 1150px) {
+  .b-detail__image-desctop {
+    max-width: 15rem;
+  }
+}
+.b-detail__button-container {
+  width: 100%;
+}
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/news/list-item/list-item.scss ***!
+  \********************************************************************************************************************************************************************************************************/
+.b-list-item {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: space-between;
+  flex: 1 1 32rem;
+  margin: 2rem;
+}
+.b-list-item__date {
+  border-radius: 20px;
+  background-color: #ecf2f5;
+  padding: 6px 18px;
+  text-align: center;
+  font-family: "Open Sans", arial, sans-serif;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 5rem;
+  box-sizing: content-box;
+}
+.b-list-item__link {
+  text-decoration: none;
+  text-align: left;
+  color: #000;
+}
+.b-list-item__title {
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 2rem;
+}
+.b-list-item:hover .b-list-item__title {
+  color: #9b407a;
+}
+.b-list-item:hover .b-button {
+  color: #fff;
+  background-color: #9b407a;
+}
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/news/list/list.scss ***!
+  \**********************************************************************************************************************************************************************************************/
+.b-list__title {
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  text-align: left;
+  margin: 2rem;
+}
+.b-list__item-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.b-list__pager {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/news/news-banner/news-banner.scss ***!
+  \************************************************************************************************************************************************************************************************************/
+.b-news-banner {
+  display: block !important;
+}
+.b-news-banner__link {
+  text-decoration: none;
+}
+.b-news-banner__text-block {
+  color: #fff;
+  font-family: "Open Sans";
+  font-style: normal;
+  text-align: left;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
+}
+.b-news-banner__title {
+  text-align: left;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+.b-news-banner__announce {
+  text-align: left;
+  font-size: 1.1rem;
+}
+.b-news-banner__container {
+  width: 80%;
+}
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/assets/button/button.scss ***!
+  \****************************************************************************************************************************************************************************************************/
+.b-button {
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 2px solid #9b407a;
+  color: #9b407a;
+  background-color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 1.4rem;
+  display: flex;
+  align-content: stretch;
+  flex-flow: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.b-button:hover {
+  color: #fff;
+  background-color: #9b407a;
+}
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/assets/error/error.scss ***!
+  \**************************************************************************************************************************************************************************************************/
+.b-error {
+  color: red;
+}
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/form/form/form.scss ***!
+  \**********************************************************************************************************************************************************************************************/
+.b-form__title-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: baseline;
+  text-transform: uppercase;
+}
+.b-form__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 132%;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 2rem;
+  padding: 14px 16px;
+}
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/inputs/input/input.scss ***!
+  \**************************************************************************************************************************************************************************************************/
+
 
 /*# sourceMappingURL=index.css.map*/

@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'env' => 'dev'
+    'env' => 'dev',
+    'redirect_if_no_slash' => false
 ];

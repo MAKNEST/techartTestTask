@@ -1,0 +1,26 @@
+@import "~style";
+
+$block-name: "b-form";
+
+.#{$block-name} {
+	&__title-container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: center;
+		align-items: baseline;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		line-height: 132%;
+		font-family: 'Open Sans';
+		font-weight: 400;
+		font-size: 2rem;
+		padding: 14px 16px;
+	}
+}

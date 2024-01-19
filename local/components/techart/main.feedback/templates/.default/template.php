@@ -10,8 +10,9 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
  * @global CUser $USER
  */
 ?>
-<div class="mfeedback">
 <div class="container">
+
+<div class="mfeedback">
 	<div class="form_feedback-title-block">
 		<h2 class="form_feedback-title">Обратная связь</h2>
 
@@ -101,4 +102,17 @@ if($arResult["OK_MESSAGE"] <> '')
 	<input type="submit" name="submit" value="<?=GetMessage("MFT_SUBMIT")?>" class="main_button form_feedback-submit">
 </form>
 </div>
+
+
+<?=
+\TAO::frontend()->renderBlock(
+	'form/form',
+	[
+		'title' => 'Обратная связь',
+		'error_message' => $arResult["ERROR_MESSAGE"],
+		'bitrix_sessid_post' => bitrix_sessid_post(),
+		
+	]
+);
+?>
 </div>

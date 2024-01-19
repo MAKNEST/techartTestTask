@@ -17,7 +17,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/src/views/components/component_button
 $categoryIdList = $arResult['PROPERTIES']['CHAPTER']['VALUE']; ?>
 
 <div class="container">
-    <div class="line"></div>
+
+    <!-- <div class="line"></div>
     <div class="work_news">
         <div class="breadcrumb">
             <a href="/news/" class="breadcrumb_link">
@@ -75,5 +76,12 @@ $categoryIdList = $arResult['PROPERTIES']['CHAPTER']['VALUE']; ?>
             ?>
             </div>
         </div>
-    </div>
+    </div> -->
+
+    <?= \TAO::frontend()->renderBlock(
+        'news/detail',
+        [
+            'data' => $arResult
+        ]
+    ) ?>
 </div>

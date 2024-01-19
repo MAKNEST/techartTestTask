@@ -1,6 +1,19 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/block/assets/assets.js":
+/*!************************************!*\
+  !*** ./src/block/assets/assets.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+function requireAll(r) {
+  r.keys().map(r);
+}
+requireAll(__webpack_require__("./src/block/assets sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$"));
+
+/***/ }),
+
 /***/ "./src/block/common/common.js":
 /*!************************************!*\
   !*** ./src/block/common/common.js ***!
@@ -11,6 +24,71 @@ function requireAll(r) {
   r.keys().map(r);
 }
 requireAll(__webpack_require__("./src/block/common sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$"));
+
+/***/ }),
+
+/***/ "./src/block/form/form.js":
+/*!********************************!*\
+  !*** ./src/block/form/form.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+function requireAll(r) {
+  r.keys().map(r);
+}
+requireAll(__webpack_require__("./src/block/form sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$"));
+
+/***/ }),
+
+/***/ "./src/block/inputs/inputs.js":
+/*!************************************!*\
+  !*** ./src/block/inputs/inputs.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+function requireAll(r) {
+  r.keys().map(r);
+}
+requireAll(__webpack_require__("./src/block/inputs sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$"));
+
+/***/ }),
+
+/***/ "./src/block/news/news.js":
+/*!********************************!*\
+  !*** ./src/block/news/news.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+function requireAll(r) {
+  r.keys().map(r);
+}
+requireAll(__webpack_require__("./src/block/news sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$"));
+
+/***/ }),
+
+/***/ "./src/block/assets/button/button.scss":
+/*!*********************************************!*\
+  !*** ./src/block/assets/button/button.scss ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/block/assets/error/error.scss":
+/*!*******************************************!*\
+  !*** ./src/block/assets/error/error.scss ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -53,13 +131,127 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/block/form/form/form.scss":
+/*!***************************************!*\
+  !*** ./src/block/form/form/form.scss ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/block/inputs/input/input.scss":
+/*!*******************************************!*\
+  !*** ./src/block/inputs/input/input.scss ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/block/news/detail/detail.scss":
+/*!*******************************************!*\
+  !*** ./src/block/news/detail/detail.scss ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/block/news/list-item/list-item.scss":
+/*!*************************************************!*\
+  !*** ./src/block/news/list-item/list-item.scss ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/block/news/list/list.scss":
+/*!***************************************!*\
+  !*** ./src/block/news/list/list.scss ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/block/news/news-banner/news-banner.scss":
+/*!*****************************************************!*\
+  !*** ./src/block/news/news-banner/news-banner.scss ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/style/layout/base.scss":
 /*!************************************!*\
   !*** ./src/style/layout/base.scss ***!
   \************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nHookWebpackError: Module build failed (from ./node_modules/css-loader/dist/cjs.js):\nError: Can't resolve 'OpenSans-Regular.woff' in '/var/www/workspace/test/www/local/templates/main/frontend/src/style/layout'\n    at finishWithoutResolve (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:369:18)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:461:15\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:89:43\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:57:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/ConditionalPlugin.js:53:42\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/forEachBail.js:39:13\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/DirectoryExistsPlugin.js:41:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)\n    at tryRunOrWebpackError (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/HookWebpackError.js:88:9)\n    at __webpack_require_module__ (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:5067:12)\n    at __webpack_require__ (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:5024:18)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:5095:20\n    at symbolIterator (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3485:9)\n    at done (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3527:9)\n    at Hook.eval [as callAsync] (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:5002:43\n    at symbolIterator (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3463:5)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:4967:16\n    at symbolIterator (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3485:9)\n    at timesSync (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3463:5)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:4935:15\n    at symbolIterator (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3485:9)\n    at done (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3527:9)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:4882:8\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:3361:32\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/HookWebpackError.js:68:3\n    at Hook.eval [as callAsync] (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Cache.store (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Cache.js:107:20)\n    at ItemCacheFacade.store (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/CacheFacade.js:141:15)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:3361:11\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Cache.js:91:34\n    at Array.<anonymous> (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/cache/MemoryCachePlugin.js:45:13)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Cache.js:91:19\n    at Hook.eval [as callAsync] (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:19:1)\n    at Cache.get (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Cache.js:75:18)\n    at ItemCacheFacade.get (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/CacheFacade.js:115:15)\n    at Compilation._codeGenerationModule (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:3331:9)\n    at codeGen (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:4870:11)\n    at symbolIterator (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3463:5)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:4900:14\n    at processQueue (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/util/processAsyncTree.js:61:4)\n    at processTicksAndRejections (node:internal/process/task_queues:77:11)\n    at runNextTicks (node:internal/process/task_queues:64:3)\n    at process.processImmediate (node:internal/timers:449:9)\n-- inner error --\nError: Module build failed (from ./node_modules/css-loader/dist/cjs.js):\nError: Can't resolve 'OpenSans-Regular.woff' in '/var/www/workspace/test/www/local/templates/main/frontend/src/style/layout'\n    at finishWithoutResolve (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:369:18)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:461:15\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:89:43\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:57:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/ConditionalPlugin.js:53:42\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/forEachBail.js:39:13\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/DirectoryExistsPlugin.js:41:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)\n    at Object.<anonymous> (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!/var/www/workspace/test/www/local/templates/main/frontend/node_modules/postcss-loader/dist/cjs.js!/var/www/workspace/test/www/local/templates/main/frontend/node_modules/sass-loader/dist/cjs.js!/var/www/workspace/test/www/local/templates/main/frontend/src/style/layout/base.scss:1:7)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/javascript/JavascriptModulesPlugin.js:452:10\n    at Hook.eval [as call] (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:19:10), <anonymous>:7:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:5069:39\n    at tryRunOrWebpackError (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/HookWebpackError.js:83:7)\n    at __webpack_require_module__ (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:5067:12)\n    at __webpack_require__ (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:5024:18)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:5095:20\n    at symbolIterator (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3485:9)\n    at done (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3527:9)\n    at Hook.eval [as callAsync] (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:5002:43\n    at symbolIterator (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3463:5)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:4967:16\n    at symbolIterator (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3485:9)\n    at timesSync (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3463:5)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:4935:15\n    at symbolIterator (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3485:9)\n    at done (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3527:9)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:4882:8\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:3361:32\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/HookWebpackError.js:68:3\n    at Hook.eval [as callAsync] (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Cache.store (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Cache.js:107:20)\n    at ItemCacheFacade.store (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/CacheFacade.js:141:15)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:3361:11\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Cache.js:91:34\n    at Array.<anonymous> (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/cache/MemoryCachePlugin.js:45:13)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Cache.js:91:19\n    at Hook.eval [as callAsync] (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:19:1)\n    at Cache.get (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Cache.js:75:18)\n    at ItemCacheFacade.get (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/CacheFacade.js:115:15)\n    at Compilation._codeGenerationModule (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:3331:9)\n    at codeGen (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:4870:11)\n    at symbolIterator (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/neo-async/async.js:3463:5)\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/Compilation.js:4900:14\n    at processQueue (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/lib/util/processAsyncTree.js:61:4)\n    at processTicksAndRejections (node:internal/process/task_queues:77:11)\n    at runNextTicks (node:internal/process/task_queues:64:3)\n    at process.processImmediate (node:internal/timers:449:9)\n\nGenerated code for /var/www/workspace/test/www/local/templates/main/frontend/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!/var/www/workspace/test/www/local/templates/main/frontend/node_modules/postcss-loader/dist/cjs.js!/var/www/workspace/test/www/local/templates/main/frontend/node_modules/sass-loader/dist/cjs.js!/var/www/workspace/test/www/local/templates/main/frontend/src/style/layout/base.scss\n1 | throw new Error(\"Module build failed (from ./node_modules/css-loader/dist/cjs.js):\\nError: Can't resolve 'OpenSans-Regular.woff' in '/var/www/workspace/test/www/local/templates/main/frontend/src/style/layout'\\n    at finishWithoutResolve (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:369:18)\\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:461:15\\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)\\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:89:43\\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:57:1)\\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/ConditionalPlugin.js:53:42\\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/forEachBail.js:39:13\\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/Resolver.js:519:5\\n    at eval (eval at create (/var/www/workspace/test/www/local/templates/main/frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\\n    at /var/www/workspace/test/www/local/templates/main/frontend/node_modules/webpack/node_modules/enhanced-resolve/lib/DirectoryExistsPlugin.js:41:15\\n    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)\");");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/block/assets sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$":
+/*!*************************************************************************************!*\
+  !*** ./src/block/assets/ sync ^\.\/[^/]+\/[^/.]+\.(js%7Ccss%7Cscss%7Csass%7Cless)$ ***!
+  \*************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./button/button.scss": "./src/block/assets/button/button.scss",
+	"./error/error.scss": "./src/block/assets/error/error.scss"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/block/assets sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$";
 
 /***/ }),
 
@@ -94,6 +286,105 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./src/block/common sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$";
+
+/***/ }),
+
+/***/ "./src/block/form sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$":
+/*!***********************************************************************************!*\
+  !*** ./src/block/form/ sync ^\.\/[^/]+\/[^/.]+\.(js%7Ccss%7Cscss%7Csass%7Cless)$ ***!
+  \***********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./form/form.scss": "./src/block/form/form/form.scss"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/block/form sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$";
+
+/***/ }),
+
+/***/ "./src/block/inputs sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$":
+/*!*************************************************************************************!*\
+  !*** ./src/block/inputs/ sync ^\.\/[^/]+\/[^/.]+\.(js%7Ccss%7Cscss%7Csass%7Cless)$ ***!
+  \*************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./input/input.scss": "./src/block/inputs/input/input.scss"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/block/inputs sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$";
+
+/***/ }),
+
+/***/ "./src/block/news sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$":
+/*!***********************************************************************************!*\
+  !*** ./src/block/news/ sync ^\.\/[^/]+\/[^/.]+\.(js%7Ccss%7Cscss%7Csass%7Cless)$ ***!
+  \***********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./detail/detail.scss": "./src/block/news/detail/detail.scss",
+	"./list-item/list-item.scss": "./src/block/news/list-item/list-item.scss",
+	"./list/list.scss": "./src/block/news/list/list.scss",
+	"./news-banner/news-banner.scss": "./src/block/news/news-banner/news-banner.scss"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/block/news sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$";
 
 /***/ })
 
@@ -174,9 +465,20 @@ var __webpack_exports__ = {};
   \****************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var style_layout_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! style/layout/base */ "./src/style/layout/base.scss");
-/* harmony import */ var style_layout_base__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(style_layout_base__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var block_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! block/common */ "./src/block/common/common.js");
 /* harmony import */ var block_common__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(block_common__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var block_news__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! block/news */ "./src/block/news/news.js");
+/* harmony import */ var block_news__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(block_news__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var block_assets__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! block/assets */ "./src/block/assets/assets.js");
+/* harmony import */ var block_assets__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(block_assets__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var block_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! block/form */ "./src/block/form/form.js");
+/* harmony import */ var block_form__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(block_form__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var block_inputs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! block/inputs */ "./src/block/inputs/inputs.js");
+/* harmony import */ var block_inputs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(block_inputs__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
 
 
 })();

@@ -1,45 +1,44 @@
 <?php
-namespace TAO\CachedInfoblock;
+	namespace TAO\CachedInfoblock;
 use TAO\Infoblock;
 
 /* infoblock ID=9, code=categories */
 class categories extends Infoblock
 {
-    public function title()
-    {
-        return 'Разделы';
-    }
+public function title()
+{
+return 'Разделы';
+}
 
     public function sites()
     {
         return array('s1');
     }
 
-    public function access()
-    {
-        return array(
-            1 => 'X',
-            2 => 'R',
+public function access()
+{
+return array(
         );
-    }
+}
 
-    public function data()
-    {
-        return array(
+	public function data()
+	{
+	return array(
             'REST_ON' => 'N',
             'LIST_PAGE_URL' => '/news/',
             'DETAIL_PAGE_URL' => '/news/#ELEMENT_ID#/1',
             'SECTION_PAGE_URL' => '/news/',
             'INDEX_SECTION' => 'Y',
             'WORKFLOW' => 'N',
+            'RIGHTS_MODE' => 'E',
             'SECTIONS_NAME' => 'Разделы',
             'SECTION_NAME' => 'Раздел',
         );
-    }
+	}
 
-    public function messages()
-    {
-        return array(
+public function messages()
+{
+return array(
             'ELEMENT_NAME' => 'Элемент',
             'ELEMENTS_NAME' => 'Элементы',
             'ELEMENT_ADD' => 'Добавить элемент',
@@ -51,11 +50,11 @@ class categories extends Infoblock
             'SECTION_EDIT' => 'Изменить раздел',
             'SECTION_DELETE' => 'Удалить раздел',
         );
-    }
+}
 
-    public function fields()
-    {
-        return array(
+	public function fields()
+	{
+	return array(
             'IBLOCK_SECTION' => array(
                 'NAME' => 'Привязка к разделам',
                 'IS_REQUIRED' => 'N',
@@ -347,10 +346,11 @@ class categories extends Infoblock
                 'VISIBLE' => 'N',
             ),
         );
-    }
+	}
 
-    public function properties()
-    {
-        return array();
-    }
+public function properties()
+{
+return array(
+        );
+}
 }

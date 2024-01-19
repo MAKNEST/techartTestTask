@@ -1,0 +1,40 @@
+@import "~style";
+
+$block-name: "b-news-banner";
+
+.#{$block-name} {
+	display: block !important;
+
+	&__link {
+		text-decoration: none;
+	}
+
+	&__text-block {
+		color: #fff;
+		font-family: "Open Sans";
+		font-style: normal;
+		text-align: left;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 30rem;
+	}
+
+	&__title {
+		text-align: left;
+		margin-bottom: 2rem;
+		font-size: 3rem;
+	}
+
+	&__announce {
+		text-align: left;
+		font-size: 1.1rem;
+	}
+
+	&__container {
+		width: 80%;
+	}
+}

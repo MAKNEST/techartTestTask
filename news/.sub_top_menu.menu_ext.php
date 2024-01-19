@@ -1,23 +1,24 @@
 <?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
-if (CModule::IncludeModule("iblock")) {
-    $arOrder = ['PROPERTY_DATE' => 'ASC'];   
-    $arFilter = ["IBLOCK_ID" => 2, "ACTIVE" => "Y"];
-    $arSelectFields = ['ID', 'NAME'];
+$categories = \TAO::infoblock('categories');
 
-    $res = CIBlockElement::GetList($arOrder, $arFilter, false, [], $arSelectFields);
+$args = [
+    'order' => [
+        'PROPERTY_DATE' => 'ASC'
+    ],
+    'fields' => ['ID', 'NAME']
+];
+$rows = $categories->getRows($args);
 
-    $aMenuLinksExt = [];
-    while ($arFields = $res->Fetch()) {
-        $aMenuLinksExt[] = [
-            $arFields['NAME'],
-            '/news/' . $arFields['ID'] . '/1',
-            [],
-            [],
-            ""
-        ];
-    }
+foreach ($rows as $row) {
+    $aMenuLinksExt[] = [
+        $row['NAME'],
+        '/news/' . $row['ID'] . '/1',
+        [],
+        [],
+        ""
+    ];
 }
 
 $aMenuLinks = array_merge($aMenuLinksExt, $aMenuLinks);

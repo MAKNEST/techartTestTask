@@ -1,0 +1,50 @@
+@import "~style";
+
+$block-name: "b-list-item";
+
+.#{$block-name} {
+	display: flex;
+	flex-flow: wrap;
+	flex-direction: column;
+	align-content: stretch;
+	justify-content: space-between;
+	flex: 1 1 32rem;
+	margin: 2rem;
+
+	&__date {
+		border-radius: 20px;
+		background-color: #ecf2f5;
+		padding: 6px 18px;
+		text-align: center;
+		font-family: $body-font-family;
+		width: fit-content;
+		max-width: 5rem;
+		box-sizing: content-box;
+	}
+
+	&__link {
+		text-decoration: none;
+		text-align: left;
+		color: #000;
+	}
+
+	&__title {
+		font-family: $body-font-family;
+		font-size: 1.6rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		margin-top: 2rem;
+	}
+
+	&:hover {
+		.#{$block-name}__title {
+			color: $color-purple;
+		}
+
+		.b-button {
+			color: $color-white;
+			background-color: $color-purple;
+		}
+	}
+}

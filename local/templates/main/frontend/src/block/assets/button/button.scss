@@ -1,0 +1,31 @@
+@import "~style";
+
+$block-name: "b-button";
+
+.#{$block-name} {
+	font-family: $body-font-family;
+	font-size: 0.9rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 50px;
+	border: 2px solid $color-purple;
+	color: $color-purple;
+	background-color: $color-white;
+	width: fit-content;
+	padding: 1rem 1.4rem;
+	display: flex;
+	align-content: stretch;
+	flex-flow: nowrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s;
+
+	&:hover {
+		color: $color-white;
+		background-color: $color-purple;
+	}
+}

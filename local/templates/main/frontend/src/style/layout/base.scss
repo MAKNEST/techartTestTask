@@ -2,7 +2,8 @@
 // Писать в этом файле свои стили ОЧЕНЬ не рекомендуется, все стили должны быть разнесены по блокам.
 @import "style";
 @import "normalize.css";
-@include site-fonts;
+
+// @include site-fonts;
 
 *,
 *::before,
