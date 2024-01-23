@@ -3,5 +3,82 @@
 $block-name: "b-element";
 
 .#{$block-name} {
-	//
+	display: flex;
+	flex-flow: wrap;
+	flex-direction: row;
+	align-content: center;
+	justify-content: space-between;
+	align-items: stretch;
+	font-family: $body-font-family;
+	margin-top: 2rem;
+
+	&__item-picture {
+		img {
+			min-height: 30rem;
+		}
+	}
+
+	&__info {
+		font-size: 2rem;
+	}
+
+	&__title {
+		font-size: 3rem;
+	}
+
+	&__genre-value,
+	&__binding-value {
+		color: $color-purple;
+	}
+
+	&__author-value {
+		a {
+			color: #000;
+
+			&:hover {
+				color: $color-purple;
+				transition: 0.3s;
+			}
+		}
+	}
+
+	&__price-container {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	&__price {
+		&--old {
+			text-decoration: line-through;
+		}
+
+		&--new {
+			color: red;
+		}
+	}
+
+	&__amount-count {
+		margin-bottom: 1rem;
+	}
+
+	&__button-minus,
+	&__button-plus {
+		font-size: 2rem;
+		color: $color-purple;
+		border: 1px solid $color-purple;
+		border-radius: 25px;
+		padding: 0 0.8rem;
+		transition: 0.3s;
+		user-select: none;
+
+		&:hover {
+			background-color: $color-purple;
+			color: $color-white;
+		}
+	}
+
+	&__meta-container {
+		position: absolute;
+		display: none;
+	}
 }

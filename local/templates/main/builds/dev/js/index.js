@@ -14,6 +14,16 @@ requireAll(__webpack_require__("./src/block/assets sync recursive ^\\.\\/[^/]+\\
 
 /***/ }),
 
+/***/ "./src/block/common/-T/-T.js":
+/*!***********************************!*\
+  !*** ./src/block/common/-T/-T.js ***!
+  \***********************************/
+/***/ (() => {
+
+console.log('Блок common/-T загружен...');
+
+/***/ }),
+
 /***/ "./src/block/common/common.js":
 /*!************************************!*\
   !*** ./src/block/common/common.js ***!
@@ -37,6 +47,21 @@ function requireAll(r) {
   r.keys().map(r);
 }
 requireAll(__webpack_require__("./src/block/form sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$"));
+
+/***/ }),
+
+/***/ "./src/block/form/form/form.js":
+/*!*************************************!*\
+  !*** ./src/block/form/form/form.js ***!
+  \*************************************/
+/***/ (() => {
+
+window.onload = function () {
+  let form = document.querySelector('.b-form__feedback');
+  if (form !== null) {
+    console.log(form.user_name.value);
+  }
+};
 
 /***/ }),
 
@@ -109,6 +134,19 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************************!*\
   !*** ./src/block/assets/ok-message/ok-message.scss ***!
   \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/block/common/-j/-j.scss":
+/*!*************************************!*\
+  !*** ./src/block/common/-j/-j.scss ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -316,6 +354,8 @@ webpackContext.id = "./src/block/assets sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./-T/-T.js": "./src/block/common/-T/-T.js",
+	"./-j/-j.scss": "./src/block/common/-j/-j.scss",
 	"./footer/footer.scss": "./src/block/common/footer/footer.scss",
 	"./header/header.scss": "./src/block/common/header/header.scss",
 	"./menu/menu.scss": "./src/block/common/menu/menu.scss"
@@ -350,6 +390,7 @@ webpackContext.id = "./src/block/common sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./form/form.js": "./src/block/form/form/form.js",
 	"./form/form.scss": "./src/block/form/form/form.scss"
 };
 

@@ -3,5 +3,8 @@
 $block-name: "b-section";
 
 .#{$block-name} {
-	//
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
 }

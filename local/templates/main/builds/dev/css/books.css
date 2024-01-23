@@ -1,0 +1,169 @@
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/catalog/element/element.scss ***!
+  \*******************************************************************************************************************************************************************************************************/
+.b-element {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: stretch;
+  font-family: "Open Sans", arial, sans-serif;
+  margin-top: 2rem;
+}
+.b-element__item-picture img {
+  min-height: 30rem;
+}
+.b-element__info {
+  font-size: 2rem;
+}
+.b-element__title {
+  font-size: 3rem;
+}
+.b-element__genre-value, .b-element__binding-value {
+  color: #9b407a;
+}
+.b-element__author-value a {
+  color: #000;
+}
+.b-element__author-value a:hover {
+  color: #9b407a;
+  transition: 0.3s;
+}
+.b-element__price-container {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.b-element__price--old {
+  text-decoration: line-through;
+}
+.b-element__price--new {
+  color: red;
+}
+.b-element__amount-count {
+  margin-bottom: 1rem;
+}
+.b-element__button-minus, .b-element__button-plus {
+  font-size: 2rem;
+  color: #9b407a;
+  border: 1px solid #9b407a;
+  border-radius: 25px;
+  padding: 0 0.8rem;
+  transition: 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.b-element__button-minus:hover, .b-element__button-plus:hover {
+  background-color: #9b407a;
+  color: #fff;
+}
+.b-element__meta-container {
+  position: absolute;
+  display: none;
+}
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/catalog/item/item.scss ***!
+  \*************************************************************************************************************************************************************************************************/
+.b-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  font-family: "Open Sans", arial, sans-serif;
+  margin-top: 1rem;
+}
+.b-item a {
+  text-decoration: none;
+}
+.b-item:hover .b-item__image {
+  height: 17rem;
+  transition: 0.3s;
+}
+.b-item:hover .b-item__title a,
+.b-item:hover .b-item__prop-value a {
+  color: #9b407a;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+.b-item__image {
+  height: 16rem;
+}
+.b-item__title {
+  margin-top: 1rem;
+}
+.b-item__title a {
+  font-size: 1rem;
+  color: #000;
+}
+.b-item__price-container {
+  margin-top: 1rem;
+}
+.b-item__price-old {
+  text-decoration: line-through;
+}
+.b-item__quntity-count {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.b-item__item-amount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.b-item__amount-filed, .b-item__amount-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.b-item__button-minus, .b-item__button-plus {
+  font-size: 1.5rem;
+  color: #9b407a;
+  border: 1px solid #9b407a;
+  border-radius: 25px;
+  padding: 0 0.6rem;
+  transition: 0.3s;
+}
+.b-item__button-minus:hover, .b-item__button-plus:hover {
+  color: #fff;
+  background-color: #9b407a;
+}
+.b-item__property-value a {
+  font-size: 1rem;
+  color: #000;
+}
+.b-item__field-count {
+  font-size: 1rem;
+  margin-left: 6%;
+  align-content: center;
+  border: none;
+  outline: none !important;
+  width: 10%;
+}
+.b-item__button-container {
+  margin-bottom: 2rem;
+  margin-top: 1.8rem;
+}
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/catalog/section-item/section-item.scss ***!
+  \*****************************************************************************************************************************************************************************************************************/
+
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/catalog/section/section.scss ***!
+  \*******************************************************************************************************************************************************************************************************/
+.b-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/catalog/top/top.scss ***!
+  \***********************************************************************************************************************************************************************************************/
+
+
+/*# sourceMappingURL=books.css.map*/

@@ -2,4 +2,5 @@
     class="{{ $block->mod($mod) }}"
     type="{{ $type }}"
     name="{{ $name }}"
-    value="{{ $value }}">
+    value="{{ $value }}"
+    id="{{ $id }}">

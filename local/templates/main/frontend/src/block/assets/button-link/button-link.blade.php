@@ -1,4 +1,4 @@
-<a href="{{ $link }}" class="{{ $block }}">
+<a href="{{ $link }}" class="{{ $block }} {{ $optional_class}}" id="{{ $id }}" rel="{{ $rel }}">
     @php
         $pos = 'right';
 

@@ -1,4 +1,4 @@
-<a href="<?php echo e($link); ?>" class="<?php echo e($block); ?>">
+<a href="<?php echo e($link); ?>" class="<?php echo e($block); ?> <?php echo e($optional_class); ?>" id="<?php echo e($id); ?>" rel="<?php echo e($rel); ?>">
     <?php
         $pos = 'right';
 

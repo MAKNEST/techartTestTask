@@ -6,10 +6,10 @@ module.exports = {
 	mainTemplateType: 'blade',
 	entry: {
 		// Для вынесения общих частей всех точек сборки нужно раскомментировать эту строчку
-		// common: ['jquery'], // По умолчанию все общие части собираеются в файл index.js
+		//common: ['jquery'], // По умолчанию все общие части собираеются в файл index.js
 		index: ['./src/entry/index.js'],
 		// Пример создания дополнительной точки сборки
-		// main: ['./src/entry/main.js'],
+		books: ['./src/entry/books.js'],
 	},
 	stats: {},
 	https: false,
