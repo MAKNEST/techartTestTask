@@ -1,5 +1,5 @@
 <input
-    class = "<?php echo e($block); ?>"
+    class = "<?php echo e($block); ?> "
     type = "text"
     name = "<?php echo $name; ?>"
     value = "<?php echo e($value); ?>"

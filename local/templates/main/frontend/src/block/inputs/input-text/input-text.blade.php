@@ -1,5 +1,5 @@
 <input
-    class = "{{ $block }}"
+    class = "{{ $block }} "
     type = "text"
     name = "{!! $name !!}"
     value = "{{ $value }}"

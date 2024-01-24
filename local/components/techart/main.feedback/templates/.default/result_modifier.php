@@ -4,24 +4,23 @@ $arResult['INPUTS'] = [];
 $error_message = $arResult['ERROR_MESSAGE'];
 
 // title error
-if (!is_null($arResult['ERROR_MESSAGE'])) {
-    $arResult['ERROR_TITLE'] = \TAO::frontend()->renderBlock(
-        'assets/error',
-        [
-            'error_text' => ' - поля обязательны для заполнения'
-        ]
-    );
-}
+$arResult['ERROR_TITLE'] = \TAO::frontend()->renderBlock(
+    'assets/error',
+    [
+        'error_text' => ' - поля обязательны для заполнения'
+    ]
+);
+
 
 // input user_name
-if (!is_null($arResult['ERROR_MESSAGE']['user_name'])) {
-    $arResult['INPUTS']['USER_NAME']['ERROR'] = \TAO::frontend()->renderBlock(
-        'assets/error',
-        [
-            'error_text' => $error_message['user_name']
-        ]
-    );
-}
+$arResult['INPUTS']['USER_NAME']['ERROR'] = \TAO::frontend()->renderBlock(
+    'assets/error',
+    [
+        'error_text' => 'Заполните ваше имя!',
+        'optionClass' => 'user_name'
+    ]
+);
+
 
 $arResult['INPUTS']['USER_NAME']['INPUT'] = \TAO::frontend()->renderBlock(
     'inputs/input-text',
@@ -33,14 +32,14 @@ $arResult['INPUTS']['USER_NAME']['INPUT'] = \TAO::frontend()->renderBlock(
 );
 
 // input email
-if (!is_null($arResult['ERROR_MESSAGE']['user_email'])) {
-    $arResult['INPUTS']['EMAIL']['ERROR'] = \TAO::frontend()->renderBlock(
-        'assets/error',
-        [
-            'error_text' => $error_message['user_email']
-        ]
-    );
-}
+$arResult['INPUTS']['EMAIL']['ERROR'] = \TAO::frontend()->renderBlock(
+    'assets/error',
+    [
+        'error_text' => 'Заполните ваш E-mail!',
+        'optionClass' => 'user_email'
+    ]
+);
+
 
 $arResult['INPUTS']['EMAIL']['INPUT'] = \TAO::frontend()->renderBlock(
     'inputs/input-text',
@@ -52,21 +51,21 @@ $arResult['INPUTS']['EMAIL']['INPUT'] = \TAO::frontend()->renderBlock(
 );
 
 // input phone
-if (!is_null($arResult['ERROR_MESSAGE']['user_phone_preg'])) {
-    $arResult['INPUTS']['PHONE']['ERROR'] = \TAO::frontend()->renderBlock(
-        'assets/error',
-        [
-            'error_text' => $error_message['user_phone_preg']
-        ]
-    );
-}
+$arResult['INPUTS']['PHONE']['ERROR'] = \TAO::frontend()->renderBlock(
+    'assets/error',
+    [
+        'error_text' => 'Заполните ваш телефон!',
+        'optionClass' => 'user_phone'
+    ]
+);
+
 
 $arResult['INPUTS']['PHONE']['INPUT'] = \TAO::frontend()->renderBlock(
     'inputs/input-text',
     [
         'value' => !empty($error_message) ? $arResult['AUTHOR_PHONE'] : '',
         'placeholder' => 'Ваш телефон',
-        'name' => 'user_phone'
+        'name' => 'user_phone',
     ]
 );
 
@@ -80,14 +79,14 @@ $arResult['INPUTS']['CATEGORIES']['INPUT'] = \TAO::frontend()->renderBlock(
 );
 
 // textarea
-if (!is_null($arResult['ERROR_MESSAGE']['MESSAGE'])) {
-    $arResult['INPUTS']['MESSAGE']['ERROR'] = \TAO::frontend()->renderBlock(
-        'assets/error',
-        [
-            'error_text' => $error_message['MESSAGE']
-        ]
-    );
-}
+$arResult['INPUTS']['MESSAGE']['ERROR'] = \TAO::frontend()->renderBlock(
+    'assets/error',
+    [
+        'error_text' => 'Напишите сообщение!',
+        'optionClass' => 'MESSAGE'
+    ]
+);
+
 
 $arResult['INPUTS']['MESSAGE']['INPUT'] = \TAO::frontend()->renderBlock(
     'inputs/textarea',
@@ -121,6 +120,4 @@ if(is_null($arResult['ERROR_MESSAGE']) && !is_null($arResult['OK_MESSAGE'])) {
     );
 }
 
-// echo "<pre>";
-// print_r($arResult);
-// echo "</pre>";
+// dd($arResult);

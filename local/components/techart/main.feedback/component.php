@@ -47,6 +47,8 @@ if($arParams["OK_TEXT"] == '') {
 	$arParams["OK_TEXT"] = GetMessage("MF_OK_MESSAGE");
 }
 
+// vd($_POST);
+
 if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_POST["PARAMS_HASH"]) || $arResult["PARAMS_HASH"] === $_POST["PARAMS_HASH"]))
 {
 	$arResult["ERROR_MESSAGE"] = array();
@@ -66,9 +68,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
 				$arResult["ERROR_MESSAGE"]['user_phone'] = GetMessage("MF_REQ_PHONE");
 			}
 			
-			if (!preg_match('/(\+7|8)[0-9]{10}/', $_POST['user_phone'])) {
-				$arResult["ERROR_MESSAGE"]['user_phone_preg'] = GetMessage("MF_PREG_PHONE");
-			}
+			// if (!preg_match('/(\+7|8)[0-9]{10}/', $_POST['user_phone'])) {
+			// 	$arResult["ERROR_MESSAGE"]['user_phone_preg'] = GetMessage("MF_PREG_PHONE");
+			// }
 
 			if ((empty($arParams["REQUIRED_FIELDS"]) || in_array("CHAPTER", $arParams["REQUIRED_FIELDS"])) && empty($_POST["chapter"])) {
 				$arResult["ERROR_MESSAGE"]['CHAPTER'] = GetMessage("MF_REQ_CHAPTER");

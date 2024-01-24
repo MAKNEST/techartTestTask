@@ -43,5 +43,16 @@ $block-name: "b-form";
 		p {
 			margin: 0;
 		}
+
+		&--error {
+			input,
+			textarea {
+				border: 2px solid red;
+			}
+	
+			.b-error {
+				display: block;
+			}
+		}
 	}
 }

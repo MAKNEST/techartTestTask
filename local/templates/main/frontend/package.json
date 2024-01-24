@@ -24,6 +24,7 @@
 	"author": "web@techart.ru",
 	"license": "ISC",
 	"dependencies": {
+		"imask": "^7.3.0",
 		"normalize.css": "^8.0.1"
 	},
 	"devDependencies": {

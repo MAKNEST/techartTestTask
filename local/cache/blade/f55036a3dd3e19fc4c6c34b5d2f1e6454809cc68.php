@@ -1,4 +1,4 @@
-<div class="<?php echo e($block); ?>">
+<div class="<?php echo e($block); ?> <?php echo e($optionClass); ?>">
     <p>
         <span class="<?php echo e($block->elem('error-icon')); ?>">*</span>
         <?php echo e($error_text); ?>

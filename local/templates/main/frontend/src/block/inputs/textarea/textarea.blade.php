@@ -1,5 +1,5 @@
 <textarea
-    class="{{ $block }}"
+    class="{{ $block }} {{ $mod }}"
     name="{{ $name }}"
     rows="{{ $rows }}"
     cols="{{ $cols }}"

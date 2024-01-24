@@ -1,5 +1,5 @@
 <textarea
-    class="<?php echo e($block); ?>"
+    class="<?php echo e($block); ?> <?php echo e($mod); ?>"
     name="<?php echo e($name); ?>"
     rows="<?php echo e($rows); ?>"
     cols="<?php echo e($cols); ?>"

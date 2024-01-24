@@ -3,4 +3,5 @@
     type="{{ $type }}"
     name="{{ $name }}"
     value="{{ $value }}"
-    id="{{ $id }}">
+    id="{{ $id }}"
+    onclick="{{ $onClick }}">
