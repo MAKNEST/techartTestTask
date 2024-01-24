@@ -14,16 +14,6 @@ requireAll(__webpack_require__("./src/block/assets sync recursive ^\\.\\/[^/]+\\
 
 /***/ }),
 
-/***/ "./src/block/common/-T/-T.js":
-/*!***********************************!*\
-  !*** ./src/block/common/-T/-T.js ***!
-  \***********************************/
-/***/ (() => {
-
-console.log('Блок common/-T загружен...');
-
-/***/ }),
-
 /***/ "./src/block/common/common.js":
 /*!************************************!*\
   !*** ./src/block/common/common.js ***!
@@ -193,6 +183,71 @@ requireAll(__webpack_require__("./src/block/news sync recursive ^\\.\\/[^/]+\\/[
 
 /***/ }),
 
+/***/ "./src/block/office/map/map.js":
+/*!*************************************!*\
+  !*** ./src/block/office/map/map.js ***!
+  \*************************************/
+/***/ (() => {
+
+document.addEventListener("DOMContentLoaded", function () {
+  async function initMap() {
+    // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+    await ymaps3.ready;
+    const {
+      YMap,
+      YMapDefaultSchemeLayer,
+      YMapDefaultFeaturesLayer,
+      YMapMarker
+    } = ymaps3;
+
+    // Иницилиазируем карту
+    const map = new YMap(
+    // Передаём ссылку на HTMLElement контейнера
+    document.getElementById('map'),
+    // Передаём параметры инициализации карты
+    {
+      location: {
+        // Координаты центра карты
+        center: [37.584719, 54.200511],
+        // Уровень масштабирования
+        zoom: 18
+      }
+    });
+
+    // Добавляем слой для отображения схематической карты
+    map.addChild(new YMapDefaultSchemeLayer());
+
+    // слой метки
+    map.addChild(new YMapDefaultFeaturesLayer());
+    const content = document.createElement("section");
+    const marker = new YMapMarker({
+      coordinates: [37.584719, 54.200511],
+      draggable: true
+    }, content);
+    let popupMarker = `<div class="b-map__popup-marker">
+			<span class="b-map__popup-content"> Офис в Туле 300041, г. Тула, ул. Ф. Смирнова ул., д. 28, 
+			оф. 601-602, 701, 703-707, 712Тел. / Факс: (4872) 250-450, 57-05-01</span></div>`;
+    content.innerHTML = '';
+    map.addChild(marker);
+  }
+  initMap();
+});
+
+/***/ }),
+
+/***/ "./src/block/office/office.js":
+/*!************************************!*\
+  !*** ./src/block/office/office.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+function requireAll(r) {
+  r.keys().map(r);
+}
+requireAll(__webpack_require__("./src/block/office sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$"));
+
+/***/ }),
+
 /***/ "./node_modules/swiper/swiper.css":
 /*!****************************************!*\
   !*** ./node_modules/swiper/swiper.css ***!
@@ -249,19 +304,6 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************************!*\
   !*** ./src/block/assets/ok-message/ok-message.scss ***!
   \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/block/common/-j/-j.scss":
-/*!*************************************!*\
-  !*** ./src/block/common/-j/-j.scss ***!
-  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -414,6 +456,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/block/office/map/map.scss":
+/*!***************************************!*\
+  !*** ./src/block/office/map/map.scss ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/style/layout/base.scss":
 /*!************************************!*\
   !*** ./src/style/layout/base.scss ***!
@@ -469,8 +524,6 @@ webpackContext.id = "./src/block/assets sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
-	"./-T/-T.js": "./src/block/common/-T/-T.js",
-	"./-j/-j.scss": "./src/block/common/-j/-j.scss",
 	"./footer/footer.scss": "./src/block/common/footer/footer.scss",
 	"./header/header.scss": "./src/block/common/header/header.scss",
 	"./menu/menu.scss": "./src/block/common/menu/menu.scss"
@@ -598,6 +651,39 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./src/block/news sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$";
+
+/***/ }),
+
+/***/ "./src/block/office sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$":
+/*!*************************************************************************************!*\
+  !*** ./src/block/office/ sync ^\.\/[^/]+\/[^/.]+\.(js%7Ccss%7Cscss%7Csass%7Cless)$ ***!
+  \*************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./map/map.js": "./src/block/office/map/map.js",
+	"./map/map.scss": "./src/block/office/map/map.scss"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/block/office sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.(js%7Ccss%7Cscss%7Csass%7Cless)$";
 
 /***/ }),
 
@@ -15231,6 +15317,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var block_form__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(block_form__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var block_inputs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! block/inputs */ "./src/block/inputs/inputs.js");
 /* harmony import */ var block_inputs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(block_inputs__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var block_office__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! block/office */ "./src/block/office/office.js");
+/* harmony import */ var block_office__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(block_office__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 

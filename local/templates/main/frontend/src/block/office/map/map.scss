@@ -1,0 +1,23 @@
+@import "~style";
+
+$block-name: "b-map";
+
+.#{$block-name} {
+
+	&__adress {
+		font-family: $body-font-family;
+		margin-top: 2rem;
+	}
+
+	&__popup-marker {
+		&:hover {
+			.#{$block-name}__popup-content {
+				display: block;
+			}
+		}
+	}
+
+	&__popup-content {
+		display: none;
+	}
+}

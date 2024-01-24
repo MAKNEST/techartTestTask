@@ -35,5 +35,12 @@ $aMenuLinks = Array(
 		Array(), 
 		"" 
 	),
+	Array(
+		"Офис",
+		"/about/office.php",
+		Array(), 
+		Array(), 
+		"" 
+	),
 );
 ?>

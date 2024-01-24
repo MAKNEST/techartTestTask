@@ -12,7 +12,6 @@ use Bitrix\Main\Page\Asset;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
 
     <?php 
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/style/main.css");
@@ -23,7 +22,7 @@ use Bitrix\Main\Page\Asset;
 	\TAO::frontendCss('index');
 	\TAO::frontendJs('index');
     ?>
-	<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+	<script src="https://api-maps.yandex.ru/v3/?apikey=a61bbf62-bad2-4148-b3e8-ff33f4747da3&lang=ru_RU"></script>
     <title><?php $APPLICATION->ShowTitle();?></title>
 </head>
 

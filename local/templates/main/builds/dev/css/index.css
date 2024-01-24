@@ -374,10 +374,6 @@ body {
 img {
   max-width: 100%;
 }
-/*!********************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/-j/-j.scss ***!
-  \********************************************************************************************************************************************************************************************/
-
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/footer/footer.scss ***!
   \****************************************************************************************************************************************************************************************************/
@@ -484,7 +480,7 @@ img {
   background-color: #fff;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 5;
 }
 .b-menu__submenu {
   color: #0a0a0a;
@@ -1213,6 +1209,19 @@ img {
 }
 .b-textarea:focus-visible {
   border: 2px solid #9b407a;
+}
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/office/map/map.scss ***!
+  \**********************************************************************************************************************************************************************************************/
+.b-map__adress {
+  font-family: "Open Sans", arial, sans-serif;
+  margin-top: 2rem;
+}
+.b-map__popup-marker:hover .b-map__popup-content {
+  display: block;
+}
+.b-map__popup-content {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map*/
