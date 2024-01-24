@@ -3,7 +3,8 @@
 $block-name: "b-news-banner";
 
 .#{$block-name} {
-	display: block !important;
+	display: flex;
+	flex-direction: row;
 
 	&__link {
 		text-decoration: none;
@@ -11,7 +12,7 @@ $block-name: "b-news-banner";
 
 	&__text-block {
 		color: #fff;
-		font-family: "Open Sans";
+		font-family: $body-font-family;
 		font-style: normal;
 		text-align: left;
 		background-position: center center;
@@ -36,5 +37,38 @@ $block-name: "b-news-banner";
 
 	&__container {
 		width: 80%;
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		color: $color-white;
+		position: absolute;
+		top: var(--swiper-navigation-top-offset, 50%);
+		width: calc(var(--swiper-navigation-size)/ 44 * 27);
+		height: var(--swiper-navigation-size);
+		margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+		z-index: 10;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.swiper-button-next {
+		right: auto;
+		left: 96%;
+	}
+
+	.swiper-button-prev {
+		left: 1.5%;
+	}
+
+	&__slider-icon {
+		width: 3rem;
+		transition: 0.3s;
+
+		&:hover {
+			color: $color-purple;
+		}
 	}
 }

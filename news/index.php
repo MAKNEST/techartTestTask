@@ -15,9 +15,9 @@ if(!$USER->IsAuthorized()) {
 
 ?><?
 $APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"news_banner",
-	Array(
+	"bitrix:news.list", 
+	"news_banner", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -37,7 +37,14 @@ $APPLICATION->IncludeComponent(
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array("ID","CODE","NAME","PREVIEW_TEXT","DETAIL_PICTURE",""),
+		"FIELD_CODE" => array(
+			0 => "ID",
+			1 => "CODE",
+			2 => "NAME",
+			3 => "PREVIEW_TEXT",
+			4 => "DETAIL_PICTURE",
+			5 => "",
+		),
 		"FILTER_NAME" => "arrFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "11",
@@ -45,7 +52,7 @@ $APPLICATION->IncludeComponent(
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "N",
 		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "1",
+		"NEWS_COUNT" => "5",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -56,7 +63,13 @@ $APPLICATION->IncludeComponent(
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array("DATE","SECRET_NEWS","ANNOUNCE","IMAGE",""),
+		"PROPERTY_CODE" => array(
+			0 => "DATE",
+			1 => "SECRET_NEWS",
+			2 => "ANNOUNCE",
+			3 => "IMAGE",
+			4 => "",
+		),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "N",
@@ -68,8 +81,10 @@ $APPLICATION->IncludeComponent(
 		"SORT_BY2" => "PROPERTY_SECRET_NEWS",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "",
-		"STRICT_SECTION_CHECK" => "N"
-	)
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "news_banner"
+	),
+	false
 );
 ?><br>
  <?php

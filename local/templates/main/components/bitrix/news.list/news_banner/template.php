@@ -12,25 +12,10 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);	
 
-foreach ($arResult['ITEMS'] as $item) : ?>
-	<!-- <a href="<?= $item['DETAIL_PAGE_URL']; ?>" class="all_news-banner-link">
-		<div class="all_news-banner" style="background-image: url(<?= $item['DETAIL_PICTURE']['SRC']; ?>);">
-			<div class="banner-container">
-				<h1 class="all_news-banner-title">
-					<?= $item['NAME']; ?>
-				</h1>
 
-				<div class="all_news-banner-announce">
-					<?= $item['PREVIEW_TEXT']; ?>
-				</div>
-			</div>
-		</div>
-	</a> -->
-
-	<?= \TAO::frontend()->renderBlock(
-		'news/news-banner',
-		[
-			'item' => $item
-		]); 
-	?>
-<?php endforeach; ?>
+echo \TAO::frontend()->renderBlock(
+	'news/news-banner',
+	[
+		'items' => $arResult['ITEMS']
+	]
+); 
