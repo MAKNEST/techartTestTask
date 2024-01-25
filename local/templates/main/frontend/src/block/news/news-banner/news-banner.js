@@ -18,6 +18,4 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 1,
         spaceBetween: 30,
 	});
-
-    console.log(document.querySelector('.b-news-banner'));
 });

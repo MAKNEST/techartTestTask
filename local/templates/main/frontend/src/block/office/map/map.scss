@@ -3,21 +3,89 @@
 $block-name: "b-map";
 
 .#{$block-name} {
-
-	&__adress {
-		font-family: $body-font-family;
-		margin-top: 2rem;
-	}
+	display: none;
 
 	&__popup-marker {
+		margin-top: 0.5rem;
+		font-size: 1.2rem;
+		font-family: $body-font-family;
+		background-color: $color-white;
+		border: 2px solid $color-purple;
+		border-radius: 25px;
+		padding: 5px 10px;
+		transition: 0.1s;
+		
+
 		&:hover {
-			.#{$block-name}__popup-content {
-				display: block;
+			.#{$block-name}__marker-title {
+				background-color: $color-purple;
+				color: $color-white;
+				transition: 0.3s;
 			}
 		}
 	}
 
-	&__popup-content {
-		display: none;
+	&__adress {
+		font-family: $body-font-family;
+		margin-top: 2rem;
+		line-height: 2rem;
 	}
+
+	&__image {
+		width: 30%;
+		transform-origin: center bottom;
+
+		&--show-content {
+			width: 30%;
+		}
+	}
+
+	&__marker-title {
+		margin: 0 auto;
+		padding: 10px 15px;
+		border-radius: 25px;
+		transition: 0.3s;
+		width: max-content;
+	}
+
+	&__popup-content {
+		transition: 0.3s;
+		display: none;
+
+		&--show {
+			display: block;
+			margin-top: 1rem;
+
+			@keyframes show {
+				0% {
+					opacity: 0;
+				} 100% {
+					opacity: 1;
+				}
+			}
+			animation: show 0.3s 1;
+			animation-fill-mode: forwards;
+			width: 10rem;
+		}
+	}
+
+	&--show {
+		display: flex;
+    	flex-direction: column-reverse;
+	}
+}
+
+.maps_tabs {
+	display: flex;
+	flex-direction: row;
+	padding: 0 2rem 2rem 0rem;
+
+	button {
+		margin-right: 1rem;
+	}
+}
+
+.tab_selected {
+	background-color: $color-purple;
+	color: $color-white;
 }

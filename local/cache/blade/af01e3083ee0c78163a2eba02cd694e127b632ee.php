@@ -1,7 +1,8 @@
-<input
-    class="<?php echo e($block->mod($mod)); ?>"
-    type="<?php echo e($type); ?>"
+<button
+    class="<?php echo e($block->mod($mod)); ?> <?php echo e($optional_class); ?>"
     name="<?php echo e($name); ?>"
-    value="<?php echo e($value); ?>"
     id="<?php echo e($id); ?>"
-    onclick="<?php echo e($onClick); ?>"><?php /**PATH /var/www/workspace/test/www/local/templates/main/frontend/src/block/assets/button/button.blade.php ENDPATH**/ ?>
+    onclick="<?php echo e($onClick); ?>" >
+    <?php echo e($text); ?>
+
+</button><?php /**PATH /var/www/workspace/test/www/local/templates/main/frontend/src/block/assets/button/button.blade.php ENDPATH**/ ?>

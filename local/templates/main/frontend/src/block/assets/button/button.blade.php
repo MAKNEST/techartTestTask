@@ -1,7 +1,7 @@
-<input
-    class="{{ $block->mod($mod) }}"
-    type="{{ $type }}"
+<button
+    class="{{ $block->mod($mod) }} {{ $optional_class }}"
     name="{{ $name }}"
-    value="{{ $value }}"
     id="{{ $id }}"
-    onclick="{{ $onClick }}">
+    onclick="{{ $onClick }}" >
+    {{ $text }}
+</button>
