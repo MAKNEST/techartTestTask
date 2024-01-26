@@ -30,27 +30,15 @@
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
     <div class="<?php echo e($block->elem('navbar')); ?>">
-        <?php if($userAuthorised): ?>
-            <?php    
-                $uri = explode('?', $_SERVER["REQUEST_URI"])[0];
+        <?php echo $renderer->renderBlock(
+            'common/auth-header',
+            [
+                'userAuthorised' => $userAuthorised,
+                'uri' => $uri,
+                'sessionId' => $sessionId,
+                'userName' => $userName
+            ]
+        ); ?>
 
-                $loginMod = $uri == '/auth/' ? 'selected' : '';
-                $registerMod = $uri == '/auth/register.php' ? 'selected' : '';
-            ?>
-
-            <a href="/auth/" class="<?php echo e($block->elem('link')->mod($loginMod)); ?>">Авторизация</a>
-            <a href="/auth/register.php" class="<?php echo e($block->elem('link')->mod($registerMod)); ?>">Регистрация</a>
-        <?php else: ?>
-            <form action="/auth/">
-                <?php echo $sessionId; ?>
-
-                <input type="hidden" name="logout" value="yes" >
-                
-                <div class="<?php echo e($block->elem('user')); ?>">	
-                    <div class="<?php echo e($block->elem('login')); ?>"><?php echo e($userName); ?></div>
-                    <input type="submit" name="logout_butt" value="Выйти" class="main_button logout_button">
-                </div>
-            </form>
-        <?php endif; ?>
     </div>
 </div><?php /**PATH /var/www/workspace/test/www/local/templates/main/frontend/src/block/common/menu/menu.blade.php ENDPATH**/ ?>

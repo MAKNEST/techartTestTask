@@ -14,7 +14,6 @@ $block-name: "b-map";
 		border-radius: 25px;
 		padding: 5px 10px;
 		transition: 0.1s;
-		
 
 		&:hover {
 			.#{$block-name}__marker-title {
@@ -38,6 +37,14 @@ $block-name: "b-map";
 		&--show-content {
 			width: 30%;
 		}
+
+		&:hover {
+			.#{$block-name}__marker-title {
+				background-color: $color-purple;
+				color: $color-white;
+				transition: 0.3s;
+			}
+		}
 	}
 
 	&__marker-title {
@@ -59,10 +66,13 @@ $block-name: "b-map";
 			@keyframes show {
 				0% {
 					opacity: 0;
-				} 100% {
+				}
+
+				100% {
 					opacity: 1;
 				}
 			}
+
 			animation: show 0.3s 1;
 			animation-fill-mode: forwards;
 			width: 10rem;
@@ -71,21 +81,6 @@ $block-name: "b-map";
 
 	&--show {
 		display: flex;
-    	flex-direction: column-reverse;
+		flex-direction: column-reverse;
 	}
-}
-
-.maps_tabs {
-	display: flex;
-	flex-direction: row;
-	padding: 0 2rem 2rem 0rem;
-
-	button {
-		margin-right: 1rem;
-	}
-}
-
-.tab_selected {
-	background-color: $color-purple;
-	color: $color-white;
 }

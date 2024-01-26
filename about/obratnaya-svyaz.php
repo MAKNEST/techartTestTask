@@ -5,6 +5,9 @@ $APPLICATION->SetPageProperty("keywords", "Обратная связь");
 $APPLICATION->SetPageProperty("description", "Обратная связь");
 $APPLICATION->SetPageProperty("TITLE", "Обратная связь");
 $APPLICATION->SetTitle("Обратная связь");
+
+\TAO::frontendCss('feedback');
+\TAO::frontendJs('feedback');
 ?>
 
 <?$APPLICATION->IncludeComponent(

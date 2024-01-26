@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
 	async function initMaps() {
 		// Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
-		await ymaps3.ready;
+		await window.ymaps3.ready;
 
 		const {
 			YMap,
 			YMapDefaultSchemeLayer,
 			YMapDefaultFeaturesLayer,
 			YMapMarker,
-		} = ymaps3;
+		} = window.ymaps3;
 
 		// Иницилиазируем карту офиса в Туле
 		const map_tula = new YMap(
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				draggable: false,
 				iconSrc: "geometka.png",
 				subtitle:
-					" Офис в Туле 300041, г. Тула, ул. Ф. Смирнова ул., д. 28, оф. 601-602, 701, 703-707, 712Тел. / Факс: (4872) 250-450, 57-05-01",
+					"Офис в Туле 300041, г. Тула, ул. Ф. Смирнова ул., д. 28, оф. 601-602, 701, 703-707, 712Тел. / Факс: (4872) 250-450, 57-05-01",
 				iconImageOffset: [-20, -100],
 			},
 			content_tula
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		map_tula.addChild(marker_tula);
 
-//============================================================================================================
+		//============================================================================================================
 		// Иницилиазируем карту офиса в Москве
 		const map_moscow = new YMap(
 			// Передаём ссылку на HTMLElement контейнера
@@ -152,6 +152,5 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	
 	initMaps();
-
-	console.log(localStorage.getItem('data'));
+	
 });

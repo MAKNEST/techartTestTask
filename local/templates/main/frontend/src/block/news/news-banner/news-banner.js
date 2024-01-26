@@ -3,9 +3,8 @@ import { Navigation, Autoplay, Pagination } from "swiper/modules";
 
 import "swiper/css";
 
-
 document.addEventListener("DOMContentLoaded", function () {
-	let swiper = new Swiper(".b-news-banner", {
+	new Swiper(".b-news-banner", {
 		modules: [Navigation, Autoplay, Pagination],
 		navigation: {
 			nextEl: ".swiper-button-next",
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			delay: 5000,
 		},
 		loop: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
+		slidesPerView: 1,
+		spaceBetween: 30,
 	});
 });

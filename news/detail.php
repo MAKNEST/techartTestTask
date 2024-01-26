@@ -4,6 +4,9 @@ $APPLICATION->SetPageProperty("TITLE", "title");
 
 $_REQUEST['CODE'] = str_replace('/', '', $_REQUEST['CODE']);
 
+\TAO::frontendCss('news');
+\TAO::frontendJs('news');
+
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news.detail", 
 	"news_detail", 

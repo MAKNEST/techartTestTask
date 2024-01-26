@@ -5,6 +5,10 @@ $APPLICATION->SetPageProperty("description", "Новости");
 
 $APPLICATION->SetTitle("Новости");
 
+
+\TAO::frontendCss('news');
+\TAO::frontendJs('news');
+
 $GLOBALS['arrFilter'] = [];
 
 if(!$USER->IsAuthorized()) {

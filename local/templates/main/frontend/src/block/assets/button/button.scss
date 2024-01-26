@@ -28,4 +28,9 @@ $block-name: "b-button";
 		color: $color-white;
 		background-color: $color-purple;
 	}
+
+	&--logout {
+		padding: 0.3rem 1.5rem;
+		font-size: 1rem;
+	}
 }

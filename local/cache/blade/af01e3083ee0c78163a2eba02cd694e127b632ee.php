@@ -2,6 +2,7 @@
     class="<?php echo e($block->mod($mod)); ?> <?php echo e($optional_class); ?>"
     name="<?php echo e($name); ?>"
     id="<?php echo e($id); ?>"
+    type="<?php echo e($type); ?>"
     onclick="<?php echo e($onClick); ?>" >
     <?php echo e($text); ?>
 

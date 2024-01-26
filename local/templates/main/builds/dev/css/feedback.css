@@ -1,0 +1,49 @@
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/form/form/form.scss ***!
+  \**********************************************************************************************************************************************************************************************/
+.b-form__title-container {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: baseline;
+  text-transform: uppercase;
+}
+.b-form__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 132%;
+  font-family: "Open Sans", arial, sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  padding: 14px 16px;
+}
+.b-form__feedback {
+  font-family: "Open Sans", arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+.b-form__input-container {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.b-form__input-container p {
+  margin: 0;
+}
+.b-form__input-container--error input,
+.b-form__input-container--error textarea {
+  border: 2px solid red;
+}
+.b-form__input-container--error .b-error {
+  display: block;
+}
+
+/*# sourceMappingURL=feedback.css.map*/

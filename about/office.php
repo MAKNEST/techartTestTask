@@ -1,6 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Офисы");
+
+\TAO::frontendCss('office');
+\TAO::frontendJs('office');
+
 ?>
 <div class="container">
 
@@ -45,8 +49,7 @@ $APPLICATION->SetTitle("Офисы");
         'id' => 'map_moscow',
         'addres' => 'Офис в Москве<br>
             115230, г. Москва, Варшавское шоссе, д. 47, к. 4, оф. 1224 (12 этаж).
-            Тел. / Факс: (495) 933-62-10',
-        'data' => 'test value ass123'
+            Тел. / Факс: (495) 933-62-10'
     ]
 )
 ?>

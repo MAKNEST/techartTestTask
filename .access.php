@@ -1,4 +1,5 @@
 <?
+$PERM["/"]["*"]="R";
 $PERM["news"]["*"]="R";
 $PERM["about"]["*"]="R";
 $PERM["books"]["*"]="R";

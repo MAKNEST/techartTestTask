@@ -105,7 +105,7 @@ $arResult['SUBMIT_BUTTON'] = \TAO::frontend()->renderBlock(
     [
         'type' => 'submit',
         'name' => 'submit',
-        'value' => 'Отправить'
+        'text' => 'Отправить'
     ]
 );
 
@@ -119,5 +119,3 @@ if(is_null($arResult['ERROR_MESSAGE']) && !is_null($arResult['OK_MESSAGE'])) {
         ]
     );
 }
-
-// dd($arResult);

@@ -1,0 +1,36 @@
+@import "~style";
+
+$block-name: "b-auth-header";
+
+.#{$block-name} {
+	&__link {
+		color: black;
+		line-height: 132%;
+		font-family: $body-font-family;
+		font-size: 1.2rem;
+		font-weight: 400;
+		text-decoration: none;
+		transition: 0.3s;
+		margin-left: 2rem;
+
+		&--selected {
+			color: $color-purple;
+		}
+
+		&:hover {
+			color: $color-purple;
+		}
+	}
+
+	&__user {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	&__login {
+		font-size: 1.2rem;
+		margin: 0 1rem;
+	}
+}

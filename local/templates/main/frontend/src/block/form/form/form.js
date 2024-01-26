@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			lazy: false,
 		};
 
-		const mask = IMask(phoneInput, maskOptions);
+		IMask(phoneInput, maskOptions);
 
 		form.addEventListener("submit", function () {
 			let data = getData(form);

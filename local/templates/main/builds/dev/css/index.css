@@ -374,6 +374,35 @@ body {
 img {
   max-width: 100%;
 }
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/auth-header/auth-header.scss ***!
+  \**************************************************************************************************************************************************************************************************************/
+.b-auth-header__link {
+  color: black;
+  line-height: 132%;
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-left: 2rem;
+}
+.b-auth-header__link--selected {
+  color: #9b407a;
+}
+.b-auth-header__link:hover {
+  color: #9b407a;
+}
+.b-auth-header__user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.b-auth-header__login {
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/common/footer/footer.scss ***!
   \****************************************************************************************************************************************************************************************************/
@@ -448,13 +477,6 @@ img {
   flex-wrap: wrap;
   align-content: center;
 }
-.b-menu__dropdown {
-  float: left;
-  overflow: hidden;
-}
-.b-menu__dropdown:hover .b-menu__dropdown-content {
-  display: block;
-}
 .b-menu__link {
   color: black;
   line-height: 132%;
@@ -471,6 +493,13 @@ img {
 .b-menu__link:hover {
   color: #9b407a;
 }
+.b-menu__dropdown {
+  float: left;
+  overflow: hidden;
+}
+.b-menu__dropdown:hover .b-menu__dropdown-content {
+  display: block;
+}
 .b-menu__dropdown-content {
   flex-direction: column;
   font-family: "Open Sans", arial, sans-serif;
@@ -479,7 +508,7 @@ img {
   position: absolute;
   background-color: #fff;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 #979797;
   z-index: 5;
 }
 .b-menu__submenu {
@@ -499,550 +528,6 @@ img {
 }
 .b-menu__icon {
   width: 1rem;
-}
-.b-menu__user {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.b-menu__login {
-  font-size: 1.2rem;
-  margin: 0 1rem;
-}
-/*!**************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/news/detail/detail.scss ***!
-  \**************************************************************************************************************************************************************************************************/
-.b-detail {
-  text-align: left;
-  position: relative;
-}
-.b-detail__breadcrumb {
-  font-family: "Open Sans", arial, sans-serif;
-  display: flex;
-  margin-top: 4rem;
-}
-.b-detail__breadcrumb-link {
-  text-decoration: none;
-  color: black;
-}
-.b-detail__breadcrumb-title {
-  color: #6c6e7b;
-  margin-left: 0.5rem;
-}
-.b-detail__title {
-  font-family: "Open Sans", arial, sans-serif;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-  text-align: left;
-}
-.b-detail__content-container {
-  display: flex;
-  justify-content: flex-start;
-}
-@media (max-width: 1151px) {
-  .b-detail__content-container {
-    width: 100%;
-    flex-flow: column;
-  }
-}
-@media (min-width: 1152px) {
-  .b-detail__content-container {
-    flex-flow: row;
-    flex-wrap: wrap;
-  }
-}
-.b-detail__text-container {
-  width: 50%;
-}
-@media (max-width: 1151px) {
-  .b-detail__text-container {
-    width: 100%;
-  }
-}
-.b-detail__date {
-  border-radius: 20px;
-  background-color: #ecf2f5;
-  padding: 6px 18px;
-  text-align: center;
-  font-family: "Open Sans", arial, sans-serif;
-  width: -moz-fit-content;
-  width: fit-content;
-  max-width: 5rem;
-  box-sizing: content-box;
-}
-.b-detail__announce p {
-  color: #9b407a;
-  font-family: "Open Sans", arial, sans-serif;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  margin-bottom: 3rem;
-}
-.b-detail__image-mobile {
-  display: flex;
-  justify-content: space-evenly;
-}
-.b-detail__image-mobile[hidden] {
-  display: none;
-}
-@media (max-width: 1151px) {
-  .b-detail__image-mobile[hidden] {
-    display: block;
-    width: 50%;
-  }
-}
-@media (min-width: 551px) and (max-width: 1150px) {
-  .b-detail__image-mobile {
-    width: 100%;
-  }
-}
-.b-detail__text {
-  color: black;
-  font-family: "Open Sans", arial, sans-serif;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 160%;
-  margin-bottom: 5rem;
-}
-@media (max-width: 550px) {
-  .b-detail__text {
-    margin-bottom: 0;
-  }
-  .b-detail__text p {
-    font-size: 4vw;
-    margin-left: 1rem;
-  }
-}
-.b-detail__chapter-link {
-  font-size: 1.2rem;
-  color: black;
-  transition: 0.3s;
-}
-.b-detail__chapter-link:hover {
-  color: #9b407a;
-}
-.b-detail__image-desctop {
-  margin-top: 5rem;
-  margin-left: 2rem;
-}
-@media (min-width: 1152px) {
-  .b-detail__image-desctop {
-    max-width: 30rem;
-  }
-}
-@media (max-width: 1151px) {
-  .b-detail__image-desctop {
-    display: none;
-  }
-}
-@media (min-width: 551px) and (max-width: 1150px) {
-  .b-detail__image-desctop {
-    max-width: 15rem;
-  }
-}
-.b-detail__button-container {
-  width: 100%;
-}
-/*!********************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/news/list-item/list-item.scss ***!
-  \********************************************************************************************************************************************************************************************************/
-.b-list-item {
-  display: flex;
-  flex-flow: wrap;
-  flex-direction: column;
-  align-content: stretch;
-  justify-content: space-between;
-  flex: 1 1 32rem;
-  margin: 2rem;
-}
-.b-list-item__date {
-  border-radius: 20px;
-  background-color: #ecf2f5;
-  padding: 6px 18px;
-  text-align: center;
-  font-family: "Open Sans", arial, sans-serif;
-  width: -moz-fit-content;
-  width: fit-content;
-  max-width: 5rem;
-  box-sizing: content-box;
-}
-.b-list-item__link {
-  text-decoration: none;
-  text-align: left;
-  color: #000;
-}
-.b-list-item__title {
-  font-family: "Open Sans", arial, sans-serif;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  margin-top: 2rem;
-}
-.b-list-item:hover .b-list-item__title {
-  color: #9b407a;
-}
-.b-list-item:hover .b-button {
-  color: #fff;
-  background-color: #9b407a;
-}
-/*!**********************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/news/list/list.scss ***!
-  \**********************************************************************************************************************************************************************************************/
-.b-list__title {
-  font-family: "Open Sans", arial, sans-serif;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 140%;
-  text-align: left;
-  margin: 2rem;
-}
-.b-list__item-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-.b-list__pager {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-/*!***********************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/swiper/swiper.css ***!
-  \***********************************************************************************************************************************************************************************************/
-/**
- * Swiper 11.0.5
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- * https://swiperjs.com
- *
- * Copyright 2014-2023 Vladimir Kharlampidi
- *
- * Released under the MIT License
- *
- * Released on: November 22, 2023
- */
-/* FONT_START */
-@font-face {
-  font-family: "swiper-icons";
-  src: url("data:application/font-woff;charset=utf-8;base64, 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");
-  font-weight: 400;
-  font-style: normal;
-}
-/* FONT_END */
-:root {
-  --swiper-theme-color: #007aff;
-  /*
-  --swiper-preloader-color: var(--swiper-theme-color);
-  --swiper-wrapper-transition-timing-function: initial;
-  */
-}
-
-:host {
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 1;
-}
-
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden;
-  list-style: none;
-  padding: 0;
-  /* Fix of Webkit flickering */
-  z-index: 1;
-  display: block;
-}
-
-.swiper-vertical > .swiper-wrapper {
-  flex-direction: column;
-}
-
-.swiper-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: flex;
-  transition-property: transform;
-  transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
-  box-sizing: content-box;
-}
-
-.swiper-android .swiper-slide,
-.swiper-ios .swiper-slide,
-.swiper-wrapper {
-  transform: translate3d(0px, 0, 0);
-}
-
-.swiper-horizontal {
-  touch-action: pan-y;
-}
-
-.swiper-vertical {
-  touch-action: pan-x;
-}
-
-.swiper-slide {
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition-property: transform;
-  display: block;
-}
-
-.swiper-slide-invisible-blank {
-  visibility: hidden;
-}
-
-/* Auto Height */
-.swiper-autoheight,
-.swiper-autoheight .swiper-slide {
-  height: auto;
-}
-
-.swiper-autoheight .swiper-wrapper {
-  align-items: flex-start;
-  transition-property: transform, height;
-}
-
-.swiper-backface-hidden .swiper-slide {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-/* 3D Effects */
-.swiper-3d.swiper-css-mode .swiper-wrapper {
-  perspective: 1200px;
-}
-
-.swiper-3d .swiper-wrapper {
-  transform-style: preserve-3d;
-}
-
-.swiper-3d {
-  perspective: 1200px;
-}
-
-.swiper-3d .swiper-slide,
-.swiper-3d .swiper-cube-shadow {
-  transform-style: preserve-3d;
-}
-
-/* CSS Mode */
-.swiper-css-mode > .swiper-wrapper {
-  overflow: auto;
-  scrollbar-width: none;
-  /* For Firefox */
-  -ms-overflow-style: none;
-  /* For Internet Explorer and Edge */
-}
-
-.swiper-css-mode > .swiper-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.swiper-css-mode > .swiper-wrapper > .swiper-slide {
-  scroll-snap-align: start start;
-}
-
-.swiper-css-mode.swiper-horizontal > .swiper-wrapper {
-  scroll-snap-type: x mandatory;
-}
-
-.swiper-css-mode.swiper-vertical > .swiper-wrapper {
-  scroll-snap-type: y mandatory;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
-  scroll-snap-type: none;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
-  scroll-snap-align: none;
-}
-
-.swiper-css-mode.swiper-centered > .swiper-wrapper::before {
-  content: "";
-  flex-shrink: 0;
-  order: 9999;
-}
-
-.swiper-css-mode.swiper-centered > .swiper-wrapper > .swiper-slide {
-  scroll-snap-align: center center;
-  scroll-snap-stop: always;
-}
-
-.swiper-css-mode.swiper-centered.swiper-horizontal > .swiper-wrapper > .swiper-slide:first-child {
-  margin-inline-start: var(--swiper-centered-offset-before);
-}
-
-.swiper-css-mode.swiper-centered.swiper-horizontal > .swiper-wrapper::before {
-  height: 100%;
-  min-height: 1px;
-  width: var(--swiper-centered-offset-after);
-}
-
-.swiper-css-mode.swiper-centered.swiper-vertical > .swiper-wrapper > .swiper-slide:first-child {
-  margin-block-start: var(--swiper-centered-offset-before);
-}
-
-.swiper-css-mode.swiper-centered.swiper-vertical > .swiper-wrapper::before {
-  width: 100%;
-  min-width: 1px;
-  height: var(--swiper-centered-offset-after);
-}
-
-/* Slide styles start */
-/* 3D Shadows */
-.swiper-3d .swiper-slide-shadow,
-.swiper-3d .swiper-slide-shadow-left,
-.swiper-3d .swiper-slide-shadow-right,
-.swiper-3d .swiper-slide-shadow-top,
-.swiper-3d .swiper-slide-shadow-bottom,
-.swiper-3d .swiper-slide-shadow,
-.swiper-3d .swiper-slide-shadow-left,
-.swiper-3d .swiper-slide-shadow-right,
-.swiper-3d .swiper-slide-shadow-top,
-.swiper-3d .swiper-slide-shadow-bottom {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.swiper-3d .swiper-slide-shadow {
-  background: rgba(0, 0, 0, 0.15);
-}
-
-.swiper-3d .swiper-slide-shadow-left {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-}
-
-.swiper-3d .swiper-slide-shadow-right {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-}
-
-.swiper-3d .swiper-slide-shadow-top {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-}
-
-.swiper-3d .swiper-slide-shadow-bottom {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-}
-
-.swiper-lazy-preloader {
-  width: 42px;
-  height: 42px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -21px;
-  margin-top: -21px;
-  z-index: 10;
-  transform-origin: 50%;
-  box-sizing: border-box;
-  border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
-  border-radius: 50%;
-  border-top-color: transparent;
-}
-
-.swiper:not(.swiper-watch-progress) .swiper-lazy-preloader,
-.swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader {
-  animation: swiper-preloader-spin 1s infinite linear;
-}
-
-.swiper-lazy-preloader-white {
-  --swiper-preloader-color: #fff;
-}
-
-.swiper-lazy-preloader-black {
-  --swiper-preloader-color: #000;
-}
-
-@keyframes swiper-preloader-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/* Slide styles end */
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/news/news-banner/news-banner.scss ***!
-  \************************************************************************************************************************************************************************************************************/
-.b-news-banner {
-  display: flex;
-  flex-direction: row;
-}
-.b-news-banner__link {
-  text-decoration: none;
-}
-.b-news-banner__text-block {
-  color: #fff;
-  font-family: "Open Sans", arial, sans-serif;
-  font-style: normal;
-  text-align: left;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30rem;
-}
-.b-news-banner__title {
-  text-align: left;
-  margin-bottom: 2rem;
-  font-size: 3rem;
-}
-.b-news-banner__announce {
-  text-align: left;
-  font-size: 1.1rem;
-}
-.b-news-banner__container {
-  width: 80%;
-}
-.b-news-banner .swiper-button-next,
-.b-news-banner .swiper-button-prev {
-  color: #fff;
-  position: absolute;
-  top: var(--swiper-navigation-top-offset, 50%);
-  width: calc(var(--swiper-navigation-size) / 44 * 27);
-  height: var(--swiper-navigation-size);
-  margin-top: calc(0px - var(--swiper-navigation-size) / 2);
-  z-index: 10;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.b-news-banner .swiper-button-next {
-  right: auto;
-  left: 96%;
-}
-.b-news-banner .swiper-button-prev {
-  left: 1.5%;
-}
-.b-news-banner__slider-icon {
-  width: 3rem;
-  transition: 0.3s;
-}
-.b-news-banner__slider-icon:hover {
-  color: #9b407a;
 }
 /*!**************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/assets/button-link/button-link.scss ***!
@@ -1104,6 +589,10 @@ img {
   color: #fff;
   background-color: #9b407a;
 }
+.b-button--logout {
+  padding: 0.3rem 1.5rem;
+  font-size: 1rem;
+}
 /*!**************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/assets/error/error.scss ***!
   \**************************************************************************************************************************************************************************************************/
@@ -1118,53 +607,6 @@ img {
   color: green;
   font-weight: bold;
   padding-bottom: 1em;
-}
-/*!**********************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/form/form/form.scss ***!
-  \**********************************************************************************************************************************************************************************************/
-.b-form__title-container {
-  display: flex;
-  flex-flow: wrap;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: baseline;
-  text-transform: uppercase;
-}
-.b-form__title {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  line-height: 132%;
-  font-family: "Open Sans", arial, sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  padding: 14px 16px;
-}
-.b-form__feedback {
-  font-family: "Open Sans", arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  justify-content: center;
-  align-items: center;
-}
-.b-form__input-container {
-  width: 35%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.b-form__input-container p {
-  margin: 0;
-}
-.b-form__input-container--error input,
-.b-form__input-container--error textarea {
-  border: 2px solid red;
-}
-.b-form__input-container--error .b-error {
-  display: block;
 }
 /*!************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/inputs/input-text/input-text.scss ***!
@@ -1210,92 +652,6 @@ img {
 }
 .b-textarea:focus-visible {
   border: 2px solid #9b407a;
-}
-/*!**********************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/office/map/map.scss ***!
-  \**********************************************************************************************************************************************************************************************/
-.b-map {
-  display: none;
-}
-.b-map__popup-marker {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  font-family: "Open Sans", arial, sans-serif;
-  background-color: #fff;
-  border: 2px solid #9b407a;
-  border-radius: 25px;
-  padding: 5px 10px;
-  transition: 0.1s;
-}
-.b-map__popup-marker:hover .b-map__marker-title {
-  background-color: #9b407a;
-  color: #fff;
-  transition: 0.3s;
-}
-.b-map__adress {
-  font-family: "Open Sans", arial, sans-serif;
-  margin-top: 2rem;
-  line-height: 2rem;
-}
-.b-map__image {
-  width: 30%;
-  transform-origin: center bottom;
-}
-.b-map__image--show-content {
-  width: 30%;
-}
-.b-map__marker-title {
-  margin: 0 auto;
-  padding: 10px 15px;
-  border-radius: 25px;
-  transition: 0.3s;
-  width: -moz-max-content;
-  width: max-content;
-}
-.b-map__popup-content {
-  transition: 0.3s;
-  display: none;
-}
-.b-map__popup-content--show {
-  display: block;
-  margin-top: 1rem;
-  animation: show 0.3s 1;
-  animation-fill-mode: forwards;
-  width: 10rem;
-}
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.b-map--show {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.maps_tabs {
-  display: flex;
-  flex-direction: row;
-  padding: 0 2rem 2rem 0rem;
-}
-.maps_tabs button {
-  margin-right: 1rem;
-}
-
-.tab_selected {
-  background-color: #9b407a;
-  color: #fff;
-}
-/*!************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/office/maps/maps.scss ***!
-  \************************************************************************************************************************************************************************************************/
-.b-maps__tabs {
-  display: flex;
-  flex-direction: row;
-  padding: 0 2rem 2rem 0rem;
 }
 
 /*# sourceMappingURL=index.css.map*/

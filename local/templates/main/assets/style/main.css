@@ -728,3 +728,18 @@ p {
         padding: 6px 12px;
     }
 }
+
+.maps_tabs {
+	display: flex;
+	flex-direction: row;
+	padding: 0 2rem 2rem 0;
+
+	button {
+		margin-right: 1rem;
+	}
+}
+
+.tab_selected {
+	background-color: $color-purple;
+	color: $color-white;
+}

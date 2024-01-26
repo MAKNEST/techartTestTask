@@ -10,6 +10,9 @@ module.exports = {
 		index: ['./src/entry/index.js'],
 		// Пример создания дополнительной точки сборки
 		books: ['./src/entry/books.js'],
+		feedback: ['./src/entry/feedback.js'],
+		news: ['./src/entry/news.js'],
+		office: ['./src/entry/office.js']
 	},
 	stats: {},
 	https: false,
